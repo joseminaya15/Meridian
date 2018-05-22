@@ -52,7 +52,17 @@
             </div>
         </nav>
         <section id="principal">
-            
+            <div class="js-container">
+                <div class="js-contenido">
+                    <div class="js-contenido__left">
+                        <h2>Partners del Programa Meridian Engage</h2>
+                        <p>Si usted está creando una app m&oacute;vil desde cero, comenzando con un Meridian AppMaker, o integrando datos de servicios de ubicaci&oacute;n en una plataforma existente, nuestros partners de clase mundial est&aacute;n aqu&iacute; para ayudarle.</p>
+                    </div>
+                    <div class="js-contenido__right">
+                        
+                    </div>
+                </div>
+            </div>
         </section>
 
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
