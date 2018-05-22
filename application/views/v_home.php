@@ -78,16 +78,16 @@
                                     </select>
                                 </div>
                                 <div class="js-select">
-                                    <select class="selectpicker" title="Por indutria">
-                                        <option>Centros Comerciales</option>
-                                        <option>Educaci&oacute;n</option>
-                                        <option>Retail</option>
-                                        <option>Salud</option>
-                                        <option>Aeropuertos</option>
-                                        <option>Plazas p&uacute;blicas</option>
-                                        <option>Transportes</option>
-                                        <option>Hoteler&iacute;a / Restaurantes</option>
-                                        <option>Manufactura</option>
+                                    <select class="selectpicker" title="Por indutria" id="industria" onchange="filtrarIndustria()">
+                                        <option value="Centros Comerciales">Centros Comerciales</option>
+                                        <option value="Educación">Educaci&oacute;n</option>
+                                        <option value="Retail">Retail</option>
+                                        <option value="Salud">Salud</option>
+                                        <option value="Aeropuertos">Aeropuertos</option>
+                                        <option value="Plazas públicas">Plazas p&uacute;blicas</option>
+                                        <option value="Transportes">Transportes</option>
+                                        <option value="Hotelería / Restaurantes">Hoteler&iacute;a / Restaurantes</option>
+                                        <option value="Manufactura">Manufactura</option>
                                     </select>
                                 </div>
                                 <button class="mdl-button mdl-js-button mdl-button--icon">
