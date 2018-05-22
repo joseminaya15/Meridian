@@ -1,23 +1,25 @@
 @font-face {
-  font-family: 'MetricRegular';
-  src: url('openSans/MetricHPE-Desktop-Regular.otf');
+  font-family: 'OpenSansLight';
+  src: url('openSans/OpenSans-Light.ttf');
   font-weight: 100;
 }
-
 @font-face {
-  font-family: 'MetricBold';
-  src: url('openSans/MetricHPE-Desktop-Bold.otf');
+  font-family: 'OpenSansRegular';
+  src: url('openSans/OpenSans-Regular.ttf');
   font-weight: 100;
 }
-
 @font-face {
-  font-family: 'MetricLight';
-  src: url('openSans/MetricHPE-Desktop-Light.otf');
+  font-family: 'OpenSansMedium';
+  src: url('openSans/OpenSans-Semibold.ttf');
   font-weight: 100;
 }
-
 @font-face {
-  font-family: 'MetricSemiBold';
-  src: url('openSans/MetricHPE-Desktop-SemiBold.otf');
+  font-family: 'OpenSansBold';
+  src: url('openSans/OpenSans-Bold.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'OpenSansExtraBold';
+  src: url('openSans/OpenSans-ExtraBold.ttf');
   font-weight: 100;
 }
