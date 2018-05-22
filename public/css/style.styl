@@ -97,7 +97,7 @@ body
 	padding 0
 	overflow hidden
 	font-family $regular
-	color #FFFFFF
+	color #000000
 	background-color #FFFFFF
 .js-idioma
 	.btn-group
@@ -112,7 +112,7 @@ body
 .js-container
 	transitionMaxWidth()
 	width 100%
-	max-width 1350px
+	max-width 1150px
 	height 100vh
 	justify-content center
 	margin auto
@@ -125,15 +125,26 @@ body
 		transitionMaxWidth()
 		display inline-block
 		width 100%
-		max-width 200px
+		max-width 320px
+		vertical-align top
+		padding 25px
+		h2
+			margin 0 0 10px 0
+		p
+			margin 10px 0
+			line-height 20px
 	.js-contenido__right
 		display inline-block
+		vertical-align top
 		width 100%
-		max-width -webkit-calc(100% - 205px)
-		max-width -moz-calc(100% - 205px)
-		max-width -ms-calc(100% - 205px)
-		max-width -o-calc(100% - 205px)
-		max-width calc(100% - 205px)
+		max-width -webkit-calc(100% - 325px)
+		max-width -moz-calc(100% - 325px)
+		max-width -ms-calc(100% - 325px)
+		max-width -o-calc(100% - 325px)
+		max-width calc(100% - 325px)
+		.js-contenido--imagen
+			img
+				width 100%
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
