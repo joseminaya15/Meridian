@@ -95,7 +95,6 @@ flipCardBackHover()
 body
 	margin 0
 	padding 0
-	overflow hidden
 	font-family $regular
 	color #000000
 	background-color #FFFFFF
@@ -145,6 +144,12 @@ body
 		.js-contenido--imagen
 			img
 				width 100%
+.js-cards
+	flexStart()
+	flex-wrap wrap
+	.js-card--partner
+		max-width 360px
+		width 100%
 .js-contenido--filtro
 	flexCenter()
 /*SCROLL*/
