@@ -1,7 +1,9 @@
-$regular = 'BentonSansRegular'
-$medium  = 'BentonSansMedium'
-$bold    = 'BentonSansBold'
-$color   = #FDB913;
+$regular   = 'BentonSansRegular'
+$medium    = 'BentonSansMedium'
+$bold      = 'BentonSansBold'
+$default   = #FF8300;
+$primary   = #9FD4C9;
+$secondary = #D5D654;
 flexCenter()
 	display flex
 	display -webkit-flex
@@ -117,6 +119,8 @@ body
 	flex-direction column
 	position relative
 	padding 30px
+.js-contenido
+	background-color $secondary
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
