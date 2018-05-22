@@ -18,6 +18,14 @@ class M_datos extends  CI_Model{
       $result = $this->db->query($sql);
       return $result->result();
     }
+    function searchPartners($industria, $geografia){
+      $sql = "SELECT p.*
+                  FROM partners p 
+                 WHERE p.geografia LIKE '%".$geografia."%'
+                    OR p.industria LIKE '%".$industria."%'";
+      $result = $this->db->query($sql);
+      return $result->result();
+    }
     /*
     function getIdByNameCate($cate){
       $sql = "SELECT c.Id

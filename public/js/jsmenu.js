@@ -40,3 +40,26 @@ function filtroGeografia(){
 	  	}
 	});
 }
+function buscarPartners(){
+	var industria = $('#industria').val();
+	var geografia = $('#geografia').val();
+	$.ajax({
+		data : {industria : industria,
+				geografia : geografia},
+		url  : 'Home/buscarPartners',
+		type : 'POST'
+	}).done(function(data){
+		try{
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	$('.js-cards').html('');
+		    	console.log(data.partners);
+		    	$('.js-cards').append(data.partners);
+		    }else {
+		    	return;
+		    }
+	  	}catch(err){
+	    	msj('error',err.message);
+	  	}
+	});
+}

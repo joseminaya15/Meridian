@@ -90,7 +90,7 @@
                                         <option value="Manufactura">Manufactura</option>
                                     </select>
                                 </div>
-                                <button class="mdl-button mdl-js-button mdl-button--icon">
+                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPartners()">
                                     <i class="mdi mdi-search"></i>
                                 </button>   
                             </div>
