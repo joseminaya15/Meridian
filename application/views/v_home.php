@@ -59,7 +59,12 @@
                         <p>Si usted está creando una app m&oacute;vil desde cero, comenzando con un Meridian AppMaker, o integrando datos de servicios de ubicaci&oacute;n en una plataforma existente, nuestros partners de clase mundial est&aacute;n aqu&iacute; para ayudarle.</p>
                     </div>
                     <div class="js-contenido__right">
-                        
+                        <div class="js-contenido--imagen">
+                            <img src="<?php echo RUTA_IMG?>fondo/fondo_meridian.jpg" alt="">
+                        </div>
+                        <div class="js-contenido--texto">
+                            <p>Cont&aacute;ctenos para conocer m&aacute;s</p>
+                        </div>
                     </div>
                 </div>
             </div>

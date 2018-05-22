@@ -121,6 +121,19 @@ body
 	padding 30px
 .js-contenido
 	background-color $secondary
+	.js-contenido__left
+		transitionMaxWidth()
+		display inline-block
+		width 100%
+		max-width 200px
+	.js-contenido__right
+		display inline-block
+		width 100%
+		max-width -webkit-calc(100% - 205px)
+		max-width -moz-calc(100% - 205px)
+		max-width -ms-calc(100% - 205px)
+		max-width -o-calc(100% - 205px)
+		max-width calc(100% - 205px)
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
