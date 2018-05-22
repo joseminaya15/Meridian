@@ -67,14 +67,14 @@
                             <p>Cont&aacute;ctenos para conocer m&aacute;s</p>
                             <div class="js-contenido--filtro">
                                 <div class="js-select">
-                                    <select class="selectpicker" title="Por cobertura geográfica">
-                                        <option>Latinoam&eacute;rica</option>
-                                        <option>Colombia</option>
-                                        <option>Panam&aacute;</option>
-                                        <option>Am&eacute;ricas</option>
-                                        <option>Ecuador</option>
-                                        <option>Brasil</option>
-                                        <option>Remoto</option>
+                                    <select class="selectpicker" title="Por cobertura geográfica" id="geografia" onchange="filtroGeografia()">
+                                        <option value="Latinoamérica">Latinoam&eacute;rica</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Panamá">Panam&aacute;</option>
+                                        <option value="Américas">Am&eacute;ricas</option>
+                                        <option value="Ecuador">Ecuador</option>
+                                        <option value="Brasil">Brasil</option>
+                                        <option value="Remoto">Remoto</option>
                                     </select>
                                 </div>
                                 <div class="js-select">

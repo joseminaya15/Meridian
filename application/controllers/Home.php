@@ -54,4 +54,42 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
+    function filtroGeografia(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $html    = '';
+            $geograf = $this->input->post('geografia');
+            $datos   = $this->M_datos->getPartnersByGeo($geograf);
+            if(count($datos) == 0){
+                return;
+            }else {
+                foreach ($datos as $key) {
+                    $html .= '<div class="js-card--partner">
+                                <div class="js-card--partner__front">
+                                    <div class="js-card--partner__imagen">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="js-card--partner__contenido">
+                                        <p>'.$key->contenido.'</p>
+                                    </div>
+                                    <div class="js-card--partner__footer">
+                                        
+                                    </div>
+                                </div>
+                                <div class="js-card--partner__back">
+                                    <div class="js-card--par">
+                                        
+                                    </div>
+                                </div>
+                            </div>';
+                }
+            }
+            $data['partners'] = $html;
+            $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

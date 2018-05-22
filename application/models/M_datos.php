@@ -7,11 +7,18 @@ class M_datos extends  CI_Model{
     function getPartners($industria){
       $sql = "SELECT p.*
                   FROM partners p 
-               WHERE p.industria LIKE '%".$industria."%'";
+                 WHERE p.industria LIKE '%".$industria."%'";
       $result = $this->db->query($sql);
-      //print_r($this->db->last_query());
       return $result->result();
-    }/*
+    }
+    function getPartnersByGeo($geografia){
+      $sql = "SELECT p.*
+                  FROM partners p 
+                 WHERE p.geografia LIKE '%".$geografia."%'";
+      $result = $this->db->query($sql);
+      return $result->result();
+    }
+    /*
     function getIdByNameCate($cate){
       $sql = "SELECT c.Id
                 FROM categorias c
