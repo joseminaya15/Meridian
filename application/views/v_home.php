@@ -71,7 +71,7 @@
                                         <option>Latinoam&eacute;rica</option>
                                         <option>Colombia</option>
                                         <option>Panam&aacute;</option>
-                                        <option>Am&eaacute;ricas</option>
+                                        <option>Am&eacute;ricas</option>
                                         <option>Ecuador</option>
                                         <option>Brasil</option>
                                         <option>Remoto</option>
