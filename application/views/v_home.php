@@ -107,7 +107,9 @@
                                 <p>ZOOX se dedica específicamente a brindar soluciones innovadoras a través de la conectividad de WIFI, brindando Social login a través de redes sociales, permitiendo generar campañas de promoción, videos publicitarios, encuestas, encuestas NPS, recolectar data de los usuarios (BigData), people analytics, heatmap, flowmap, etc. Y todo esto utilizando la infraestructura ya instalada de Access Points.</p>
                             </div>
                             <div class="js-card--partner__footer">
-                                
+                                <div>
+                                    
+                                </div>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
