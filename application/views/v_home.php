@@ -65,7 +65,7 @@
                         </div>
                         <div class="js-contenido--texto">
                             <p>Cont&aacute;ctenos para conocer m&aacute;s</p>
-                            <div>
+                            <div class="js-contenido--filtro">
                                 <div class="js-select">
                                     <select class="selectpicker" title="Por cobertura geográfica">
                                         <option>Latinoam&eacute;rica</option>
@@ -89,7 +89,10 @@
                                         <option>Hoteler&iacute;a / Restaurantes</option>
                                         <option>Manufactura</option>
                                     </select>
-                                </div>   
+                                </div>
+                                <button class="mdl-button mdl-js-button mdl-button--icon">
+                                    <i class="mdi mdi-search"></i>
+                                </button>   
                             </div>
                         </div>
                     </div>
