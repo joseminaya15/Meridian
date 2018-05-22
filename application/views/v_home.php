@@ -65,6 +65,32 @@
                         </div>
                         <div class="js-contenido--texto">
                             <p>Cont&aacute;ctenos para conocer m&aacute;s</p>
+                            <div>
+                                <div class="js-select">
+                                    <select class="selectpicker" title="Por cobertura geográfica">
+                                        <option>Latinoam&eacute;rica</option>
+                                        <option>Colombia</option>
+                                        <option>Panam&aacute;</option>
+                                        <option>Am&eaacute;ricas</option>
+                                        <option>Ecuador</option>
+                                        <option>Brasil</option>
+                                        <option>Remoto</option>
+                                    </select>
+                                </div>
+                                <div class="js-select">
+                                    <select class="selectpicker" title="Por indutria">
+                                        <option>Centros Comerciales</option>
+                                        <option>Educaci&oacute;n</option>
+                                        <option>Retail</option>
+                                        <option>Salud</option>
+                                        <option>Aeropuertos</option>
+                                        <option>Plazas p&uacute;blicas</option>
+                                        <option>Transportes</option>
+                                        <option>Hoteler&iacute;a / Restaurantes</option>
+                                        <option>Manufactura</option>
+                                    </select>
+                                </div>   
+                            </div>
                         </div>
                     </div>
                 </div>
