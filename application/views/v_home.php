@@ -107,7 +107,17 @@
                                 <p>ZOOX se dedica específicamente a brindar soluciones innovadoras a través de la conectividad de WIFI, brindando Social login a través de redes sociales, permitiendo generar campañas de promoción, videos publicitarios, encuestas, encuestas NPS, recolectar data de los usuarios (BigData), people analytics, heatmap, flowmap, etc. Y todo esto utilizando la infraestructura ya instalada de Access Points.</p>
                             </div>
                             <div class="js-card--partner__footer">
-                                <div>
+                                <div class="col-xs-7">
+                                    <div class="js-card--footer__texto">
+                                        <p>Contacto Comercial</p>
+                                        <span>marcelo.cardenuto@skyfii.com</span>
+                                    </div>
+                                    <div class="js-card--footer__texto">
+                                        <p>Contacto Técnico</p>
+                                        <span>demis.cunha@skyfii.com</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5">
                                     
                                 </div>
                             </div>
