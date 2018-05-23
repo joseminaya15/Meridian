@@ -9,7 +9,6 @@ function filtrarIndustria(){
 		    data = JSON.parse(data);
 		    if(data.error == 0){
 		    	$('.js-cards').html('');
-		    	console.log(data.partners);
 		    	$('.js-cards').append(data.partners);
 		    }else {
 		    	return;
@@ -30,7 +29,6 @@ function filtroGeografia(){
 		    data = JSON.parse(data);
 		    if(data.error == 0){
 		    	$('.js-cards').html('');
-		    	console.log(data.partners);
 		    	$('.js-cards').append(data.partners);
 		    }else {
 		    	return;
@@ -53,7 +51,26 @@ function buscarPartners(){
 		    data = JSON.parse(data);
 		    if(data.error == 0){
 		    	$('.js-cards').html('');
-		    	console.log(data.partners);
+		    	$('.js-cards').append(data.partners);
+		    }else {
+		    	return;
+		    }
+	  	}catch(err){
+	    	msj('error',err.message);
+	  	}
+	});
+}
+function buscadorPartner(){
+	var buscador = $('#buscador').val();
+	$.ajax({
+		data : {buscador : buscador},
+		url  : 'Home/buscadorPartner',
+		type : 'POST'
+	}).done(function(data){
+		try{
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	$('.js-cards').html('');
 		    	$('.js-cards').append(data.partners);
 		    }else {
 		    	return;

@@ -5,9 +5,10 @@ class M_datos extends  CI_Model{
         parent::__construct();
     }
     function getPartners($industria){
-      $sql = "SELECT p.*
-                  FROM partners p 
-                 WHERE p.industria LIKE '%".$industria."%'";
+      $sql = "SELECT contenido,
+                     imagenes
+                FROM partners
+               WHERE industria LIKE '%".$industria."%'";
       $result = $this->db->query($sql);
       return $result->result();
     }
@@ -23,6 +24,14 @@ class M_datos extends  CI_Model{
                   FROM partners p 
                  WHERE p.geografia LIKE '%".$geografia."%'
                     OR p.industria LIKE '%".$industria."%'";
+      $result = $this->db->query($sql);
+      return $result->result();
+    }
+    function getPartnersBuscador($buscador){
+      $sql = "SELECT p.*
+                  FROM partners p 
+                 WHERE p.geografia LIKE '%".$buscador."%'
+                    OR p.industria LIKE '%".$buscador."%'";
       $result = $this->db->query($sql);
       return $result->result();
     }

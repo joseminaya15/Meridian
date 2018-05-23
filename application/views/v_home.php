@@ -38,9 +38,9 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <div class="form-group m-0">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Search" id="buscador">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default" onclick="buscadorPartner()">Submit</button>
                         <div class="js-select">
                             <select class="selectpicker" title="Español" id="geografia" onchange="filtroGeografia()">
                                 <option value="Español">Español</option>
