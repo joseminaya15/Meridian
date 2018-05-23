@@ -170,19 +170,13 @@ body
 				p
 					line-height 20px
 		.js-card--partner__back
-			height 100%
-			width 100%
-			opacity 0
+			-webkit-backface-visibility hidden
+			-moz-backface-visibility hidden
 			backface-visibility hidden
-			-webkit-transition -webkit-transform 0.3s, opacity 0.3s
-			-moz-transition -moz-transform 0.3s, opacity 0.3s
-			transition transform 0.3s, opacity 0.3s
 			position absolute
 			top 0
 			left 0
 			padding 20px
-			background-color #2c3f52
-			color #FFFFFF
 			h2
 				font-size 22px
 				line-height 24px
@@ -192,15 +186,6 @@ body
 				font-weight bold
 			table
 				margin-top 20px
-		&.effect1
-			.js-card--partner__front
-				opacity 0
-			.js-card--partner__back
-				opacity 1
-				-webkit-transform translate(15px, 15px)
-				-moz-transform translate(15px, 15px)
-				-ms-transform translate(15px, 15px)
-				transform translate(15px, 15px)
 		&:nth-child(1)
 			.js-card--partner__back
 				background-color #004876
@@ -219,6 +204,59 @@ body
 		&:nth-child(6)
 			.js-card--partner__back
 				background-color #008375
+		&.js-card--partner1
+			.js-card--partner__back
+				height 100%
+				width 100%
+				opacity 0
+				-webkit-transition -webkit-transform 0.3s, opacity 0.3s
+				-moz-transition -moz-transform 0.3s, opacity 0.3s
+				transition transform 0.3s, opacity 0.3s
+				color #FFFFFF
+			&.effect1
+				.js-card--partner__front
+					opacity 0
+				.js-card--partner__back
+					opacity 1
+					-webkit-transform translate(15px, 15px)
+					-moz-transform translate(15px, 15px)
+					-ms-transform translate(15px, 15px)
+					transform translate(15px, 15px)
+		&.js-card--partner2
+			overflow hidden
+			.js-card--partner__front
+				-webkit-transition -webkit-transform 0.4s
+				-moz-transition -moz-transform 0.4s
+				transition transform 0.4s
+			.js-card--partner__back
+				height 100%
+				width 100%
+				opacity 0
+				-webkit-transform-origin 0 0
+				-moz-transform-origin 0 0
+				transform-origin 0 0
+				-webkit-transform rotateY(-90deg)
+				-moz-transform-origin rotateY(-90deg)
+				transform rotateY(-90deg)
+				-webkit-transition -webkit-transform 0.4s, opacity 0.1s 0.3s
+				-moz-transition -moz-transform 0.4s, opacity 0.1s 0.3s
+				transition transform 0.4s, opacity 0.1s 0.3s
+			&.effect4
+				.js-card--partner__front
+					-webkit-transform translateX(25%)
+					-moz-transform translateX(25%)
+					-ms-transform translateX(25%)
+					transform translateX(25%)
+					opacity 0
+				.js-card--partner__back
+					opacity 1
+					-webkit-transform rotateY(0deg)
+					-moz-transform rotateY(0deg)
+					-ms-transform rotateY(0deg)
+					transform rotateY(0deg)
+					-webkit-transition -webkit-transform 0.4s, opacity 0.1s
+					-moz-transition -webkit-transform 0.4s, opacity 0.1s
+					transition -webkit-transform 0.4s, opacity 0.1s
 .js-contenido--filtro
 	flexCenter()
 .js-card--partner__footer

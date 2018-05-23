@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="js-cards">
-                    <div class="js-card--partner">
+                    <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/zoox.png" alt="">
@@ -176,7 +176,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="js-card--partner">
+                    <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/elun.png" alt="">
@@ -251,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="js-card--partner">
+                    <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/datawifi.png" alt="">
@@ -324,7 +324,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="js-card--partner">
+                    <div class="js-card--partner js-card--partner2">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/skyfii.png" alt="">
@@ -399,7 +399,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="js-card--partner">
+                    <div class="js-card--partner js-card--partner2">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/ohmyfi.png" alt="">
@@ -474,7 +474,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="js-card--partner">
+                    <div class="js-card--partner js-card--partner2">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/lab3.png" alt="">
