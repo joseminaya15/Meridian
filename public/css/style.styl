@@ -151,22 +151,71 @@ body
 		max-width 340px
 		width 100%
 		margin 10px
+		padding 20px
 		border 1px solid #000000
+		position relative
 		.js-card--partner__front
+			float left
+			position relative
+			z-index 5
 			.js-card--partner__imagen
 				text-align center
 				height 125px
-				padding 20px
 				img
 					max-width 200px
 					width 100%
 			.js-card--partner__contenido
-				padding 0 30px
+				padding 0 10px
 				height 260px
 				p
 					line-height 20px
+		.js-card--partner__back
+			height 100%
+			width 100%
+			opacity 0
+			backface-visibility hidden
+			-webkit-transition -webkit-transform 0.3s, opacity 0.3s
+			-moz-transition -moz-transform 0.3s, opacity 0.3s
+			transition transform 0.3s, opacity 0.3s
+			position absolute
+			top 0
+			left 0
+			padding 20px
+			background-color #2c3f52
+		&.effect1
+			.js-card--partner__front
+				opacity 0
+			.js-card--partner__back
+				opacity 1
+				-webkit-transform translate(15px, 15px)
+				-moz-transform translate(15px, 15px)
+				-ms-transform translate(15px, 15px)
+				transform translate(15px, 15px)
 .js-contenido--filtro
 	flexCenter()
+.js-card--partner__footer
+	border-top 1px solid #000000
+	flexCenter()
+	.js-card--footer__texto
+		margin 10px 0
+		p
+			margin 0
+			line-height 14px
+			font-size 12px
+		a
+			font-family $bold
+			font-size 12px
+			line-height 14px
+			color #000000
+			width 100%
+			overflow hidden
+			white-space nowrap
+			text-overflow ellipsis
+			display inline-block
+	.js--card--footer__contact
+		flexCenter()
+		height 70px
+		border-left 1px solid #000000
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
