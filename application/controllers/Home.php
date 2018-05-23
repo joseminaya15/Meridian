@@ -23,7 +23,6 @@ class Home extends CI_Controller {
             $html    = '';
             $industr = $this->input->post('industria');
             $datos   = $this->M_datos->getPartners($industr);
-            print_r($this->db->last_query());
             if(count($datos) == 0){
                 return;
             }else {

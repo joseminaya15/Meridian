@@ -77,6 +77,7 @@
                             <div class="js-contenido--filtro">
                                 <div class="js-select">
                                     <select class="selectpicker" title="Por cobertura geográfica" id="geografia" onchange="filtroGeografia()">
+                                        <option value="">Por cobertura geográfica</option>
                                         <option value="Latinoamérica">Latinoam&eacute;rica</option>
                                         <option value="Colombia">Colombia</option>
                                         <option value="Panamá">Panam&aacute;</option>
