@@ -42,7 +42,7 @@
                         </div>
                         <button type="submit" class="btn btn-default" onclick="buscadorPartner()">Submit</button>
                         <div class="js-select">
-                            <select class="selectpicker" title="Español" id="geografia" onchange="filtroGeografia()">
+                            <select class="selectpicker" title="Español" id="idioma" onchange="filtroGeografia()">
                                 <option value="Español">Español</option>
                                 <option value="Inglés">Inglés</option>
                                 <option value="Portugués">Portugués</option>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="js-cards">
+                <div class="js-cards hola">
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
