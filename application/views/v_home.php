@@ -142,7 +142,7 @@
                                     </tr>
                                     <tr>
                                         <td>Analítica</td>
-                                        <td><i class="mdi mdi-done"></i></td>
+                                        <td><i class="mdi mdi-close"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Marketing</td>
@@ -154,7 +154,7 @@
                                     </tr>
                                     <tr>
                                         <td>Reportes</td>
-                                        <td><i class="mdi mdi-done"></i></td>
+                                        <td><i class="mdi mdi-close"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Monitoreo infraestructura</td>
@@ -216,7 +216,7 @@
                                         </tr>
                                         <tr>
                                             <td>Analítica</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Marketing</td>
@@ -228,7 +228,7 @@
                                         </tr>
                                         <tr>
                                             <td>Reportes</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -290,7 +290,7 @@
                                     </tr>
                                     <tr>
                                         <td>Analítica</td>
-                                        <td><i class="mdi mdi-done"></i></td>
+                                        <td><i class="mdi mdi-close"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Marketing</td>
@@ -302,7 +302,7 @@
                                     </tr>
                                     <tr>
                                         <td>Reportes</td>
-                                        <td><i class="mdi mdi-done"></i></td>
+                                        <td><i class="mdi mdi-close"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Monitoreo infraestructura</td>
@@ -364,7 +364,7 @@
                                         </tr>
                                         <tr>
                                             <td>Analítica</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Marketing</td>
@@ -376,7 +376,7 @@
                                         </tr>
                                         <tr>
                                             <td>Reportes</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -439,7 +439,7 @@
                                         </tr>
                                         <tr>
                                             <td>Analítica</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Marketing</td>
@@ -451,7 +451,7 @@
                                         </tr>
                                         <tr>
                                             <td>Reportes</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -514,7 +514,7 @@
                                         </tr>
                                         <tr>
                                             <td>Analítica</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Marketing</td>
@@ -526,7 +526,7 @@
                                         </tr>
                                         <tr>
                                             <td>Reportes</td>
-                                            <td><i class="mdi mdi-done"></i></td>
+                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
