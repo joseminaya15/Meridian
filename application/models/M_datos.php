@@ -13,9 +13,10 @@ class M_datos extends  CI_Model{
       return $result->result();
     }
     function getPartnersByGeo($geografia){
-      $sql = "SELECT p.*
-                  FROM partners p 
-                 WHERE p.geografia LIKE '%".$geografia."%'";
+      $sql = "SELECT p.contenido,
+                     p.imagenes
+                FROM partners p 
+               WHERE p.geografia LIKE '%".$geografia."%'";
       $result = $this->db->query($sql);
       return $result->result();
     }

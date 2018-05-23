@@ -89,6 +89,7 @@
                                 </div>
                                 <div class="js-select">
                                     <select class="selectpicker" title="Por indutria" id="industria" onchange="filtrarIndustria()">
+                                        <option value="">Por indutria</option>
                                         <option value="Centros Comerciales">Centros Comerciales</option>
                                         <option value="Educación">Educaci&oacute;n</option>
                                         <option value="Retail">Retail</option>
