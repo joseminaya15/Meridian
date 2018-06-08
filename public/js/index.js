@@ -11,6 +11,7 @@ function showCard(id){
 	var idCardSelect = $('#'+id+'.select');
 	$('.js-card--partner__button').find('button').removeClass('select');
 	idCard.addClass('select');
+	idCard.toggleClass('rotate');
 	// idCardSelect.parents('.js-card--partner').find('.js-hide').toggleClass('js-height');
 	if(idCard.hasClass('select')){
 		idCard.parents('.js-card--partner').find('.js-hide').toggleClass('js-height');
