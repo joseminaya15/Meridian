@@ -99,19 +99,18 @@
               <optgroup label="Adquisición de datos">
                 <option value="Portal Cautivo">Portal Cautivo</option>
                 <option value="Servicios de presencia (ALE)">Servicios de presencia (ALE)</option>
-                <option value="Perfil">RTLS (ALE)</option>
-                <option value="Perfil">API de entrada de datos</option>
-                <option value="Perfil">Integración con Aruba Clearpass</option>
+                <option value="RTLS (ALE)">RTLS (ALE)</option>
+                <option value="API de entrada de datos">API de entrada de datos</option>
+                <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
               </optgroup>
               <optgroup label="Verticalización">
-                <option value="Perfil">Centros Comerciales</option>
-                <option value="Perfil">Educación</option>
-                <option value="Perfil">Retail</option>
-                <option value="Perfil">Salud</option>
-                <option value="Perfil">Integración con Aruba Clearpass</option>
+                <option value="Centros Comerciales">Centros Comerciales</option>
+                <option value="Educación">Educación</option>
+                <option value="Retail">Retail</option>
+                <option value="Salud">Salud</option>
+                <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
               </optgroup>
             </select>
-
         </div>
         <section id="principal">
             <div class="js-container">
