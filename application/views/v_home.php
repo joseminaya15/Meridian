@@ -103,13 +103,6 @@
                 <option value="API de entrada de datos">API de entrada de datos</option>
                 <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
               </optgroup>
-              <optgroup label="Verticalización">
-                <option value="Centros Comerciales">Centros Comerciales</option>
-                <option value="Educación">Educación</option>
-                <option value="Retail">Retail</option>
-                <option value="Salud">Salud</option>
-                <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
-              </optgroup>
             </select>
         </div>
         <section id="principal">
