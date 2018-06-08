@@ -62,6 +62,27 @@
             </div>
         </nav> -->
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
+        <div class="m-l-50 text-left">
+            <select class="selectpicker" id="pais" title="Typically your Country">
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Panamá">Panam&aacute;</option>
+            </select>
+        </div>
+        <div class="m-l-50">
+            <select class="selectpicker" id="vertical" title="Typically your Vertical">
+                <option value="Centros comerciales">Centros comerciales</option>
+                <option value="Educación">Educación</option>
+                <option value="Retail">Retail</option>
+            </select>
+        </div>
+        <div class="m-l-50">
+            <select class="selectpicker" id="caracter" title="Typically your Characteristics">
+                <option value="Portable">Portable</option>
+                <option value="Analítica">Analítica</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </div>
         <section id="principal">
             <div class="js-container">
                 <!-- <div class="js-contenido">
