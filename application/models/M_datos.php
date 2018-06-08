@@ -19,6 +19,11 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getCaract(){
+        // $sql ="" ;
+        // $return = $this->db->query($sql);
+        // return $result->result();
+    }
 
 //_________________________________________________________________
 

@@ -18,18 +18,27 @@ class Home extends CI_Controller {
         $data['vertical'] = '';
         $datosPaises      = $this->M_datos->getPais();
         $datosVertical    = $this->M_datos->getVertical();
+        // $datosCarac       = $this->M_datos->getCaract();
         $optionPaises     = '';
         $optionVertical   = '';
+        $optionCarac      = '';
         foreach($datosPaises as $key) {
-            $optionPaises .= '<option value="'.$key->Nombre.'">'.$key->Nombre.'</option>';
+            $optionPaises .= '<option value="'.$key->Nombre.'" >'.$key->Nombre.'</option>';
         }
         foreach ($datosVertical as $key) {
             $optionVertical .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
         }
+        // foreach ($datosCarac as $key) {
+        //     $optionCarac .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
+        // }
         $data['paises']   = $optionPaises;
         $data['vertical'] = $optionVertical;
+        $data['caracter'] = $optionCarac;
 		$this->load->view('v_home', $data);
 	}
+
+//________________________________________________________________________________________________________________________________________
+
     function filtrarIndustria(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
