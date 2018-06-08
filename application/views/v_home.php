@@ -79,7 +79,7 @@
             </select>
         </div>
         <div class="m-l-50">
-            <select class="selectpicker" multiple data-live-search="true">
+            <select class="selectpicker" multiple data-live-search="true" title="Choose the characteristic...">
               <optgroup label="Analítica">
                 <option>Captura datos demográficos</option>
                 <option>Perfil</option>
