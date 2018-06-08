@@ -67,6 +67,8 @@
                 <option value="Dominican Republic">Dominican Republic</option>
                 <option value="Puerto Rico">Puerto Rico</option>
                 <option value="Panamá">Panam&aacute;</option>
+                <option value="Salud">Salud</option>
+                <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
             </select>
         </div>
         <div class="m-l-50">
@@ -87,6 +89,32 @@
                 <option>Analizar comportamiento de clientes</option>
                 <option>Desplegar campañas de publicidad</option>
                 <option>Segmentación de clientes</option>
+              </optgroup>
+              <optgroup label="Integración">
+                <option>Integración con Beacons genéricos</option>
+                <option>Integración con Beacons Aruba Meridian</option>
+                <option>Rastreo de activos</option>
+                <option>Wayfinding & Mapping</option>
+              </optgroup>
+              <optgroup label="Reportes">
+                <option>Reportes Históricos</option>
+              </optgroup>
+              <optgroup label="Monitoreo Infraestructura">
+                <option>Monitor de Infraestructura WiFi (SNMP, Polling, ICMP)</option>
+              </optgroup>
+              <optgroup label="Adquisición de datos">
+                <option>Portal Cautivo</option>
+                <option>Servicios de presencia (ALE)</option>
+                <option>RTLS (ALE)</option>
+                <option>API de entrada de datos</option>
+                <option>Integración con Aruba Clearpass</option>
+              </optgroup>
+              <optgroup label="Verticalización">
+                <option>Centros Comerciales</option>
+                <option>Educación</option>
+                <option>Retail</option>
+                <option>Salud</option>
+                <option>Integración con Aruba Clearpass</option>
               </optgroup>
             </select>
 
