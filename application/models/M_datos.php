@@ -4,38 +4,60 @@ class M_datos extends  CI_Model{
     function __construct(){
         parent::__construct();
     }
+
+    function getPais(){
+        $sql = "SELECT * 
+                  FROM pais
+              ORDER BY Nombre ASC";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getVertical() {
+        $sql = "SELECT * 
+                  FROM vertical
+              ORDER BY nombre ASC;";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+//_________________________________________________________________
+
     function getPartners($industria){
-      $sql = "SELECT contenido,
-                     imagenes
-                FROM partners
-               WHERE industria LIKE '%".$industria."%'";
-      $result = $this->db->query($sql);
-      return $result->result();
+        $sql = "SELECT contenido,
+                       imagenes
+                  FROM partners
+                 WHERE industria LIKE '%".$industria."%'";
+        $result = $this->db->query($sql);
+        return $result->result();
     }
+
     function getPartnersByGeo($geografia){
-      $sql = "SELECT p.contenido,
-                     p.imagenes
-                FROM partners p 
-               WHERE p.geografia LIKE '%".$geografia."%'";
-      $result = $this->db->query($sql);
-      return $result->result();
+        $sql = "SELECT p.contenido,
+                       p.imagenes
+                  FROM partners p 
+                 WHERE p.geografia LIKE '%".$geografia."%'";
+        $result = $this->db->query($sql);
+        return $result->result();
     }
+
     function searchPartners($industria, $geografia){
-      $sql = "SELECT p.*
+        $sql = "SELECT p.*
                   FROM partners p 
                  WHERE p.geografia LIKE '%".$geografia."%'
                     OR p.industria LIKE '%".$industria."%'";
-      $result = $this->db->query($sql);
-      return $result->result();
+        $result = $this->db->query($sql);
+        return $result->result();
     }
+
     function getPartnersBuscador($buscador){
-      $sql = "SELECT p.*
+        $sql = "SELECT p.*
                   FROM partners p 
                  WHERE p.geografia LIKE '%".$buscador."%'
                     OR p.industria LIKE '%".$buscador."%'";
-      $result = $this->db->query($sql);
-      return $result->result();
+        $result = $this->db->query($sql);
+        return $result->result();
     }
+
     /*
     function getIdByNameCate($cate){
       $sql = "SELECT c.Id
