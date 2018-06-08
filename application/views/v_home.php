@@ -117,40 +117,40 @@
         <div class="m-l-50">
             <select class="selectpicker" multiple data-live-search="true" title="Choose the characteristic...">
               <optgroup label="Analítica">
-                <option>Captura datos demográficos</option>
-                <option>Perfil</option>
-                <option>Presencia</option>
+                <option value="Captura datos demográficos">Captura datos demográficos</option>
+                <option value="Perfil">Perfil</option>
+                <option value="Presencia">Presencia</option>
               </optgroup>
               <optgroup label="Marketing">
-                <option>Analizar comportamiento de clientes</option>
-                <option>Desplegar campañas de publicidad</option>
-                <option>Segmentación de clientes</option>
+                <option value="Analizar comportamiento de clientes">Analizar comportamiento de clientes</option>
+                <option value="Desplegar campañas de publicidad">Desplegar campañas de publicidad</option>
+                <option value="Segmentación de clientes">Segmentación de clientes</option>
               </optgroup>
               <optgroup label="Integración">
-                <option>Integración con Beacons genéricos</option>
-                <option>Integración con Beacons Aruba Meridian</option>
-                <option>Rastreo de activos</option>
-                <option>Wayfinding & Mapping</option>
+                <option value="Integración con Beacons genéricos">Integración con Beacons genéricos</option>
+                <option value="Integración con Beacons Aruba Meridian">Integración con Beacons Aruba Meridian</option>
+                <option value="Rastreo de activos">Rastreo de activos</option>
+                <option value="Wayfinding & Mapping">Wayfinding & Mapping</option>
               </optgroup>
               <optgroup label="Reportes">
-                <option>Reportes Históricos</option>
+                <option value="Reportes Históricos">Reportes Históricos</option>
               </optgroup>
               <optgroup label="Monitoreo Infraestructura">
-                <option>Monitor de Infraestructura WiFi (SNMP, Polling, ICMP)</option>
+                <option value="Monitor de Infraestructura WiFi (SNMP, Polling, ICMP)">Monitor de Infraestructura WiFi (SNMP, Polling, ICMP)</option>
               </optgroup>
               <optgroup label="Adquisición de datos">
-                <option>Portal Cautivo</option>
-                <option>Servicios de presencia (ALE)</option>
-                <option>RTLS (ALE)</option>
-                <option>API de entrada de datos</option>
-                <option>Integración con Aruba Clearpass</option>
+                <option value="Portal Cautivo">Portal Cautivo</option>
+                <option value="Servicios de presencia (ALE)">Servicios de presencia (ALE)</option>
+                <option value="Perfil">RTLS (ALE)</option>
+                <option value="Perfil">API de entrada de datos</option>
+                <option value="Perfil">Integración con Aruba Clearpass</option>
               </optgroup>
               <optgroup label="Verticalización">
-                <option>Centros Comerciales</option>
-                <option>Educación</option>
-                <option>Retail</option>
-                <option>Salud</option>
-                <option>Integración con Aruba Clearpass</option>
+                <option value="Perfil">Centros Comerciales</option>
+                <option value="Perfil">Educación</option>
+                <option value="Perfil">Retail</option>
+                <option value="Perfil">Salud</option>
+                <option value="Perfil">Integración con Aruba Clearpass</option>
               </optgroup>
             </select>
 
