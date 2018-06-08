@@ -77,11 +77,19 @@
             </select>
         </div>
         <div class="m-l-50">
-            <select class="selectpicker" id="caracter" title="Typically your Characteristics">
-                <option value="Portable">Portable</option>
-                <option value="Analítica">Analítica</option>
-                <option value="Marketing">Marketing</option>
+            <select class="selectpicker" multiple data-live-search="true">
+              <optgroup label="Analítica">
+                <option>Captura datos demográficos</option>
+                <option>Perfil</option>
+                <option>Presencia</option>
+              </optgroup>
+              <optgroup label="Marketing">
+                <option>Analizar comportamiento de clientes</option>
+                <option>Desplegar campañas de publicidad</option>
+                <option>Segmentación de clientes</option>
+              </optgroup>
             </select>
+
         </div>
         <section id="principal">
             <div class="js-container">
