@@ -67,8 +67,38 @@
                 <option value="Dominican Republic">Dominican Republic</option>
                 <option value="Puerto Rico">Puerto Rico</option>
                 <option value="Panamá">Panam&aacute;</option>
-                <option value="Salud">Salud</option>
-                <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Curacao">Curacao</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Netherlands Antilles">Netherlands Antilles</option>
+                <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
+                <option value="St. Maarten">St. Maarten</option>
+                <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                <option value="Suriname">Suriname</option>
+                <option value="Virgin Islands (U.S)">Virgin Islands (U.S)</option>
+                <option value="Antigua & Bermuda">Antigua & Bermuda</option>
+                <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                <option value="Belize">Belize</option>
+                <option value="Turks & Caicos">Turks & Caicos</option>
+                <option value="Dominica">Dominica</option>
+                <option value="St Lucia">St Lucia</option>
+                <option value="Bonaire">Bonaire</option>
+                <option value="Martinique">Martinique</option>
+                <option value="St Barthelem">St Barthelem</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Grenada">Grenada</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Cayman">Cayman</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                <option value="Bermuda">Bermuda</option>
             </select>
         </div>
         <div class="m-l-50">
@@ -76,6 +106,12 @@
                 <option value="Centros comerciales">Centros comerciales</option>
                 <option value="Educación">Educación</option>
                 <option value="Retail">Retail</option>
+                <option value="Salud">Salud</option>
+                <option value="Aeropuertos">Aeropuertos</option>
+                <option value="Plazas públicas">Plazas públicas</option>
+                <option value="Transportes">Transportes</option>
+                <option value="Hotelería / Restaurantes">Hotelería / Restaurantes</option>
+                <option value="Manufactura">Manufactura</option>
             </select>
         </div>
         <div class="m-l-50">
