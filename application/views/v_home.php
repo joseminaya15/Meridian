@@ -24,7 +24,7 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <nav class="navbar navbar-default">
+        <!-- <nav class="navbar navbar-default">
             <div class="container-fluid js-container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -60,10 +60,11 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
+        <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
         <section id="principal">
             <div class="js-container">
-                <div class="js-contenido">
+                <!-- <div class="js-contenido">
                     <div class="js-contenido__left">
                         <h2>Partners del Programa Meridian Engage</h2>
                         <p>Si usted está creando una app m&oacute;vil desde cero, comenzando con un Meridian AppMaker, o integrando datos de servicios de ubicaci&oacute;n en una plataforma existente, nuestros partners de clase mundial est&aacute;n aqu&iacute; para ayudarle.</p>
@@ -107,39 +108,49 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="js-cards hola">
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/zoox.png" alt="">
                             </div>
-                            <div class="js-card--partner__contenido">
-                                <p>ZOOX se dedica específicamente a brindar soluciones innovadoras a través de la conectividad de WIFI, brindando Social login a través de redes sociales, permitiendo generar campañas de promoción, videos publicitarios, encuestas, encuestas NPS, recolectar data de los usuarios (BigData), people analytics, heatmap, flowmap, etc. Y todo esto utilizando la infraestructura ya instalada de Access Points.</p>
-                                <!-- <a href="">Alcance</a> -->
+                            <div class="js-hide">
+                                <div class="js-card--partner__contenido">
+                                    <p>ZOOX se dedica específicamente a brindar soluciones innovadoras a través de la conectividad de WIFI, brindando Social login a través de redes sociales, permitiendo generar campañas de promoción, videos publicitarios, encuestas, encuestas NPS, recolectar data de los usuarios (BigData), people analytics, heatmap, flowmap, etc. Y todo esto utilizando la infraestructura ya instalada de Access Points.</p>
+                                    <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                </div>
+                                <div class="js-card--partner__footer">
+                                    <div class="col-sm-9 col-xs-8 p-l-0">
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Comercial</p>
+                                            <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                                        </div>
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Técnico</p>
+                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-email"></i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-12 p-0 js-card--partner__footer">
-                                <div class="col-sm-9 col-xs-8 p-l-0">
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Comercial</p>
-                                        <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
-                                    </div>
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Técnico</p>
-                                        <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-email"></i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-chat"></i>
-                                    </button>
-                                </div>
+                            <div class="js-card--partner__button">
+                                <button id="buttonzoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                    <i class="mdi mdi-arrow_downward"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
+                            <div class="text-right">
+                                <button id="hidezoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
+                            </div>
                             <h2>Alcance de la Soluci&oacute;n</h2>
                             <table class="table">
                                 <tbody>
@@ -148,20 +159,12 @@
                                         <td><i class="mdi mdi-done"></i></td>
                                     </tr>
                                     <tr>
-                                        <td>Analítica</td>
-                                        <td><i class="mdi mdi-close"></i></td>
-                                    </tr>
-                                    <tr>
                                         <td>Marketing</td>
                                         <td><i class="mdi mdi-done"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Integración</td>
                                         <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reportes</td>
-                                        <td><i class="mdi mdi-close"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Monitoreo infraestructura</td>
@@ -186,34 +189,45 @@
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/elun.png" alt="">
+                                <img id="idelun" src="<?php echo RUTA_IMG?>logo/elun.png" alt="" onclick="showCard(this.id)">
                             </div>
-                            <div class="js-card--partner__contenido">
-                                <p>SINÓPTICO es una plataforma móvil de monitoreo oportuna y simple, de indicadores relativos al conteo de personas y estadísticas relacionadas. La aplicación está orientado a usuarios de Banca, Retail, Minería e Industria que requieran conocer la cantidad de personas que se encuentran en los espacios de su compañía.</p>
-                            </div>
-                            <div class="col-xs-12 p-0 js-card--partner__footer">
-                                <div class="col-sm-9 col-xs-8 p-l-0">
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Comercial</p>
-                                        <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                            <div class="js-hide">
+                                <div class="js-card--partner__contenido">
+                                    <p>SINÓPTICO es una plataforma móvil de monitoreo oportuna y simple, de indicadores relativos al conteo de personas y estadísticas relacionadas. La aplicación está orientado a usuarios de Banca, Retail, Minería e Industria que requieran conocer la cantidad de personas que se encuentran en los espacios de su compañía.</p>
+                                    <a id="showelun" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                </div>
+                                <div class="col-xs-12 p-0 js-card--partner__footer">
+                                    <div class="col-sm-9 col-xs-8 p-l-0">
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Comercial</p>
+                                            <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                                        </div>
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Técnico</p>
+                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                        </div>
                                     </div>
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Técnico</p>
-                                        <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                    <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-email"></i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-chat"></i>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-email"></i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-chat"></i>
-                                    </button>
-                                </div>
+                            </div>
+                            <div class="js-card--partner__button">
+                                <button id="buttonelun" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                    <i class="mdi mdi-arrow_downward"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
                             <div class="js-card--par">
+                                <div class="text-right">
+                                    <button id="hideelun" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
+                                </div>
                                 <h2>Alcance de la Soluci&oacute;n</h2>
                                 <table class="table">
                                     <tbody>
@@ -222,20 +236,12 @@
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
-                                            <td>Analítica</td>
-                                            <td><i class="mdi mdi-close"></i></td>
-                                        </tr>
-                                        <tr>
                                             <td>Marketing</td>
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Integración</td>
                                             <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Reportes</td>
-                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -261,33 +267,44 @@
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
-                                <img src="<?php echo RUTA_IMG?>logo/datawifi.png" alt="">
+                                <img id="iddatawifi" src="<?php echo RUTA_IMG?>logo/datawifi.png" alt="" onclick="showCard(this.id)">
                             </div>
-                            <div class="js-card--partner__contenido">
-                                <p>DataWifi es la plataforma de alta capacidad para soluciones de Autenticación, Análisis y Marketing más usada en Colombia, nuestra tecnología utiliza las redes Wi-Fi para Atraer, retener y recompensar a sus consumidores.</p>
-                            </div>
-                            <div class="col-xs-12 p-0 js-card--partner__footer">
-                                <div class="col-sm-9 col-xs-8 p-l-0">
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Comercial</p>
-                                        <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                            <div class="js-hide">
+                                <div class="js-card--partner__contenido">
+                                    <p>DataWifi es la plataforma de alta capacidad para soluciones de Autenticación, Análisis y Marketing más usada en Colombia, nuestra tecnología utiliza las redes Wi-Fi para Atraer, retener y recompensar a sus consumidores.</p>
+                                    <a id="showdatawifi" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                </div>
+                                <div class="col-xs-12 p-0 js-card--partner__footer">
+                                    <div class="col-sm-9 col-xs-8 p-l-0">
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Comercial</p>
+                                            <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                                        </div>
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Técnico</p>
+                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                        </div>
                                     </div>
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Técnico</p>
-                                        <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                    <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-email"></i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-chat"></i>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-email"></i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-chat"></i>
-                                    </button>
-                                </div>
+                            </div>
+                            <div class="js-card--partner__button">
+                                <button id="buttondatawifi" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                    <i class="mdi mdi-arrow_downward"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
+                            <div class="text-right">
+                                <button id="hidedatawifi" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
+                            </div>
                             <h2>Alcance de la Soluci&oacute;n</h2>
                             <table class="table">
                                 <tbody>
@@ -296,20 +313,12 @@
                                         <td><i class="mdi mdi-done"></i></td>
                                     </tr>
                                     <tr>
-                                        <td>Analítica</td>
-                                        <td><i class="mdi mdi-close"></i></td>
-                                    </tr>
-                                    <tr>
                                         <td>Marketing</td>
                                         <td><i class="mdi mdi-done"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Integración</td>
                                         <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Reportes</td>
-                                        <td><i class="mdi mdi-close"></i></td>
                                     </tr>
                                     <tr>
                                         <td>Monitoreo infraestructura</td>
@@ -331,37 +340,48 @@
                             </table>
                         </div>
                     </div>
-                    <div class="js-card--partner js-card--partner2">
+                    <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/skyfii.png" alt="">
                             </div>
-                            <div class="js-card--partner__contenido">
-                                <p>Skyfii es una plataforma analítica para redes WiFi que recoge datos y analiza el comportamiento de los visitantes en lugares con WiFi público. Estos datos se utilizan para agrupar a los visitantes basados en sus intereses y facilitar la comunicación a través de canales de comunicación como vídeo, correo electrónico o SMS.</p>
+                            <div class="js-hide">
+                                <div class="js-card--partner__contenido">
+                                    <p>Skyfii es una plataforma analítica para redes WiFi que recoge datos y analiza el comportamiento de los visitantes en lugares con WiFi público. Estos datos se utilizan para agrupar a los visitantes basados en sus intereses y facilitar la comunicación a través de canales de comunicación como vídeo, correo electrónico o SMS.</p>
+                                    <a id="showskyfii" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                </div>
+                                <div class="col-xs-12 p-0 js-card--partner__footer">
+                                    <div class="col-sm-9 col-xs-8 p-l-0">
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Comercial</p>
+                                            <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                                        </div>
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Técnico</p>
+                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-email"></i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-12 p-0 js-card--partner__footer">
-                                <div class="col-sm-9 col-xs-8 p-l-0">
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Comercial</p>
-                                        <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
-                                    </div>
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Técnico</p>
-                                        <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-email"></i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-chat"></i>
-                                    </button>
-                                </div>
+                            <div class="js-card--partner__button">
+                                <button id="buttonskyfii" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                    <i class="mdi mdi-arrow_downward"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
                             <div class="js-card--par">
+                                <div class="text-right">
+                                    <button id="hideskifii" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
+                                </div>
                                 <h2>Alcance de la Soluci&oacute;n</h2>
                                 <table class="table">
                                     <tbody>
@@ -370,20 +390,12 @@
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
-                                            <td>Analítica</td>
-                                            <td><i class="mdi mdi-close"></i></td>
-                                        </tr>
-                                        <tr>
                                             <td>Marketing</td>
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Integración</td>
                                             <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Reportes</td>
-                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -406,37 +418,48 @@
                             </div>
                         </div>
                     </div>
-                    <div class="js-card--partner js-card--partner2">
+                    <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/ohmyfi.png" alt="">
                             </div>
-                            <div class="js-card--partner__contenido">
-                                <p>Convierte el WiFi gratis que ofreces a tus clientes en estrategias de venta, comunicación, fidelización y entretenimiento, logrando así aumentar tus ventas promedio, tiempo de permanencia, atrae nuevos clientes y fideliza a los actuales sacándole todo el provecho al Internet en tus puntos de venta.</p>
+                            <div class="js-hide">
+                                <div class="js-card--partner__contenido">
+                                    <p>Convierte el WiFi gratis que ofreces a tus clientes en estrategias de venta, comunicación, fidelización y entretenimiento, logrando así aumentar tus ventas promedio, tiempo de permanencia, atrae nuevos clientes y fideliza a los actuales sacándole todo el provecho al Internet en tus puntos de venta.</p>
+                                    <a id="showohmyfi" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                </div>
+                                <div class="col-xs-12 p-0 js-card--partner__footer">
+                                    <div class="col-sm-9 col-xs-8 p-l-0">
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Comercial</p>
+                                            <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                                        </div>
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Técnico</p>
+                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-email"></i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-12 p-0 js-card--partner__footer">
-                                <div class="col-sm-9 col-xs-8 p-l-0">
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Comercial</p>
-                                        <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
-                                    </div>
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Técnico</p>
-                                        <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-email"></i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-chat"></i>
-                                    </button>
-                                </div>
+                            <div class="js-card--partner__button">
+                                <button id="buttonohmyfi" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                    <i class="mdi mdi-arrow_downward"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
                             <div class="js-card--par">
+                                <div class="text-right">
+                                    <button id="hideohmyfi" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
+                                </div>
                                 <h2>Alcance de la Soluci&oacute;n</h2>
                                 <table class="table">
                                     <tbody>
@@ -445,20 +468,12 @@
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
-                                            <td>Analítica</td>
-                                            <td><i class="mdi mdi-close"></i></td>
-                                        </tr>
-                                        <tr>
                                             <td>Marketing</td>
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Integración</td>
                                             <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Reportes</td>
-                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -481,37 +496,48 @@
                             </div>
                         </div>
                     </div>
-                    <div class="js-card--partner js-card--partner2">
+                    <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/lab3.png" alt="">
                             </div>
-                            <div class="js-card--partner__contenido">
-                                <p>Las soluciones de Lab3 están diseñadas para promover la integración real entre los datos, la infraestructura y los dispositivos del usuario, creando un entorno verdaderamente de movilidad centrado en la productividad, la seguridad y la experiencia del usuario. BYOD, usuarios móviles, redes programables, BLE y UX son el foco de nuestros productos.</p>
+                            <div class="js-hide">
+                                <div class="js-card--partner__contenido">
+                                    <p>Las soluciones de Lab3 están diseñadas para promover la integración real entre los datos, la infraestructura y los dispositivos del usuario, creando un entorno verdaderamente de movilidad centrado en la productividad, la seguridad y la experiencia del usuario. BYOD, usuarios móviles, redes programables, BLE y UX son el foco de nuestros productos.</p>
+                                    <a id="showlab3" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                </div>
+                                <div class="col-xs-12 p-0 js-card--partner__footer">
+                                    <div class="col-sm-9 col-xs-8 p-l-0">
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Comercial</p>
+                                            <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
+                                        </div>
+                                        <div class="js-card--footer__texto">
+                                            <p>Contacto Técnico</p>
+                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-email"></i>
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-chat"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-12 p-0 js-card--partner__footer">
-                                <div class="col-sm-9 col-xs-8 p-l-0">
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Comercial</p>
-                                        <a href="mailto:marcelo.cardenuto@skyfii.com">marcelo.cardenuto@skyfii.com</a>
-                                    </div>
-                                    <div class="js-card--footer__texto">
-                                        <p>Contacto Técnico</p>
-                                        <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-email"></i>
-                                    </button>
-                                    <button class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="mdi mdi-chat"></i>
-                                    </button>
-                                </div>
+                            <div class="js-card--partner__button">
+                                <button id="buttonlab3" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                    <i class="mdi mdi-arrow_downward"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="js-card--partner__back">
                             <div class="js-card--par">
+                                <div class="text-right">
+                                    <button id="hidelab3" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
+                                </div>
                                 <h2>Alcance de la Soluci&oacute;n</h2>
                                 <table class="table">
                                     <tbody>
@@ -520,20 +546,12 @@
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
-                                            <td>Analítica</td>
-                                            <td><i class="mdi mdi-close"></i></td>
-                                        </tr>
-                                        <tr>
                                             <td>Marketing</td>
                                             <td><i class="mdi mdi-done"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Integración</td>
                                             <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Reportes</td>
-                                            <td><i class="mdi mdi-close"></i></td>
                                         </tr>
                                         <tr>
                                             <td>Monitoreo infraestructura</td>
@@ -559,7 +577,7 @@
                 </div>
             </div>
         </section>
-
+        <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;">
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
