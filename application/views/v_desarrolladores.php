@@ -337,7 +337,7 @@
 							  </div>
 							</div>
 						  </fieldset>
-						  <button type="button" class="btn btn-primary" onclick="guardarDatosDeps()">Guardar</button>
+						  <button type="button" class="btn btn-primary btn-guadar-deps" onclick="guardarDatosDeps()">Guardar</button>
 						</form>
 				    </div>
     			</div>
