@@ -105,3 +105,12 @@ function limpiarCampos(){
 	$('#pais').val("0");
 	$('.selectpicker').selectpicker('refresh');
 }
+function guardarDatosDeps(){
+	arrayIds = [];
+	$(".checks input").each(function (){
+		console.log($('#'+this.id).val());
+       // if ($(this.checked)==true){ 
+       //      arrayIds.push()
+       //  }
+    }) 	
+}
