@@ -168,176 +168,176 @@
 						    <legend>Multiples idiomas</legend>
 						    <div class="form-check">
 						      <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						      <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion1" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Multiples portales</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4">
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion2" maxlength="50">
 							  </div>
 							</div>
 						    <legend>E-mail de Bienvenido</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios5" value="option5" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios6" value="option6" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion3" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Modelos de portales predefinidos</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios7" value="option7" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios8" value="option8" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion4" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Configurables</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios9" value="option9" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios10" value="option10" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion5" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Portal responsivo</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios11" value="option11" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios12" value="option12" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion6" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Bienvenido de vuelta</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios13" value="option13" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios14" value="option14" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion7" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Perfil Progresivo</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check ">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios15" value="option15" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios16" value="option16" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion8" maxlength="50">
 							  </div>
 							</div>
 						    <legend>Preguntas Personalizadas</legend>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios17" value="option17" >
 						        Sí
 						      </label>
 						    </div>
-						    <div class="form-check disabled">
+						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios18" value="option18" >
 						        No
 						      </label>
 						    </div>
 						    <div class="form-group row">
 							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
 							  <div class="col-xs-5">
-							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							    <input class="form-control" type="text" placeholder="Observación" id="observacion9" maxlength="50">
 							  </div>
 							</div>
 						  </fieldset>
-						  <button type="submit" class="btn btn-primary">Submit</button>
+						  <button type="submit" class="btn btn-primary">Guardar</button>
 						</form>
 				    </div>
     			</div>
