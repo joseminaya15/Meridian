@@ -68,7 +68,7 @@
             </select>
         </div>
         <div class="m-l-50">
-            <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical" onchange="cargarCaracteristica()">
+            <select class="selectpicker" id="vertical" title="Typically your Vertical">
                 <?php echo $vertical ?>
             </select>
         </div>
