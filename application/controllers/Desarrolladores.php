@@ -20,12 +20,13 @@ class Desarrolladores extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $empresa  = $_POST('empresa');
-            $gerente  = $_POST('gerente');
-            $cont_com = $_POST('cont_com');
-            $cont_tec = $_POST('cont_tec');
-            $url      = $_POST('url');
-            $telefono = $_POST('telefono');
+            $empresa  = $this->input->post('empresa');
+            $gerente  = $this->input->post('gerente');
+            $cont_com = $this->input->post('cont_com');
+            $cont_tec = $this->input->post('cont_tec');
+            $url      = $this->input->post('url');
+            $telefono = $this->input->post('telefono');
+            $id_pais  = $this->input->post('id_pais');
             $arrInserDep = array('Empresa' => $empresa,
                                  'Descripcion' => '',
                                  'imagen' => '');
@@ -36,7 +37,7 @@ class Desarrolladores extends CI_Controller {
                                  'pagina'         => $url,
                                  'id_deps'        => $insetDep['Id'],
                                  'id_vertical'    => '',
-                                 'id_pais'        => 1);
+                                 'id_pais'        => intval($id_pais));
             $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){

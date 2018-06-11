@@ -5,8 +5,13 @@ function guardarDesarrolladores(){
 	var cont_tec = $('#cont_tecnico').val();
 	var url 	 = $('#url').val();
 	var telefono = $('#telefono').val();
+	var pais 	 = $('#pais').val();
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese el nombre de su empresa');
+		return;
+	}
+	if(pais == '' || pais == null){
+		msj('error', 'Ingrese el país de su empresa');
 		return;
 	}
 	if(gerente == '' || gerente == null){
@@ -44,7 +49,8 @@ function guardarDesarrolladores(){
 				cont_com : cont_com,
 				cont_tec : cont_tec,
 				url 	 : url,
-				telefono : telefono},
+				telefono : telefono,
+				id_pais  : pais.toString()},
 		url  : 'desarrolladores/guardarDesarrolladores',
 		type : 'POST'
 	}).done(function(data){
@@ -96,4 +102,6 @@ function limpiarCampos(){
 	$('#cont_tecnico').val("");
 	$('#url').val("");
 	$('#telefono').val("");
+	$('#pais').val("0");
+	$('.selectpicker').selectpicker('refresh');
 }
