@@ -76,19 +76,19 @@
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-2 col-form-label">Gerente</label>
 				  <div class="col-10">
-				    <input class="form-control" type="text" placeholder="Nombre del gerente" id="gerente">
+				    <input class="form-control" type="text" placeholder="Nombre del gerente" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-2 col-form-label">Contacto Comercial</label>
 				  <div class="col-10">
-				    <input class="form-control" type="text" placeholder="Nombre del contacto comercial" id="cont_comercial">
+				    <input class="form-control" type="email" placeholder="Email del contacto comercial" id="cont_comercial">
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-2 col-form-label">Contacto técnico</label>
 				  <div class="col-10">
-				    <input class="form-control" type="text" placeholder="Nombre del contacto técnico" id="cont_tecnico">
+				    <input class="form-control" type="email" placeholder="Email del contacto técnico" id="cont_tecnico">
 				  </div>
 				</div>
 				<div class="form-group row">
@@ -98,19 +98,13 @@
 				  </div>
 				</div>
 				<div class="form-group row">
-				  <label for="example-email-input" class="col-2 col-form-label">Email</label>
+				  <label for="example-tel-input" class="col-2 col-form-label">Teléfono</label>
 				  <div class="col-10">
-				    <input class="form-control" type="email" placeholder="user@example.com" id="email">
+				    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono" onchange="validarCampos()">
 				  </div>
 				</div>
 				<div class="form-group row">
-				  <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
-				  <div class="col-10">
-				    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono">
-				  </div>
-				</div>
-				<div class="form-group row">
-					<button class="mdl-button mdl-js-button btn-primary" onclick="guardarDesarrolladores()">
+					<button class="mdl-button mdl-js-button btn-primary btn-guardar" onclick="guardarDesarrolladores()">
 	                    Guardar
 	                </button>
             	</div>
@@ -126,7 +120,7 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsutils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>index.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>desarroladores.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
