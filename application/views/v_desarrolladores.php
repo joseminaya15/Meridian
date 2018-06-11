@@ -168,13 +168,13 @@
 						    <legend>Multiples idiomas</legend>
 						    <div class="form-check">
 						      <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="option1">
+						        <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="Multiples idiomas">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						      <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios2" value="option2">
+						        <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios2" value="">
 						        No
 						      </label>
 						    </div>
@@ -187,13 +187,13 @@
 						    <legend>Multiples portales</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="option3">
+						        <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="Multiples portales">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios4" value="option4">
+						        <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios4" value="">
 						        No
 						      </label>
 						    </div>
@@ -206,13 +206,13 @@
 						    <legend>E-mail de Bienvenido</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios5" value="option5">
+						        <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios5" value="E-mail de Bienvenido">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios6" id="optionsRadios6" value="option6">
+						        <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios6" value="">
 						        No
 						      </label>
 						    </div>
@@ -225,13 +225,13 @@
 						    <legend>Modelos de portales predefinidos</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios7" value="option7">
+						        <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios7" value="Modelos de portales predefinidos">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios8" id="optionsRadios8" value="option8">
+						        <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios8" value="">
 						        No
 						      </label>
 						    </div>
@@ -244,13 +244,13 @@
 						    <legend>Configurables</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios9" value="option9">
+						        <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios9" value="Configurables">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios10" id="optionsRadios10" value="option10">
+						        <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios10" value="">
 						        No
 						      </label>
 						    </div>
@@ -263,13 +263,13 @@
 						    <legend>Portal responsivo</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios11" id="optionsRadios11" value="option11">
+						        <input type="radio" class="form-check-input" name="optionsRadios11" id="optionsRadios11" value="Portal responsivo">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios12" id="optionsRadios12" value="option12">
+						        <input type="radio" class="form-check-input" name="optionsRadios11" id="optionsRadios12" value="">
 						        No
 						      </label>
 						    </div>
@@ -282,13 +282,13 @@
 						    <legend>Bienvenido de vuelta</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios13" id="optionsRadios13" value="option13">
+						        <input type="radio" class="form-check-input" name="optionsRadios13" id="optionsRadios13" value="Bienvenido de vuelta">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios14" id="optionsRadios14" value="option14">
+						        <input type="radio" class="form-check-input" name="optionsRadios13" id="optionsRadios14" value="">
 						        No
 						      </label>
 						    </div>
@@ -301,13 +301,13 @@
 						    <legend>Perfil Progresivo</legend>
 						    <div class="form-check ">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios15" id="optionsRadios15" value="option15">
+						        <input type="radio" class="form-check-input" name="optionsRadios15" id="optionsRadios15" value="Perfil Progresivo">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios16" id="optionsRadios16" value="option16">
+						        <input type="radio" class="form-check-input" name="optionsRadios15" id="optionsRadios16" value="">
 						        No
 						      </label>
 						    </div>
@@ -320,13 +320,13 @@
 						    <legend>Preguntas Personalizadas</legend>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios17" value="option17">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios17" value="Preguntas Personalizadas">
 						        Sí
 						      </label>
 						    </div>
 						    <div class="form-check">
 						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios18" value="option18">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios17" value="">
 						        No
 						      </label>
 						    </div>
