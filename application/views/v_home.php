@@ -68,13 +68,14 @@
             </select>
         </div>
         <div class="m-l-50">
-            <select class="selectpicker" id="vertical" title="Typically your Vertical">
+            <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical">
                 <?php echo $vertical ?>
             </select>
         </div>
         <div class="m-l-50">
-            <select class="selectpicker" multiple data-live-search="true" title="Choose the characteristic...">
-              <optgroup label="Analítica">
+            <select class="selectpicker" multiple="multiple"  data-live-search="true" title="Choose the characteristic...">
+                <?php echo $caracter ?>  
+              <!-- <optgroup label="Analítica">
                 <option value="Captura datos demográficos">Captura datos demográficos</option>
                 <option value="Perfil">Perfil</option>
                 <option value="Presencia">Presencia</option>
@@ -102,7 +103,7 @@
                 <option value="RTLS (ALE)">RTLS (ALE)</option>
                 <option value="API de entrada de datos">API de entrada de datos</option>
                 <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
-              </optgroup>
+              </optgroup> -->
             </select>
         </div>
         <section id="principal">

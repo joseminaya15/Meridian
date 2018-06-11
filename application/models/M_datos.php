@@ -33,14 +33,24 @@ class M_datos extends  CI_Model{
     function getVertical() {
         $sql = "SELECT * 
                   FROM vertical
-              ORDER BY nombre ASC;";
+              ORDER BY nombre ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
     function getCaract(){
-        // $sql ="" ;
-        // $return = $this->db->query($sql);
-        // return $result->result();
+        $sql = "SELECT * 
+                  FROM caracteristicas
+              ORDER BY name_caract ASC" ;
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getDetalleCaract ($id) {
+        $sql = "SELECT *
+                  FROM detalle_caract
+                 WHERE id_caract = ".$id."
+              ORDER BY tipo ASC";
+        $result = $this->db->query($sql);
+        return $result->result();
     }
 
 //_________________________________________________________________

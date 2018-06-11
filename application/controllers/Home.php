@@ -18,7 +18,7 @@ class Home extends CI_Controller {
         $data['vertical'] = '';
         $datosPaises      = $this->M_datos->getPais();
         $datosVertical    = $this->M_datos->getVertical();
-        // $datosCarac       = $this->M_datos->getCaract();
+        $datosCarac       = $this->M_datos->getCaract();
         $optionPaises     = '';
         $optionVertical   = '';
         $optionCarac      = '';
@@ -28,9 +28,14 @@ class Home extends CI_Controller {
         foreach ($datosVertical as $key) {
             $optionVertical .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
         }
-        // foreach ($datosCarac as $key) {
-        //     $optionCarac .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
-        // }
+        foreach ($datosCarac as $key) {
+            $detalleCarac = $this->M_datos->getDetalleCaract($key->Id);
+            $optionCarac .= '<optgroup label="'.$key->name_caract.'">';
+            foreach ($detalleCarac as $value) {
+                $optionCarac .= '<option value="'.$key->Id.', '.$value->Id.'">'.$value->tipo.'</option>';
+            }
+            $optionCarac .= '</optgroup>';
+        }
         $data['paises']   = $optionPaises;
         $data['vertical'] = $optionVertical;
         $data['caracter'] = $optionCarac;
