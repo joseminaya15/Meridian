@@ -25,6 +25,8 @@ function guardarDesarrolladores(){
 	if (!validateEmail(cont_com)){
 		$('#cont_comercial').css('border-color','red');
 		return;
+	}else {
+		$('#cont_comercial').css('border-color','');
 	}
 	if(cont_tec == '' || cont_tec == null){
 		msj('error', 'Ingrese el Email de su contacto técnico');
@@ -33,6 +35,8 @@ function guardarDesarrolladores(){
 	if (!validateEmail(cont_tec)){
 		$('#cont_tecnico').css('border-color','red');
 		return;
+	}else {
+		$('#cont_tecnico').css('border-color','');
 	}
 	if(url == '' || url == null){
 		msj('error', 'Ingrese la url de su página web');
