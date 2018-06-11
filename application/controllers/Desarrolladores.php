@@ -17,6 +17,31 @@ class Desarrolladores extends CI_Controller {
 		$this->load->view('v_desarrolladores');
 	}
     function guardarDesarrolladores(){
-        
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $empresa  = $_POST('empresa');
+            $gerente  = $_POST('gerente');
+            $cont_com = $_POST('cont_com');
+            $cont_tec = $_POST('cont_tec');
+            $url      = $_POST('url');
+            $telefono = $_POST('telefono');
+            $arrInserDep = array('Empresa' => $empresa,
+                                 'Descripcion' => '',
+                                 'imagen' => '');
+            $insetDep = $this->M_datos->insertarDatos($arrInserDep, 'desarrolladores');
+            $arrayInsert = array('gerente'        => $gerente,
+                                 'cont_comercial' => $cont_com,
+                                 'cont_tecnico'   => $cont_tec,
+                                 'pagina'         => $url,
+                                 'id_deps'        => $insetDep['Id'],
+                                 'id_vertical'    => '',
+                                 'id_pais'        => 1);
+            $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
+            $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
     }
 }
