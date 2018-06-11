@@ -64,92 +64,283 @@
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
         <section id="principal">
             <div class="js-container">
-            	<div class="title">
-            		<h3>DATOS PERSONALES:</h3>
-            	</div>
-            	<div class="form-group row">
-				  <label for="example-text-input" class="col-2 col-form-label">Empresa</label>
-				  <div class="col-10">
-				    <input class="form-control" type="text" placeholder="Nombre de la empresa" id="empresa">
-				  </div>
-				</div>
-				<div class="form-group row">
-					<label for="example-text-input" class="col-2 col-form-label">País</label>
-					<div class="col-10">
-						<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
-			                <option value="1">Dominican Republic</option>
-	                        <option value="2">Puerto Rico</option>
-	                        <option value="3">Panam&aacute;</option>
-	                        <option value="4">Costa Rica</option>
-	                        <option value="5">Guatemala</option>
-	                        <option value="6">El Salvador</option>
-	                        <option value="7">Nicaragua</option>
-	                        <option value="8">Honduras</option>
-	                        <option value="9">Haiti</option>
-	                        <option value="10">Aruba</option>
-	                        <option value="11">Curacao</option>
-	                        <option value="12">Guyana</option>
-	                        <option value="13">Netherlands Antilles</option>
-	                        <option value="14">St. Kitts & Nevis</option>
-	                        <option value="15">St. Maarten</option>
-	                        <option value="16">St Vincent & Grenadines</option>
-	                        <option value="17">Suriname</option>
-	                        <option value="18">Virgin Islands (U.S)</option>
-	                        <option value="19">Antigua & Bermuda</option>
-	                        <option value="20">Virgin Islands (British)</option>
-	                        <option value="21">Belize</option>
-	                        <option value="22">Turks & Caicos</option>
-	                        <option value="23">Dominica</option>
-	                        <option value="24">St Lucia</option>
-	                        <option value="25">Bonaire</option>
-	                        <option value="26">Martinique</option>
-	                        <option value="27">St Barthelem</option>
-	                        <option value="28">Anguilla</option>
-	                        <option value="29">Grenada</option>
-	                        <option value="30">Bahamas</option>
-	                        <option value="31">Barbados</option>
-	                        <option value="32">Cayman</option>
-	                        <option value="33">Jamaica</option>
-	                        <option value="34">Trinidad & Tobago</option>
-	                        <option value="35">Bermuda</option>
-			            </select>
-					</div>
-		        </div>
-				<div class="form-group row">
-				  <label for="example-text-input" class="col-2 col-form-label">Gerente</label>
-				  <div class="col-10">
-				    <input class="form-control" type="text" placeholder="Nombre del gerente" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
-				  </div>
-				</div>
-				<div class="form-group row">
-				  <label for="example-text-input" class="col-2 col-form-label">Contacto Comercial</label>
-				  <div class="col-10">
-				    <input class="form-control" type="email" placeholder="Email del contacto comercial" id="cont_comercial">
-				  </div>
-				</div>
-				<div class="form-group row">
-				  <label for="example-text-input" class="col-2 col-form-label">Contacto técnico</label>
-				  <div class="col-10">
-				    <input class="form-control" type="email" placeholder="Email del contacto técnico" id="cont_tecnico">
-				  </div>
-				</div>
-				<div class="form-group row">
-				  <label for="example-url-input" class="col-2 col-form-label">URL</label>
-				  <div class="col-10">
-				    <input class="form-control" type="url" placeholder="URL de su página web" id="url">
-				  </div>
-				</div>
-				<div class="form-group row">
-				  <label for="example-tel-input" class="col-2 col-form-label">Teléfono</label>
-				  <div class="col-10">
-				    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono">
-				  </div>
-				</div>
-				<div class="form-group row">
-					<button class="mdl-button mdl-js-button btn-primary btn-guardar" onclick="guardarDesarrolladores()">
-	                    Guardar
-	                </button>
-            	</div>
+            	<ul class="nav nav-tabs" role="tablist">
+				    <li class="nav-item">
+				      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+				    </li>
+				</ul>
+            	<div class="tab-content">
+    				<div id="home" class="container tab-pane active"><br>
+    					<div class="title">
+		            		<h3>DATOS PERSONALES:</h3>
+		            	</div>
+		            	<div class="form-group row">
+						  <label for="example-text-input" class="col-2 col-form-label">Empresa</label>
+						  <div class="col-10">
+						    <input class="form-control" type="text" placeholder="Nombre de la empresa" id="empresa">
+						  </div>
+						</div>
+						<div class="form-group row">
+							<label for="example-text-input" class="col-2 col-form-label">País</label>
+							<div class="col-10">
+								<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
+					                <option value="1">Dominican Republic</option>
+			                        <option value="2">Puerto Rico</option>
+			                        <option value="3">Panam&aacute;</option>
+			                        <option value="4">Costa Rica</option>
+			                        <option value="5">Guatemala</option>
+			                        <option value="6">El Salvador</option>
+			                        <option value="7">Nicaragua</option>
+			                        <option value="8">Honduras</option>
+			                        <option value="9">Haiti</option>
+			                        <option value="10">Aruba</option>
+			                        <option value="11">Curacao</option>
+			                        <option value="12">Guyana</option>
+			                        <option value="13">Netherlands Antilles</option>
+			                        <option value="14">St. Kitts & Nevis</option>
+			                        <option value="15">St. Maarten</option>
+			                        <option value="16">St Vincent & Grenadines</option>
+			                        <option value="17">Suriname</option>
+			                        <option value="18">Virgin Islands (U.S)</option>
+			                        <option value="19">Antigua & Bermuda</option>
+			                        <option value="20">Virgin Islands (British)</option>
+			                        <option value="21">Belize</option>
+			                        <option value="22">Turks & Caicos</option>
+			                        <option value="23">Dominica</option>
+			                        <option value="24">St Lucia</option>
+			                        <option value="25">Bonaire</option>
+			                        <option value="26">Martinique</option>
+			                        <option value="27">St Barthelem</option>
+			                        <option value="28">Anguilla</option>
+			                        <option value="29">Grenada</option>
+			                        <option value="30">Bahamas</option>
+			                        <option value="31">Barbados</option>
+			                        <option value="32">Cayman</option>
+			                        <option value="33">Jamaica</option>
+			                        <option value="34">Trinidad & Tobago</option>
+			                        <option value="35">Bermuda</option>
+					            </select>
+							</div>
+				        </div>
+						<div class="form-group row">
+						  <label for="example-text-input" class="col-2 col-form-label">Gerente</label>
+						  <div class="col-10">
+						    <input class="form-control" type="text" placeholder="Nombre del gerente" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="example-text-input" class="col-2 col-form-label">Contacto Comercial</label>
+						  <div class="col-10">
+						    <input class="form-control" type="email" placeholder="Email del contacto comercial" id="cont_comercial">
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="example-text-input" class="col-2 col-form-label">Contacto técnico</label>
+						  <div class="col-10">
+						    <input class="form-control" type="email" placeholder="Email del contacto técnico" id="cont_tecnico">
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="example-url-input" class="col-2 col-form-label">URL</label>
+						  <div class="col-10">
+						    <input class="form-control" type="url" placeholder="URL de su página web" id="url">
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="example-tel-input" class="col-2 col-form-label">Teléfono</label>
+						  <div class="col-10">
+						    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono">
+						  </div>
+						</div>
+						<div class="form-group row">
+							<button class="mdl-button mdl-js-button btn-primary btn-guardar" onclick="guardarDesarrolladores()">
+			                    Guardar
+			                </button>
+		            	</div>
+    				</div>
+    				<div id="menu1" class="container tab-pane fade"><br>
+				      <form>
+				      	  <h3>Portales Cautivos</h3>
+						  <fieldset class="form-group">
+						    <legend>Multiples idiomas</legend>
+						    <div class="form-check">
+						      <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check">
+						      <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Multiples portales</legend>
+						    <div class="form-check">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>E-mail de Bienvenido</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Modelos de portales predefinidos</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Configurables</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Portal responsivo</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Bienvenido de vuelta</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Perfil Progresivo</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						    <legend>Preguntas Personalizadas</legend>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        Sí
+						      </label>
+						    </div>
+						    <div class="form-check disabled">
+						    <label class="form-check-label">
+						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+						        No
+						      </label>
+						    </div>
+						    <div class="form-group row">
+							  <label for="example-text-input" class="col-xs-12 col-form-label">Observacion</label>
+							  <div class="col-xs-5">
+							    <input class="form-control" type="text" placeholder="Nombre del gerente" id="observacion" maxlength="50">
+							  </div>
+							</div>
+						  </fieldset>
+						  <button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+				    </div>
+    			</div>
             </div>
         </section>
         <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;">

@@ -27,9 +27,9 @@ class Desarrolladores extends CI_Controller {
             $url      = $this->input->post('url');
             $telefono = $this->input->post('telefono');
             $id_pais  = $this->input->post('id_pais');
-            $arrInserDep = array('Empresa' => $empresa,
+            $arrInserDep = array('Empresa'     => $empresa,
                                  'Descripcion' => '',
-                                 'imagen' => '');
+                                 'imagen'      => '');
             $insetDep = $this->M_datos->insertarDatos($arrInserDep, 'desarrolladores');
             $arrayInsert = array('gerente'        => $gerente,
                                  'cont_comercial' => $cont_com,
