@@ -111,13 +111,14 @@ function limpiarCampos(){
 }
 function guardarDatosDeps(){
 	arrayIds = [];
-	$(".js-radio input").each(function (){
+	$(".js-radio label").each(function (){
 		//console.log($('#'+this.id).parents().find('legend').text());
-		console.log($('.mdl-radio').has('is-checked'));
-       /*if ($(this.checked)==true){ 
-            // arrayIds.push($('#'+this.id).val())
-            console.log($('#'+this.id).val());
-        }*/
+		// console.log($('.mdl-radio').has('is-checked'));
+		console.log(this);
+       // if ($(this.checked)==true){ 
+       //      // arrayIds.push($('#'+this.id).val())
+       //      console.log($('#'+this.id).val());
+       //  }
     })
     $('.btn-guardar-deps').prop("disabled", true);
 }
