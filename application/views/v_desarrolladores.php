@@ -81,47 +81,44 @@
 							<label for="empresa">Nombre de la empresa</label>
 							<input type="text" id="empresa">
 						</div>
-						<div class="form-group row">
-							<label for="example-text-input" class="col-2 col-form-label">País</label>
-							<div class="col-10">
-								<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
-					                <option value="1">Dominican Republic</option>
-			                        <option value="2">Puerto Rico</option>
-			                        <option value="3">Panam&aacute;</option>
-			                        <option value="4">Costa Rica</option>
-			                        <option value="5">Guatemala</option>
-			                        <option value="6">El Salvador</option>
-			                        <option value="7">Nicaragua</option>
-			                        <option value="8">Honduras</option>
-			                        <option value="9">Haiti</option>
-			                        <option value="10">Aruba</option>
-			                        <option value="11">Curacao</option>
-			                        <option value="12">Guyana</option>
-			                        <option value="13">Netherlands Antilles</option>
-			                        <option value="14">St. Kitts & Nevis</option>
-			                        <option value="15">St. Maarten</option>
-			                        <option value="16">St Vincent & Grenadines</option>
-			                        <option value="17">Suriname</option>
-			                        <option value="18">Virgin Islands (U.S)</option>
-			                        <option value="19">Antigua & Bermuda</option>
-			                        <option value="20">Virgin Islands (British)</option>
-			                        <option value="21">Belize</option>
-			                        <option value="22">Turks & Caicos</option>
-			                        <option value="23">Dominica</option>
-			                        <option value="24">St Lucia</option>
-			                        <option value="25">Bonaire</option>
-			                        <option value="26">Martinique</option>
-			                        <option value="27">St Barthelem</option>
-			                        <option value="28">Anguilla</option>
-			                        <option value="29">Grenada</option>
-			                        <option value="30">Bahamas</option>
-			                        <option value="31">Barbados</option>
-			                        <option value="32">Cayman</option>
-			                        <option value="33">Jamaica</option>
-			                        <option value="34">Trinidad & Tobago</option>
-			                        <option value="35">Bermuda</option>
-					            </select>
-							</div>
+						<div class="col-xs-12 js-input js-select">
+							<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
+				                <option value="1">Dominican Republic</option>
+		                        <option value="2">Puerto Rico</option>
+		                        <option value="3">Panam&aacute;</option>
+		                        <option value="4">Costa Rica</option>
+		                        <option value="5">Guatemala</option>
+		                        <option value="6">El Salvador</option>
+		                        <option value="7">Nicaragua</option>
+		                        <option value="8">Honduras</option>
+		                        <option value="9">Haiti</option>
+		                        <option value="10">Aruba</option>
+		                        <option value="11">Curacao</option>
+		                        <option value="12">Guyana</option>
+		                        <option value="13">Netherlands Antilles</option>
+		                        <option value="14">St. Kitts & Nevis</option>
+		                        <option value="15">St. Maarten</option>
+		                        <option value="16">St Vincent & Grenadines</option>
+		                        <option value="17">Suriname</option>
+		                        <option value="18">Virgin Islands (U.S)</option>
+		                        <option value="19">Antigua & Bermuda</option>
+		                        <option value="20">Virgin Islands (British)</option>
+		                        <option value="21">Belize</option>
+		                        <option value="22">Turks & Caicos</option>
+		                        <option value="23">Dominica</option>
+		                        <option value="24">St Lucia</option>
+		                        <option value="25">Bonaire</option>
+		                        <option value="26">Martinique</option>
+		                        <option value="27">St Barthelem</option>
+		                        <option value="28">Anguilla</option>
+		                        <option value="29">Grenada</option>
+		                        <option value="30">Bahamas</option>
+		                        <option value="31">Barbados</option>
+		                        <option value="32">Cayman</option>
+		                        <option value="33">Jamaica</option>
+		                        <option value="34">Trinidad & Tobago</option>
+		                        <option value="35">Bermuda</option>
+				            </select>
 				        </div>
 						<div class="col-xs-12 js-input">
 						  	<label for="gerente">Nombre del gerente</label>
@@ -131,23 +128,17 @@
 						  	<label for="cont_comercial">Email del contacto comercial</label>
 						    <input type="email" id="cont_comercial">
 						</div>
-						<div class="form-group row">
-						  <label for="example-text-input" class="col-2 col-form-label">Contacto técnico</label>
-						  <div class="col-10">
-						    <input class="form-control" type="email" placeholder="Email del contacto técnico" id="cont_tecnico">
-						  </div>
+						<div class="col-xs-12 js-input">
+					 	 	<label for="cont_tecnico" class="col-2 col-form-label">Email del contacto t&eacute;cnico</label>
+						    <input type="email" id="cont_tecnico">
 						</div>
-						<div class="form-group row">
-						  <label for="example-url-input" class="col-2 col-form-label">URL</label>
-						  <div class="col-10">
-						    <input class="form-control" type="url" placeholder="URL de su página web" id="url">
-						  </div>
+						<div class="col-xs-12 js-input">
+						  	<label for="url" class="col-2 col-form-label">URL de su p&aacute;gina web</label>
+						    <input type="url" id="url">
 						</div>
-						<div class="form-group row">
-						  <label for="example-tel-input" class="col-2 col-form-label">Teléfono</label>
-						  <div class="col-10">
-						    <input class="form-control" type="tel" placeholder="1-(555)-555-5555" id="telefono">
-						  </div>
+						<div class="col-xs-12 js-input">
+						  	<label for="telefono" class="col-2 col-form-label">Teléfono</label>
+						    <input type="tel" id="telefono">
 						</div>
 						<div class="form-group row">
 							<button class="mdl-button mdl-js-button btn-primary btn-guardar" onclick="guardarDesarrolladores()">
