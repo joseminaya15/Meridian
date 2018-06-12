@@ -111,12 +111,13 @@ function limpiarCampos(){
 }
 function guardarDatosDeps(){
 	arrayIds = [];
-	$(".checks input").each(function (){
+	$(".js-radio input").each(function (){
 		//console.log($('#'+this.id).parents().find('legend').text());
-       if ($(this.checked)==true){ 
+		console.log($('.mdl-radio').has('is-checked'));
+       /*if ($(this.checked)==true){ 
             // arrayIds.push($('#'+this.id).val())
             console.log($('#'+this.id).val());
-        }
+        }*/
     })
     $('.btn-guardar-deps').prop("disabled", true);
 }
