@@ -557,6 +557,29 @@
                 </div>
             </div>
         </section>
+        <footer class="section">
+            <div class="js-container">
+                <div class="col-sm-4">
+                    <h2>S&iacute;ganos</h2>
+                    <ul>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-8">
+                    <div class="col-sm-4">
+                        
+                    </div>
+                    <div class="col-sm-4">
+                        
+                    </div>
+                    <div class="col-sm-4">
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
         <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;"> -->
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
