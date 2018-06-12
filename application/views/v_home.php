@@ -64,6 +64,7 @@
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
         <section id="principal">
             <div class="js-container">
+                <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
                 <div class="js-flex">
                     <div class="js-input js-select">
                         <select class="selectpicker" multiple="multiple" id="pais" title="Typically your Country" onchange="buscarPais()" >
