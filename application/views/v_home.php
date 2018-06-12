@@ -62,98 +62,26 @@
             </div>
         </nav> -->
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
-        <div class="m-l-50 text-left">
-            <select class="selectpicker" id="pais" title="Typically your Country">
-                <?php echo $paises?>
-            </select>
-        </div>
-        <div class="m-l-50">
-            <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical">
-                <?php echo $vertical ?>
-            </select>
-        </div>
-        <div class="m-l-50">
-            <select class="selectpicker" multiple="multiple"  data-live-search="true" title="Choose the characteristic...">
-                <?php echo $caracter ?>  
-              <!-- <optgroup label="Analítica">
-                <option value="Captura datos demográficos">Captura datos demográficos</option>
-                <option value="Perfil">Perfil</option>
-                <option value="Presencia">Presencia</option>
-              </optgroup>
-              <optgroup label="Marketing">
-                <option value="Analizar comportamiento de clientes">Analizar comportamiento de clientes</option>
-                <option value="Desplegar campañas de publicidad">Desplegar campañas de publicidad</option>
-                <option value="Segmentación de clientes">Segmentación de clientes</option>
-              </optgroup>
-              <optgroup label="Integración">
-                <option value="Integración con Beacons genéricos">Integración con Beacons genéricos</option>
-                <option value="Integración con Beacons Aruba Meridian">Integración con Beacons Aruba Meridian</option>
-                <option value="Rastreo de activos">Rastreo de activos</option>
-                <option value="Wayfinding & Mapping">Wayfinding & Mapping</option>
-              </optgroup>
-              <optgroup label="Reportes">
-                <option value="Reportes Históricos">Reportes Históricos</option>
-              </optgroup>
-              <optgroup label="Monitoreo Infraestructura">
-                <option value="Monitor de Infraestructura WiFi (SNMP, Polling, ICMP)">Monitor de Infraestructura WiFi (SNMP, Polling, ICMP)</option>
-              </optgroup>
-              <optgroup label="Adquisición de datos">
-                <option value="Portal Cautivo">Portal Cautivo</option>
-                <option value="Servicios de presencia (ALE)">Servicios de presencia (ALE)</option>
-                <option value="RTLS (ALE)">RTLS (ALE)</option>
-                <option value="API de entrada de datos">API de entrada de datos</option>
-                <option value="Integración con Aruba Clearpass">Integración con Aruba Clearpass</option>
-              </optgroup> -->
-            </select>
-        </div>
         <section id="principal">
             <div class="js-container">
-                <!-- <div class="js-contenido">
-                    <div class="js-contenido__left">
-                        <h2>Partners del Programa Meridian Engage</h2>
-                        <p>Si usted está creando una app m&oacute;vil desde cero, comenzando con un Meridian AppMaker, o integrando datos de servicios de ubicaci&oacute;n en una plataforma existente, nuestros partners de clase mundial est&aacute;n aqu&iacute; para ayudarle.</p>
+                <div class="js-flex">
+                    <div class="js-input js-select">
+                        <select class="selectpicker" id="pais" title="Typically your Country">
+                            <?php echo $paises?>
+                        </select>
                     </div>
-                    <div class="js-contenido__right">
-                        <div class="js-contenido--imagen">
-                            <img src="<?php echo RUTA_IMG?>fondo/fondo_meridian.jpg" alt="">
-                        </div>
-                        <div class="js-contenido--texto">
-                            <p>Cont&aacute;ctenos para conocer m&aacute;s</p>
-                            <div class="js-contenido--filtro">
-                                <div class="js-select">
-                                    <select class="selectpicker" title="Por cobertura geográfica" id="geografia" onchange="filtroGeografia()">
-                                        <option value="">Por cobertura geográfica</option>
-                                        <option value="Latinoamérica">Latinoam&eacute;rica</option>
-                                        <option value="Colombia">Colombia</option>
-                                        <option value="Panamá">Panam&aacute;</option>
-                                        <option value="Américas">Am&eacute;ricas</option>
-                                        <option value="Ecuador">Ecuador</option>
-                                        <option value="Brasil">Brasil</option>
-                                        <option value="Remoto">Remoto</option>
-                                    </select>
-                                </div>
-                                <div class="js-select">
-                                    <select class="selectpicker" title="Por indutria" id="industria" onchange="filtrarIndustria()">
-                                        <option value="">Por indutria</option>
-                                        <option value="Centros Comerciales">Centros Comerciales</option>
-                                        <option value="Educación">Educaci&oacute;n</option>
-                                        <option value="Retail">Retail</option>
-                                        <option value="Salud">Salud</option>
-                                        <option value="Aeropuertos">Aeropuertos</option>
-                                        <option value="Plazas públicas">Plazas p&uacute;blicas</option>
-                                        <option value="Transportes">Transportes</option>
-                                        <option value="Hotelería / Restaurantes">Hoteler&iacute;a / Restaurantes</option>
-                                        <option value="Manufactura">Manufactura</option>
-                                    </select>
-                                </div>
-                                <button class="mdl-button mdl-js-button mdl-button--icon" onclick="buscarPartners()">
-                                    <i class="mdi mdi-search"></i>
-                                </button>   
-                            </div>
-                        </div>
+                    <div class="js-input js-select">
+                        <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical">
+                            <?php echo $vertical ?>
+                        </select>
                     </div>
-                </div> -->
-                <div class="js-cards hola">
+                    <div class="js-input js-select">
+                        <select class="selectpicker" multiple="multiple"  data-live-search="true" title="Choose the characteristic...">
+                            <?php echo $caracter ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="js-cards">
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">

@@ -104,6 +104,8 @@ body
 	font-family $regular
 	color #000000
 	background-color #FFFFFF
+.js-flex
+	flexCenter()
 .js-idioma
 	.btn-group
 		width 100% !important
@@ -172,7 +174,7 @@ body
 		border 1px solid #000000
 		position relative
 		.js-hide
-			height 0
+			height 100px
 			overflow hidden
 			&.js-height
 				height 100%
@@ -249,51 +251,6 @@ body
 				-moz-transition -moz-transform 0.3s, opacity 0.3s
 				transition transform 0.3s, opacity 0.3s
 				color #FFFFFF
-			&.effect1
-				.js-card--partner__front
-					opacity 0
-				.js-card--partner__back
-					opacity 1
-					-webkit-transform translate(15px, 15px)
-					-moz-transform translate(15px, 15px)
-					-ms-transform translate(15px, 15px)
-					transform translate(15px, 15px)
-					z-index 10
-		&.js-card--partner2
-			overflow hidden
-			.js-card--partner__front
-				-webkit-transition -webkit-transform 0.4s
-				-moz-transition -moz-transform 0.4s
-				transition transform 0.4s
-			.js-card--partner__back
-				height 100%
-				width 100%
-				opacity 0
-				-webkit-transform-origin 0 0
-				-moz-transform-origin 0 0
-				transform-origin 0 0
-				-webkit-transform rotateY(-90deg)
-				-moz-transform-origin rotateY(-90deg)
-				transform rotateY(-90deg)
-				-webkit-transition -webkit-transform 0.4s, opacity 0.1s 0.3s
-				-moz-transition -moz-transform 0.4s, opacity 0.1s 0.3s
-				transition transform 0.4s, opacity 0.1s 0.3s
-			&.effect4
-				.js-card--partner__front
-					-webkit-transform translateX(25%)
-					-moz-transform translateX(25%)
-					-ms-transform translateX(25%)
-					transform translateX(25%)
-					opacity 0
-				.js-card--partner__back
-					opacity 1
-					-webkit-transform rotateY(0deg)
-					-moz-transform rotateY(0deg)
-					-ms-transform rotateY(0deg)
-					transform rotateY(0deg)
-					-webkit-transition -webkit-transform 0.4s, opacity 0.1s
-					-moz-transition -webkit-transform 0.4s, opacity 0.1s
-					transition -webkit-transform 0.4s, opacity 0.1s
 .js-contenido--filtro
 	flexCenter()
 	margin 20px 0 30px 0
@@ -320,16 +277,77 @@ body
 		flexCenter()
 		height 70px
 		border-left 1px solid #000000
-.table
-	&>tbody
-		&>tr
-			&>td
-				padding 3px 0
-				vertical-align middle
-				border-top 1px solid #FFFFFF
-				font-family $medium
-.js-select
-	margin-right 20px
+.js-input
+	padding 7px 20px
+	height 72px
+	border 1px solid rgba(0,0,0,0.15)
+	background-color #FFFFFF
+	margin-bottom -1px
+	color #333333
+	margin 15px
+	&.js-date
+		height 100%
+		padding 5px 20px
+		.js-icon
+			width 100%
+			max-width 36px
+			text-align center
+	&.js-radio
+		height 100%
+		.mdl-radio
+			width 100%
+			.mdl-radio__inner-circle
+				background $default
+			&.is-checked
+				.mdl-radio__outer-circle
+					border 2px solid $default
+			.mdl-radio__ripple-container 
+				.mdl-ripple
+					background $default
+	&.js-select
+		padding 0
+		height 100%
+		.bootstrap-select
+			.dropdown-toggle
+				padding 14px 24px
+				border-radius 0
+				box-shadow none
+				background-color transparent
+			.dropdown-menu
+				background-color rgba(248, 248, 248, 0.95)
+				border-radius 0
+				margin 0 
+				padding 0
+				&.open
+					margin 0
+					padding 0
+					li
+						a
+							padding 6px 20px
+							&:hover
+								background-color rgba(221,221,221,0.5)
+	label
+		font-family $light
+		color #666666
+		cursor pointer
+	input
+		display block
+		height 36px
+		width 100%
+		border none
+		font-size 16px
+		&:focus
+			outline 0
+	&.input-focused
+		background-color #FFFFFF
+	.bootstrap-select
+		width 100% !important
+		.dropdown-toggle
+			border none !important
+			padding 6px 0
+			selectTransparent()
+			&:focus
+				outline: 0 !important
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
