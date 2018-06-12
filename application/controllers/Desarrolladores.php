@@ -14,16 +14,30 @@ class Desarrolladores extends CI_Controller {
     }
 
 	public function index(){
-      $html = '';
-      $cont = 1;
-      $cont1 = '';
-      $nombre = '';
+      $html      = '';
+      $cont      = 1;
+      $cont1     = '';
+      $titulo    = '';
+      $html_titu = '';
+      $i         = 1;
       $datos = $this->M_datos->getCaracteristicas();
+      $nombre = $datos[0]->name_caract;
       foreach ($datos as $key) {
           $cont1 = $cont+1;
           $h3    = '';
-          $nombre = $key->name_caract;
-          $html .= '<h3>'.$key->tipo.'</h3>
+          if($nombre == $key->name_caract){
+            if($i == 1){
+              $h3 = '<h3 class="text-center">'.$key->name_caract.'</h3>';
+            }
+            $i = 2;
+          }
+          if($nombre != $key->name_caract) {
+            $nombre = $key->name_caract;
+            $h3 = '';
+            $i = 1;
+          }
+          $html .= '  '.$h3.'
+                      <h3>'.$key->tipo.'</h3>
                       <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
                         <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->tipo.'">
                         <span class="mdl-radio__label">Sí</span>

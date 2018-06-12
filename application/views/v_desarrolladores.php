@@ -163,7 +163,6 @@
     				</div>
     				<div id="menu1" class="container tab-pane fade"><br>
 				      <form>
-				      	  <h3 class="text-center">Portales Cautivos</h3>
 						  <fieldset class="form-group checks">
 						  	<?php echo $html ?>
 						    <!-- <h3>Multiples idiomas</h3>
