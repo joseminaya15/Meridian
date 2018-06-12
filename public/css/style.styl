@@ -167,6 +167,7 @@ body
 	justify-content center
 	.js-card--partner
 		// transitionHeight()
+		box-shadow 5px 5px 10px rgba(0, 0, 0, 0.2)
 		background-color #FFFFFF
 		max-width 340px
 		width 100%
@@ -348,6 +349,26 @@ body
 			selectTransparent()
 			&:focus
 				outline: 0 !important
+.js-button
+	margin 10px 0
+	text-transform initial
+	font-family $medium
+	color #FFFFFF
+	text-decoration none
+	background-color $default !important
+	border-radius 0
+	font-size 18px
+	box-shadow none
+	border 2px solid $default
+	margin 5px
+	border-radius 4px
+	line-height 30px
+	&:hover
+		color #FFFFFF
+		text-decoration none
+	&.js-button--default
+		background-color transparent !important
+		color #000000
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px

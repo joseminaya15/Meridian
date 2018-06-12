@@ -549,7 +549,15 @@
                 </div>
             </div>
         </section>
-        <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;">
+        <section id="contacto" class="section">
+            <div class="js-container">
+                <div class="js-contacto text-center">
+                   <h2>¿Eres desarrollador, quieres ser parte de nuestro programa&#63;</h2>
+                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">P&oacute;ngase en contacto con nosotros</a>
+                </div>
+            </div>
+        </section>
+        <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;"> -->
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
