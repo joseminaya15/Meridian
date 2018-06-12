@@ -27,7 +27,7 @@ class Desarrolladores extends CI_Controller {
           $h3    = '';
           if($nombre == $key->name_caract){
             if($i == 1){
-              $h3 = '<h3 class="text-center">'.$key->name_caract.'</h3>';
+              $h3 = '<div class="col-xs-12"><h3 class="text-center">'.$key->name_caract.'</h3></div>';
             }
             $i = 2;
           }
@@ -36,7 +36,8 @@ class Desarrolladores extends CI_Controller {
             $h3 = '';
             $i = 1;
           }
-          $html .= '  '.$h3.'
+          $html .= ''.$h3.'
+                    <div class="col-sm-6 col-xs-12">
                       <div class="col-xs-12 js-input js-radio">
                           <label>'.$key->tipo.'</label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
@@ -51,7 +52,8 @@ class Desarrolladores extends CI_Controller {
                       <div class="col-xs-12 js-input">
                           <label for="observacion1">Observacion</label>
                           <input type="text" id="observacion1" maxlength="50">
-                      </div>';
+                      </div>
+                    </div>';
           $cont++;
       }
       $data['html'] = $html;
