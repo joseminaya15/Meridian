@@ -136,10 +136,8 @@
 						  	<label for="telefono" class="col-2 col-form-label">Teléfono</label>
 						    <input type="tel" id="telefono">
 						</div>
-						<div class="form-group row">
-							<button class="mdl-button mdl-js-button btn-primary btn-guardar" onclick="guardarDesarrolladores()">
-			                    Guardar
-			                </button>
+						<div class="col-xs-12 text-right">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores()">Guardar</button>
 		            	</div>
     				</div>
     				<div id="menu1" class="tab-pane fade"><br>
