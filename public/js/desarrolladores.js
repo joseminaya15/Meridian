@@ -112,7 +112,14 @@ function limpiarCampos(){
 function guardarDatosDeps(){
 	arrayIds = [];
 	$(".js-radio .is-checked").each(function (){
-		console.log(this);
-	})
+		var isChecked    = $(this);
+		var labelChecked = isChecked.find('.mdl-radio__label');
+		var textChecked = isChecked.find('.mdl-radio__label').text()
+		if(textChecked == 'Sí'){
+			var valChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
+			var idChecked = $('#'+valChecked).val();
+			console.log(idChecked);
+		}
+    })
     $('.btn-guardar-deps').prop("disabled", true);
 }
