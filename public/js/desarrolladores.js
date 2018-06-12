@@ -111,14 +111,8 @@ function limpiarCampos(){
 }
 function guardarDatosDeps(){
 	arrayIds = [];
-	$(".js-radio label").each(function (){
-		//console.log($('#'+this.id).parents().find('legend').text());
-		// console.log($('.mdl-radio').has('is-checked'));
+	$(".js-radio .is-checked").each(function (){
 		console.log(this);
-       // if ($(this.checked)==true){ 
-       //      // arrayIds.push($('#'+this.id).val())
-       //      console.log($('#'+this.id).val());
-       //  }
-    })
+	})
     $('.btn-guardar-deps').prop("disabled", true);
 }
