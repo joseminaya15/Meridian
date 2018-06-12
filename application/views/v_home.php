@@ -557,30 +557,64 @@
                 </div>
             </div>
         </section>
-        <footer class="section">
+        <footer class="js-section col-xs-12">
             <div class="js-container">
-                <div class="col-sm-4">
-                    <h2>S&iacute;ganos</h2>
-                    <ul>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
+                <div class="js-contendo col-xs-12">
+                    <div class="col-sm-4">
+                        <h2>S&Iacute;GANOS</h2>
+                        <ul class="js-redes">
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="col-sm-4">
+                            <h2>EMPRESA</h2>
+                            <ul>
+                                <li><a href="">Acerca de nosotros</a></li>
+                                <li><a href="">Empleo</a></li>
+                                <li><a href="">P&oacute;ngase en contacto con nostros</a></li>
+                                <li><a href="">Multimedia</a></li>
+                                <li><a href="">Notas de prensa</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h2>EXPERIMENTE</h2>
+                            <ul>
+                                <li><a href="" target="_blank">Comunidad Airheads</a></li>
+                                <li><a href="" target="_blank">Blogs</a></li>
+                                <li><a href="" target="_blank">Casos pr&aacute;cticos</a></li>
+                                <li><a href="" target="_blank">Eventos</a></li>
+                                <li><a href="" target="_blank">Partner Ready for Networking</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h2>SERVICIO T&Eacute;CNICO</h2>
+                            <ul>
+                                <li><a href="" target="_blank">Contacte servicio t&eacute;cnico</a></li>
+                                <li><a href="" target="_blank">Abrir un caso</a></li>
+                                <li><a href="" target="_blank">Servicios profesionales</a></li>
+                                <li><a href="" target="_blank">Inicio de sesi&oacute;n con licencia</a></li>
+                                <li><a href="" target="_blank">Aruba Solution Exchange</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <div class="col-sm-4">
-                        
+                <div class="js-footer col-xs-12">
+                    <div class="col-sm-7 js-politicas">
+                        <a href="">Pol&iacute;tica de privacidad</a>
+                        <a href="">Condiciones del servicio</a>
+                        <a href="">Cookies</a>
+                        <a href="">Mapa del sitio</a>
+                        <a href="">Avisos legales</a>
                     </div>
-                    <div class="col-sm-4">
-                        
-                    </div>
-                    <div class="col-sm-4">
-                        
+                    <div class="col-sm-5">
+                        <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;"> -->
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>

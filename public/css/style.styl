@@ -107,8 +107,13 @@ body
 	background-color #FFFFFF
 label
 	font-weight 100
+a
+	text-decoration none !important
 .js-flex
 	flexCenter()
+.js-section
+	position relative
+	padding 40px 20px
 .js-idioma
 	.btn-group
 		width 100% !important
@@ -372,6 +377,39 @@ label
 	&.js-button--default
 		background-color transparent !important
 		color #000000
+footer
+	background-color #F3F3F4
+	h2
+		font-size 14px
+		font-family $medium
+		margin 10px 0
+		color #646569
+	p
+		font-size 12px
+		text-align right
+	ul
+		margin 0
+		padding 0
+		&.js-redes
+			flexCenter()
+			li
+				margin 10px 15px
+				a
+					i
+						font-size 30px
+						color #646569
+		li
+			list-style none
+			a
+				color #646569
+				font-family $regular
+	.js-footer
+		margin-top 50px
+		.js-politicas
+			a
+				font-size 12px
+				padding 0 5px
+				color #646569
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
