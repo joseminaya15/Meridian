@@ -22,7 +22,15 @@ class M_datos extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
-
+    function getCaracteristicas(){
+        $sql = "SELECT dc.tipo,
+                       c.name_caract
+                  FROM detalle_caract dc,
+                       caracteristicas c
+                 WHERE dc.id_caract = c.Id";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
     function getPais(){
         $sql = "SELECT * 
                   FROM pais

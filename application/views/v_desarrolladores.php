@@ -163,21 +163,10 @@
     				</div>
     				<div id="menu1" class="container tab-pane fade"><br>
 				      <form>
-				      	  <h3>Portales Cautivos</h3>
+				      	  <h3 class="text-center">Portales Cautivos</h3>
 						  <fieldset class="form-group checks">
-						    <legend>Multiples idiomas</legend>
-						    <!-- <div class="form-check">
-						      <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="Multiples idiomas">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						      <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios2" value="">
-						        No
-						      </label>
-						    </div> -->
+						  	<?php echo $html ?>
+						    <!-- <h3>Multiples idiomas</h3>
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios1">
 							  <input type="radio" id="optionsRadios1" class="mdl-radio__button" name="optionsRadios1" value="Multiples idiomas">
 							  <span class="mdl-radio__label">Sí</span>
@@ -193,18 +182,6 @@
 							  </div>
 							</div>
 						    <legend>Multiples portales</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="Multiples portales">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios4" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios3">
 							  <input type="radio" id="optionsRadios3" class="mdl-radio__button" name="optionsRadios3" value="Multiples idiomas">
 							  <span class="mdl-radio__label">Sí</span>
@@ -220,18 +197,7 @@
 							  </div>
 							</div>
 						    <legend>E-mail de Bienvenido</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios5" value="E-mail de Bienvenido">
-						        Sí
-						      </label>
 						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios6" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios5">
 							  <input type="radio" id="optionsRadios5" class="mdl-radio__button" name="optionsRadios5" value="E-mail de Bienvenido">
 							  <span class="mdl-radio__label">Sí</span>
@@ -247,18 +213,6 @@
 							  </div>
 							</div>
 						    <legend>Modelos de portales predefinidos</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios7" value="Modelos de portales predefinidos">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios8" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios7">
 							  <input type="radio" id="optionsRadios7" class="mdl-radio__button" name="optionsRadios7" value="Modelos de portales predefinidos">
 							  <span class="mdl-radio__label">Sí</span>
@@ -274,18 +228,6 @@
 							  </div>
 							</div>
 						    <legend>Configurables</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios9" value="Configurables">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios10" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios9">
 							  <input type="radio" id="optionsRadios9" class="mdl-radio__button" name="optionsRadios9" value="Configurables">
 							  <span class="mdl-radio__label">Sí</span>
@@ -301,18 +243,7 @@
 							  </div>
 							</div>
 						    <legend>Portal responsivo</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios11" id="optionsRadios11" value="Portal responsivo">
-						        Sí
-						      </label>
 						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios11" id="optionsRadios12" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios11">
 							  <input type="radio" id="optionsRadios11" class="mdl-radio__button" name="optionsRadios11" value="Portal responsivo">
 							  <span class="mdl-radio__label">Sí</span>
@@ -328,18 +259,6 @@
 							  </div>
 							</div>
 						    <legend>Bienvenido de vuelta</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios13" id="optionsRadios13" value="Bienvenido de vuelta">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios13" id="optionsRadios14" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios13">
 							  <input type="radio" id="optionsRadios13" class="mdl-radio__button" name="optionsRadios13" value="Bienvenido de vuelta">
 							  <span class="mdl-radio__label">Sí</span>
@@ -355,18 +274,6 @@
 							  </div>
 							</div>
 						    <legend>Perfil Progresivo</legend>
-						    <!-- <div class="form-check ">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios15" id="optionsRadios15" value="Perfil Progresivo">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios15" id="optionsRadios16" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios15">
 							  <input type="radio" id="optionsRadios15" class="mdl-radio__button" name="optionsRadios15" value="Perfil Progresivo">
 							  <span class="mdl-radio__label">Sí</span>
@@ -382,18 +289,6 @@
 							  </div>
 							</div>
 						    <legend>Preguntas Personalizadas</legend>
-						    <!-- <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios17" value="Preguntas Personalizadas">
-						        Sí
-						      </label>
-						    </div>
-						    <div class="form-check">
-						    <label class="form-check-label">
-						        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios17" value="">
-						        No
-						      </label>
-						    </div> -->
 						    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios17">
 							  <input type="radio" id="optionsRadios17" class="mdl-radio__button" name="optionsRadios17" value="Preguntas Personalizadas">
 							  <span class="mdl-radio__label">Sí</span>
@@ -407,7 +302,7 @@
 							  <div class="col-xs-5">
 							    <input class="form-control" type="text" placeholder="Observación" id="observacion9" maxlength="50">
 							  </div>
-							</div>
+							</div> -->
 						  </fieldset>
 						  <button type="button" class="btn btn-primary btn-guadar-deps" onclick="guardarDatosDeps()">Guardar</button>
 						</form>
