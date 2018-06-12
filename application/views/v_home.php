@@ -90,7 +90,7 @@
                             <div class="js-hide">
                                 <div class="js-card--partner__contenido">
                                     <p>ZOOX se dedica específicamente a brindar soluciones innovadoras a través de la conectividad de WIFI, brindando Social login a través de redes sociales, permitiendo generar campañas de promoción, videos publicitarios, encuestas, encuestas NPS, recolectar data de los usuarios (BigData), people analytics, heatmap, flowmap, etc. Y todo esto utilizando la infraestructura ya instalada de Access Points.</p>
-                                    <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                    <!-- <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
                                 </div>
                                 <div class="js-card--partner__footer">
                                     <div class="col-sm-9 col-xs-8 p-l-0">
@@ -166,7 +166,7 @@
                             <div class="js-hide">
                                 <div class="js-card--partner__contenido">
                                     <p>SINÓPTICO es una plataforma móvil de monitoreo oportuna y simple, de indicadores relativos al conteo de personas y estadísticas relacionadas. La aplicación está orientado a usuarios de Banca, Retail, Minería e Industria que requieran conocer la cantidad de personas que se encuentran en los espacios de su compañía.</p>
-                                    <a id="showelun" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                    <!-- <a id="showelun" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
                                 </div>
                                 <div class="col-xs-12 p-0 js-card--partner__footer">
                                     <div class="col-sm-9 col-xs-8 p-l-0">
@@ -244,7 +244,7 @@
                             <div class="js-hide">
                                 <div class="js-card--partner__contenido">
                                     <p>DataWifi es la plataforma de alta capacidad para soluciones de Autenticación, Análisis y Marketing más usada en Colombia, nuestra tecnología utiliza las redes Wi-Fi para Atraer, retener y recompensar a sus consumidores.</p>
-                                    <a id="showdatawifi" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                    <!-- <a id="showdatawifi" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
                                 </div>
                                 <div class="col-xs-12 p-0 js-card--partner__footer">
                                     <div class="col-sm-9 col-xs-8 p-l-0">
@@ -398,7 +398,7 @@
                             <div class="js-hide">
                                 <div class="js-card--partner__contenido">
                                     <p>Convierte el WiFi gratis que ofreces a tus clientes en estrategias de venta, comunicación, fidelización y entretenimiento, logrando así aumentar tus ventas promedio, tiempo de permanencia, atrae nuevos clientes y fideliza a los actuales sacándole todo el provecho al Internet en tus puntos de venta.</p>
-                                    <a id="showohmyfi" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                    <!-- <a id="showohmyfi" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
                                 </div>
                                 <div class="col-xs-12 p-0 js-card--partner__footer">
                                     <div class="col-sm-9 col-xs-8 p-l-0">
@@ -476,7 +476,7 @@
                             <div class="js-hide">
                                 <div class="js-card--partner__contenido">
                                     <p>Las soluciones de Lab3 están diseñadas para promover la integración real entre los datos, la infraestructura y los dispositivos del usuario, creando un entorno verdaderamente de movilidad centrado en la productividad, la seguridad y la experiencia del usuario. BYOD, usuarios móviles, redes programables, BLE y UX son el foco de nuestros productos.</p>
-                                    <a id="showlab3" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a>
+                                    <!-- <a id="showlab3" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
                                 </div>
                                 <div class="col-xs-12 p-0 js-card--partner__footer">
                                     <div class="col-sm-9 col-xs-8 p-l-0">
