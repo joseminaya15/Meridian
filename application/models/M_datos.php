@@ -23,7 +23,8 @@ class M_datos extends  CI_Model{
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
     function getCaracteristicas(){
-        $sql = "SELECT dc.tipo,
+        $sql = "SELECT dc.Id,
+                       dc.tipo,
                        c.name_caract
                   FROM detalle_caract dc,
                        caracteristicas c

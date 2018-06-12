@@ -41,11 +41,11 @@ class Desarrolladores extends CI_Controller {
                       <div class="col-xs-12 js-input js-radio">
                           <label>'.$key->tipo.'</label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
-                              <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->tipo.'">
+                              <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
                               <span class="mdl-radio__label">Sí</span>
                           </label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont1.'">
-                              <input type="radio" id="optionsRadios'.$cont1.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="">
+                              <input type="radio" id="optionsRadios'.$cont1.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
                               <span class="mdl-radio__label">No</span>
                           </label>
                       </div>
@@ -54,7 +54,7 @@ class Desarrolladores extends CI_Controller {
                           <input type="text" id="observacion1" maxlength="50">
                       </div>
                     </div>';
-          $cont++;
+          $cont = $cont1+1;
       }
       $data['html'] = $html;
 		$this->load->view('v_desarrolladores', $data);
