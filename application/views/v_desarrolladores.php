@@ -77,11 +77,9 @@
     					<div class="title">
 		            		<h3>DATOS PERSONALES:</h3>
 		            	</div>
-		            	<div class="form-group row">
-						  <label for="example-text-input" class="col-2 col-form-label">Empresa</label>
-						  <div class="col-10">
-						    <input class="form-control" type="text" placeholder="Nombre de la empresa" id="empresa">
-						  </div>
+		            	<div class="col-xs-12 js-input">
+							<label for="empresa">Nombre de la empresa</label>
+							<input type="text" id="empresa">
 						</div>
 						<div class="form-group row">
 							<label for="example-text-input" class="col-2 col-form-label">País</label>
@@ -125,17 +123,13 @@
 					            </select>
 							</div>
 				        </div>
-						<div class="form-group row">
-						  <label for="example-text-input" class="col-2 col-form-label">Gerente</label>
-						  <div class="col-10">
-						    <input class="form-control" type="text" placeholder="Nombre del gerente" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
-						  </div>
+						<div class="col-xs-12 js-input">
+						  	<label for="gerente">Nombre del gerente</label>
+							<input type="text" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
 						</div>
-						<div class="form-group row">
-						  <label for="example-text-input" class="col-2 col-form-label">Contacto Comercial</label>
-						  <div class="col-10">
-						    <input class="form-control" type="email" placeholder="Email del contacto comercial" id="cont_comercial">
-						  </div>
+						<div class="col-xs-12 js-input">
+						  	<label for="cont_comercial">Email del contacto comercial</label>
+						    <input type="email" id="cont_comercial">
 						</div>
 						<div class="form-group row">
 						  <label for="example-text-input" class="col-2 col-form-label">Contacto técnico</label>
