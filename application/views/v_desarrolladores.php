@@ -73,7 +73,7 @@
 				    </li>
 				</ul>
             	<div class="tab-content">
-    				<div id="home" class="container tab-pane active"><br>
+    				<div id="home" class="tab-pane fade in active"><br>
     					<div class="title">
 		            		<h3>DATOS PERSONALES:</h3>
 		            	</div>
@@ -146,7 +146,7 @@
 			                </button>
 		            	</div>
     				</div>
-    				<div id="menu1" class="container tab-pane fade"><br>
+    				<div id="menu1" class="tab-pane fade"><br>
 				      <form>
 						  <fieldset class="form-group checks">
 						  	<?php echo $html ?>
