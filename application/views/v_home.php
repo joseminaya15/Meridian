@@ -66,17 +66,17 @@
             <div class="js-container">
                 <div class="js-flex">
                     <div class="js-input js-select">
-                        <select class="selectpicker" id="pais" title="Typically your Country">
+                        <select class="selectpicker" multiple="multiple" id="pais" title="Typically your Country" onchange="buscarPais()" >
                             <?php echo $paises?>
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical">
+                        <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical" onchange="buscarVertical();">
                             <?php echo $vertical ?>
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple"  data-live-search="true" title="Choose the characteristic...">
+                        <select class="selectpicker" multiple="multiple"  id="caracteristica" data-live-search="true" title="Choose the characteristic..." onchange ="buscarCaracteristica();">
                             <?php echo $caracter ?>
                         </select>
                     </div>

@@ -23,10 +23,10 @@ class Home extends CI_Controller {
         $optionVertical   = '';
         $optionCarac      = '';
         foreach($datosPaises as $key) {
-            $optionPaises .= '<option value="'.$key->Nombre.'" >'.$key->Nombre.'</option>';
+            $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
         }
         foreach ($datosVertical as $key) {
-            $optionVertical .= '<option value="'.$key->nombre.'">'.$key->nombre.'</option>';
+            $optionVertical .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
         }
         foreach ($datosCarac as $key) {
             $detalleCarac = $this->M_datos->getDetalleCaract($key->Id);
@@ -42,6 +42,25 @@ class Home extends CI_Controller {
 		$this->load->view('v_home', $data);
 	}
 
+    function filtrarPais() {
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try { 
+            $pais  = $this->input->post('pais');
+            // $pais2 = '';
+            // foreach ($pais as $key) {
+            //     $pais2 .= $key.", ";
+            // }
+            // $pais2 = substr($pais2, 0, -2);
+            // print_r($pais);
+            // exit;
+            $datos = $this->M_datos->filtroPais($pais2);
+            
+        } catch (Exception $ex){
+            $data['msj'] = $ex->getMessage();
+        }
+        echo json_encode($data);
+    }
 //________________________________________________________________________________________________________________________________________
 
     function filtrarIndustria(){
