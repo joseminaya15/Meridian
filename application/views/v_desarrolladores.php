@@ -65,13 +65,9 @@
         <section id="desarrollador" class="section">
             <div class="js-container">
             	<ul class="nav nav-tabs" role="tablist">
-				    <li class="nav-item">
-				      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
-				    </li>
-				    <li class="nav-item">
-				      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
-				    </li>
-				</ul>
+				    <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+				    <li><a href="#menu1" aria-controls="menu1" role="tab" data-toggle="tab">Menu 1</a></li>
+			  	</ul>
             	<div class="tab-content">
     				<div id="home" class="tab-pane fade in active"><br>
     					<div class="title">
