@@ -310,7 +310,6 @@
     			</div>
             </div>
         </section>
-        <img src="<?php echo RUTA_IMG?>fondo/fondo-bottom.png" style="width: 100%;">
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
