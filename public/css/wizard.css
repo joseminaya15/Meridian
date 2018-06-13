@@ -72,12 +72,12 @@
 .js-wizard ul.nav.nav-pills>li:NTH-CHILD(6)>a span.step:AFTER {
 	content: "6"
 }
-.js-wizard .form-wizard.form-wizard-horizontal .nav li.complete .step {
+.js-wizard .nav li.complete .step {
     border-color: #004062;
     background-color: #004062;
     color: #FFFFFF;
 }
-.js-wizard .form-wizard.form-wizard-horizontal .nav li.complete .title {
+.js-wizard .nav li.complete .title {
 	color: #004062;
 	overflow: hidden;
 	white-space: nowrap;
@@ -85,7 +85,7 @@
 }
 .js-wizard ul.nav.nav-pills>li.complete>a span.step:AFTER {
     font-family: 'Material Icons' !important;
-	content: "\e9c1";
+	content: "\ea10";
 }
 .js-wizard .tab-pane .mdl-wizzard__tittle,
 .js-wizard .tab-pane .mdl-card-supporting__title {
