@@ -109,9 +109,6 @@
 						<div class="tab-content">
 							<div class="tab-pane pane-pos active" id="tab1Pos">    
 							    <div class="row-fluid">
-									<div class="col-xs-12 mdl-wizzard__tittle">
-										<h2 class="mdl-card__title-text">Personal</h2>
-									</div>
 									<div class="col-xs-12 title-wizard">
                                         <h1>Datos Personales</h1>
 									</div>
@@ -190,12 +187,6 @@
 							</div>
                             <div class="tab-pane pane-pos" id="tab2Pos">
                                 <div class="row-fluid">
-                                    <div class="col-xs-12 mdl-wizzard__tittle">
-                                        <h2 class="mdl-card__title-text">Contrato</h2>
-                                    </div>
-                                    <div class="col-xs-12 title-wizard">
-                                        <h1>Laboral</h1>
-									</div>
                                     <?php echo $html ?>
 								  	<div class="col-xs-12 text-right">
 								  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="guardarDatosDeps()">Guardar</button>
