@@ -199,55 +199,55 @@
         </section>
         <footer class="js-section col-xs-12">
             <div class="js-container">
-                <div class="js-contendo col-xs-12 p-0">
+                <div class="js-contendo col-xs-12">
                     <div class="col-sm-4">
                         <h2>S&Iacute;GANOS</h2>
                         <ul class="js-redes">
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://twitter.com/ArubaEMEA" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/arubanetworks" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/aruba-a-hewlett-packard-enterprise-company/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-8">
                         <div class="col-sm-4">
                             <h2>EMPRESA</h2>
                             <ul>
-                                <li><a href="">Acerca de nosotros</a></li>
-                                <li><a href="">Empleo</a></li>
-                                <li><a href="">P&oacute;ngase en contacto con nostros</a></li>
-                                <li><a href="">Multimedia</a></li>
-                                <li><a href="">Notas de prensa</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/compania/acerca-de-nosotros/">Acerca de nosotros</a></li>
+                                <li><a href="https://careers.arubanetworks.com/" target="_blank">Empleo</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/compania/pongase-en-contacto-con-nosotros/">P&oacute;ngase en contacto con nostros</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/compania/centro-de-prensa/">Multimedia</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/compania/notas-de-prensa/">Notas de prensa</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-4">
                             <h2>EXPERIMENTE</h2>
                             <ul>
-                                <li><a href="" target="_blank">Comunidad Airheads</a></li>
-                                <li><a href="" target="_blank">Blogs</a></li>
-                                <li><a href="" target="_blank">Casos pr&aacute;cticos</a></li>
-                                <li><a href="" target="_blank">Eventos</a></li>
-                                <li><a href="" target="_blank">Partner Ready for Networking</a></li>
+                                <li><a href="https://community.arubanetworks.com/" target="_blank">Comunidad Airheads</a></li>
+                                <li><a href="https://community.arubanetworks.com/t5/Blogs/ct-p/news?source=footer" target="_blank">Blogs</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/recursos/#wpcf-type=1">Casos pr&aacute;cticos</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/compania/eventos/">Eventos</a></li>
+                                <li><a href="https://partner.hpe.com/aruba?TYPE=33554433&REALMOID=06-0009a4f6-684b-17f6-b8e5-70ef10c3d05d&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=1X6WKX2K3YgnwZ4JKRWBNAONV95wtWOWI4uByjr6FVDAMEDB0zkkX4EeZVG4GCnp&TARGET=$SM$https%3a%2f%2fpartner%2ehpe%2ecom%2fgroup%2fupp-aruba%2fhome" target="_blank">Partner Ready for Networking</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-4">
                             <h2>SERVICIO T&Eacute;CNICO</h2>
                             <ul>
-                                <li><a href="" target="_blank">Contacte servicio t&eacute;cnico</a></li>
-                                <li><a href="" target="_blank">Abrir un caso</a></li>
-                                <li><a href="" target="_blank">Servicios profesionales</a></li>
-                                <li><a href="" target="_blank">Inicio de sesi&oacute;n con licencia</a></li>
-                                <li><a href="" target="_blank">Aruba Solution Exchange</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/servicios-de-apoyo/ponerse-en-contacto-con-el-servicio-tecnico/">Contacte servicio t&eacute;cnico</a></li>
+                                <li><a href="https://cf.passport.hpe.com/hppcf/login.do?cc=US&lang=EN&applandingpage=https%3a%2f%2fh10145.www1.hpe.com%2fhelp%2fhelp_questions.aspx%3fl2id%3d48%26SelectedTab%3d3&hpappid=118682_MYNETWORKING_PRO_HPE" target="_blank">Abrir un caso</a></li>
+                                <li><a href="https://www.arubanetworks.com/es/servicios-de-apoyo/servicios-profesionales/">Servicios profesionales</a></li>
+                                <li><a href="https://cf.passport.hpe.com/hppcf/login.do?cc=US&lang=EN&applandingpage=https%3a%2f%2fh10145.www1.hpe.com%2flicense%2fGenerateLicense.aspx%3fsmp%3d1&hpappid=118682_MYNETWORKING_PRO_HPE"  target="_blank">Inicio de sesi&oacute;n con licencia</a></li>
+                                <li><a href="https://ase.arubanetworks.com/?source=footer" target="_blank">Aruba Solution Exchange</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="js-footer col-xs-12">
                     <div class="col-sm-7 js-politicas">
-                        <a href="">Pol&iacute;tica de privacidad</a>
-                        <a href="">Condiciones del servicio</a>
+                        <a href="https://www.hpe.com/es/es/legal/privacy.html" target="_blank">Pol&iacute;tica de privacidad</a>
+                        <a href="https://www.arubanetworks.com/es/condiciones-del-servicio/">Condiciones del servicio</a>
                         <a href="">Cookies</a>
-                        <a href="">Mapa del sitio</a>
-                        <a href="">Avisos legales</a>
+                        <a href="https://www.arubanetworks.com/es/mapa-del-sitio/">Mapa del sitio</a>
+                        <a href="https://www.arubanetworks.com/es/avisos-legales/">Avisos legales</a>
                     </div>
                     <div class="col-sm-5">
                         <p>&copy; Copyright 2018 Hewlett Packard Enterprise Development LP</p>
