@@ -75,17 +75,17 @@
             <div class="js-container">
                 <div class="js-flex">
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" id="pais" title="Typically your Country" onchange="buscarGeneral()" >
+                        <select class="selectpicker" multiple="multiple" id="pais" title="Seleccione su país" onchange="buscarGeneral()" >
                             <?php echo $paises?>
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical" onchange="buscarGeneral();">
+                        <select class="selectpicker" multiple="multiple" id="vertical" title="Seleccione su industria" onchange="buscarGeneral();">
                             <?php echo $vertical ?>
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple"  id="caracteristica" data-live-search="true" title="Choose the characteristic..." onchange ="buscarGeneral();">
+                        <select class="selectpicker" multiple="multiple"  id="caracteristica" data-live-search="true" title="Seleccione su característic" onchange ="buscarGeneral();">
                             <?php echo $caracter ?>
                         </select>
                     </div>
