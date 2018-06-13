@@ -99,7 +99,7 @@
                                 <span class="title">Informaci&oacute;n</span>
                             </li>
                             <li id="li2Pos">
-                                <a data-toggle="tab" aria-expanded="false" href="#tab2Pos" class="my-link-pos" id="step2Pos"> 
+                                <a data-toggle="tab" aria-expanded="false" href="#tab2Pos" class="my-link-pos" id="step2Pos" style="pointer-events: none;"> 
                                     <span class="step"></span>
                                 </a>
                                 <span class="title">Caracter&iacute;sticas</span>

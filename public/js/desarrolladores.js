@@ -68,6 +68,12 @@ function guardarDesarrolladores(){
         	data = JSON.parse(data);
         	if(data.error == 0){
 				limpiarCampos();
+				$('#li1Pos').addClass('complete');
+				$('#li1Pos').removeClass('active');
+				$('#li2Pos').addClass('active');
+				$('#tab1Pos').removeClass('active');
+				$('#tab2Pos').addClass('active');
+				$('#step2Pos').css('pointer-events', '');
         	}else{
         		return;
         	}
@@ -139,6 +145,7 @@ function guardarDatosDeps(){
         	if(data.error == 0){
 				arrayIds = [];
 				$('.mdl-radio').removeClass('is-checked');
+				$('#li2Pos').addClass('complete');
         	}else{
         		return;
         	}
