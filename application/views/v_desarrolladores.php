@@ -84,7 +84,7 @@
                 </div>
             </div>
         </section>
-        <section id="desarrollador" class="js-section">
+        <section id="desarrollador" class="js-section col-xs-12">
             <div class="js-container">
         		<div class="js-wizard" id="rootwizard2">
 					<div class="js-wizard__nav">
