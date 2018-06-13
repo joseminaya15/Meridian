@@ -116,7 +116,6 @@ class M_datos extends  CI_Model{
                  WHERE dc.Id IN ?
               GROUP BY dc.id_caract";
         $result = $this->db->query($sql, array($ids));
-        //print_r($this->db->last_query());
         return $result->result();
     }
     function getVerticales(){
