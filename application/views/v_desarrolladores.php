@@ -64,8 +64,8 @@
                 </div>
             </div>
         </nav> -->
-        <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
-        <section id="programa">
+        <section id="programa" class="js-section">
+            <div class="js-fondo--programa"></div>
             <div class="js-container">
                 <h2>Programa de partners Meridian Engage Technology</h2>
             </div>
