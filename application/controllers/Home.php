@@ -49,25 +49,27 @@ class Home extends CI_Controller {
             $pais           = $this->input->post('pais');
             $vertical       = $this->input->post('vertical');
             $caracteristica = $this->input->post('caracteristica');
-
             $datos   = $this->M_datos->filtroGeneral();
             $muestra = "";
             $paisObtenido = "";
+            $arr_pais     = array();
+            $arr_pais2    = array();
+            $arr_final    = array();
             $verticalObte = "";
             $caractObteni = "";
             $i = 0;
+            foreach ($pais as $val) {
+                array_push($arr_pais2, $val);
+            }
             foreach($datos as $key) {
-                $paisObtenido = explode(',', $key->id_pais);
                 $verticalObte = explode(',', $key->id_vertical);
                 $caractObteni = explode(',', $key->id_detalle_caract);
+                array_push($arr_pais, explode(',', $key->id_pais));
                 
-                // foreach ($variable as $key => $value) {
-                //     # code...
-                // }
-                // if ($key->pais )
-                // $muestra = "";
+                foreach ($arr_pais as $value) {
+                    array_push($arr_final,array_intersect($arr_pais2, $value));
+                }
             }
-            print_r($paisObtenido);
             exit;
             
         } catch (Exception $ex){
