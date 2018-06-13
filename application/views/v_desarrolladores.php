@@ -64,6 +64,7 @@
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
         <section id="desarrollador" class="section">
             <div class="js-container">
+            	<img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
             	<ul class="nav nav-tabs" role="tablist">
 				    <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
 				    <li><a href="#menu1" aria-controls="menu1" role="tab" data-toggle="tab">Menu 1</a></li>

@@ -32,6 +32,8 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+
+
     function getPais(){
         $sql = "SELECT * 
                   FROM pais
@@ -53,12 +55,20 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getDetalleCaract ($id) {
+    function getDetalleCaract($id) {
         $sql = "SELECT *
                   FROM detalle_caract
-                 WHERE id_caract = ".$id."
+                 WHERE id_caract = ?
               ORDER BY tipo ASC";
-        $result = $this->db->query($sql);
+        $result = $this->db->query($sql, array($id));
+        return $result->result();
+    }
+    function filtroPais($pais) {
+        $sql = "SELECT * 
+                  FROM contacto
+                 WHERE id_pais IN (?)";
+        $result = $this->db->query($sql, array($pais));
+        print_r($this->db->last_query());
         return $result->result();
     }
 
