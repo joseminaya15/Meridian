@@ -56,6 +56,7 @@ class Desarrolladores extends CI_Controller {
                     </div>';
           $cont = $cont1+1;
       }
+      $data['verticales'] = $this->comboVerticales();
       $data['html'] = $html;
 		$this->load->view('v_desarrolladores', $data);
 	}
@@ -70,6 +71,7 @@ class Desarrolladores extends CI_Controller {
             $url      = $this->input->post('url');
             $telefono = $this->input->post('telefono');
             $id_pais  = $this->input->post('id_pais');
+            $id_verti = $this->input->post('id_verti');
             $arrInserDep = array('Empresa'     => $empresa,
                                  'Descripcion' => '',
                                  'imagen'      => '');
@@ -79,7 +81,7 @@ class Desarrolladores extends CI_Controller {
                                  'cont_tecnico'   => $cont_tec,
                                  'pagina'         => $url,
                                  'id_deps'        => $insetDep['Id'],
-                                 'id_vertical'    => '',
+                                 'id_vertical'    => $id_verti,
                                  'id_pais'        => $id_pais);
             $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
             $session    = array('id_contact' => $insetDatos['Id']);
@@ -111,5 +113,14 @@ class Desarrolladores extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
+    }
+
+    function comboVerticales(){
+      $html = '';
+      $datos = $this->M_datos->getVerticales();
+      foreach ($datos as $key) {
+        $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
+      }
+      return $html;
     }
 }

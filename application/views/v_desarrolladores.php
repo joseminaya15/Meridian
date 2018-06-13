@@ -79,6 +79,11 @@
 							<input type="text" id="empresa">
 						</div>
 						<div class="col-xs-12 js-input js-select">
+							<select class="selectpicker" id="vertical" title="Ingrese su vertical" multiple>
+				                <?php echo $verticales ?>
+				            </select>
+				        </div>
+						<div class="col-xs-12 js-input js-select">
 							<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
 				                <option value="1">Dominican Republic</option>
 		                        <option value="2">Puerto Rico</option>
