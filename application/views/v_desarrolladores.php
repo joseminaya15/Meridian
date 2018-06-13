@@ -83,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <section id="desarrollador" class="section">
+        <section id="desarrollador" class="js-section">
             <div class="js-container">
             	<div class="mdl-wizard">
             		<div class="form-wizard form-wizard-horizontal m-b-10" id="rootwizard2">
@@ -209,7 +209,7 @@
         </section>
         <footer class="js-section col-xs-12">
             <div class="js-container">
-                <div class="js-contendo col-xs-12">
+                <div class="js-contendo col-xs-12 p-0">
                     <div class="col-sm-4">
                         <h2>S&Iacute;GANOS</h2>
                         <ul class="js-redes">
