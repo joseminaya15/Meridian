@@ -62,9 +62,27 @@
             </div>
         </nav> -->
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
+        <section id="programa">
+            <div class="js-container">
+                <h2>Programa de partners Meridian Engage Technology</h2>
+            </div>
+        </section>
+        <section id="partner" class="js-section">
+            <div class="js-container js-flex js-partner">
+                <div class="js-partner--imagen">
+                    <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
+                </div>
+                <div class="js-partner--contenido">
+                    <h2>Partners del programa Meridian Engage</h2>
+                    <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
+                    AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
+                    categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
+                    <a href=""><i class="mdi mdi-arrow_forward"></i>P&oacute;ngase en contacto con nosotros para obtener m&aacute;s informaci&oacute;n</a>
+                </div>
+            </div>
+        </section>
         <section id="principal">
             <div class="js-container">
-                <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
                 <div class="js-flex">
                     <div class="js-input js-select">
                         <select class="selectpicker" multiple="multiple" id="pais" title="Typically your Country" onchange="buscarPais()" >
@@ -550,7 +568,7 @@
                 </div>
             </div>
         </section>
-        <section id="contacto" class="section">
+        <section id="contacto" class="js-section">
             <div class="js-container">
                 <div class="js-contacto text-center">
                    <h2>¿Eres desarrollador, quieres ser parte de nuestro programa&#63;</h2>
@@ -564,9 +582,9 @@
                     <div class="col-sm-4">
                         <h2>S&Iacute;GANOS</h2>
                         <ul class="js-redes">
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://twitter.com/ArubaEMEA" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/arubanetworks" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/aruba-a-hewlett-packard-enterprise-company/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-8">
@@ -616,6 +634,7 @@
                 </div>
             </div>
         </footer>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>

@@ -62,9 +62,27 @@
             </div>
         </nav> -->
         <img src="<?php echo RUTA_IMG?>fondo/fondo-top.png" style="width: 100%;">
+        <section id="programa">
+            <div class="js-container">
+                <h2>Programa de partners Meridian Engage Technology</h2>
+            </div>
+        </section>
+        <section id="partner" class="js-section">
+            <div class="js-container js-flex js-partner">
+                <div class="js-partner--imagen">
+                    <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
+                </div>
+                <div class="js-partner--contenido">
+                    <h2>Partners del programa Meridian Engage</h2>
+                    <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
+                    AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
+                    categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
+                    <a href=""><i class="mdi mdi-arrow_forward"></i>P&oacute;ngase en contacto con nosotros para obtener m&aacute;s informaci&oacute;n</a>
+                </div>
+            </div>
+        </section>
         <section id="desarrollador" class="section">
             <div class="js-container">
-            	<img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
             	<ul class="nav nav-tabs" role="tablist">
 				    <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
 				    <li><a href="#menu1" aria-controls="menu1" role="tab" data-toggle="tab">Menu 1</a></li>

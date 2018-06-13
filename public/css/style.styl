@@ -140,7 +140,6 @@ a
 	margin auto
 	flex-direction column
 	position relative
-	padding 30px
 .js-contenido
 	background-color $secondary
 	.js-contenido__left
@@ -288,6 +287,40 @@ a
 		flexCenter()
 		height 70px
 		border-left 1px solid #000000
+.js-partner
+	.js-partner--imagen
+		&::after
+			absolute()
+			background-color #000000
+			opacity .5
+			z-index 0
+			height 100%
+			width 100%
+			content ''
+	.js-partner--contenido
+		position absolute
+		text-align center
+		color #FFFFFF
+		max-width 800px
+		h2
+			font-size 40px
+		p
+			font-size 20px
+			font-family $light
+		a
+			color $default
+			font-size 18px
+			font-family $light
+			i
+				vertical-align middle
+				color $default
+				margin-right 5px
+.js-contacto
+	h2
+		color #646569
+		font-size 40px
+		font-family $light
+		margin 20px 0
 .js-input
 	padding 7px 20px
 	height 72px

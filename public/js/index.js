@@ -52,7 +52,3 @@ function buscarVertical (){
 		}
 	});
 }
-
-function buscarCaracteristica() {
-	
-}
