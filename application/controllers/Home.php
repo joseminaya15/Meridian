@@ -32,7 +32,7 @@ class Home extends CI_Controller {
             $detalleCarac = $this->M_datos->getDetalleCaract($key->Id);
             $optionCarac .= '<optgroup label="'.$key->name_caract.'">';
             foreach ($detalleCarac as $value) {
-                $optionCarac .= '<option value="'.$key->Id.', '.$value->Id.'">'.$value->tipo.'</option>';
+                $optionCarac .= '<option value="'.$value->Id.'">'.$value->tipo.'</option>';
             }
             $optionCarac .= '</optgroup>';
         }
@@ -42,19 +42,33 @@ class Home extends CI_Controller {
 		$this->load->view('v_home', $data);
 	}
 
-    function filtrarPais() {
+    function busquedaGeneral () {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try { 
-            $pais  = $this->input->post('pais');
-            // $pais2 = '';
-            // foreach ($pais as $key) {
-            //     $pais2 .= $key.", ";
-            // }
-            // $pais2 = substr($pais2, 0, -2);
-            // print_r($pais);
-            // exit;
-            $datos = $this->M_datos->filtroPais($pais2);
+            $pais           = $this->input->post('pais');
+            $vertical       = $this->input->post('vertical');
+            $caracteristica = $this->input->post('caracteristica');
+
+            $datos   = $this->M_datos->filtroGeneral();
+            $muestra = "";
+            $paisObtenido = "";
+            $verticalObte = "";
+            $caractObteni = "";
+            $i = 0;
+            foreach($datos as $key) {
+                $paisObtenido = explode(',', $key->id_pais);
+                $verticalObte = explode(',', $key->id_vertical);
+                $caractObteni = explode(',', $key->id_detalle_caract);
+                
+                // foreach ($variable as $key => $value) {
+                //     # code...
+                // }
+                // if ($key->pais )
+                // $muestra = "";
+            }
+            print_r($paisObtenido);
+            exit;
             
         } catch (Exception $ex){
             $data['msj'] = $ex->getMessage();

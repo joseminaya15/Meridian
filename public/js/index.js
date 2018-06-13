@@ -19,36 +19,26 @@ function showCard(id){
 // 	var card   = idCard.parents('.js-card--partner1').removeClass('effect1');
 // }
 
-
-function buscarPais () {
-	var pais = $('#pais').val();
-	pais     = pais.toString();
+function buscarGeneral (){
+	var pais 		   = $('#pais').val();
+	var vertical 	   = $('#vertical').val();
+	var caracteristica = $('#caracteristica').val();
+	// pais     	   = (pais == null) ? '' : pais.toString();
+	// vertical 	   = (vertical == null) ? '' : vertical.toString();
+	// caracteristica = (caracteristica == null) ? '' : caracteristica.toString();
+	console.log(pais);
+	// console.log(vertical);
+	// console.log(caracteristica);
 	$.ajax({
-		data : { pais : pais },
-		url  : 'Home/filtrarPais',
+		data : { pais     		: pais,
+				 vertical 		: vertical,
+				 caracteristica : caracteristica },
+		url  : 'Home/busquedaGeneral',
 		type : 'POST'
 	}).done(function(data){
-		data = JSON.parse(data);
-		if (data.error) {
-			$('#vertical').attr('disabled', false);
-		}
-	});
-}
+		// data = JSON.parse(data);
+		// if (data.error) {
 
-function buscarVertical (){
-	var pais = $('#pais').val();
-	var vertical = $('#vertical').val;
-	pais     = pais.toString();
-	vertical = vertical.toString();
-	$.ajax({
-		data : { pais     : pais,
-				 vertical : vertical },
-		url  : 'Home/filtrarVertical',
-		type : 'POST'
-	}).done(function(data){
-		data = JSON.parse(data);
-		if (data.error) {
-			$('#caracteristica').attr('disabled', false);
-		}
+		// }
 	});
 }
