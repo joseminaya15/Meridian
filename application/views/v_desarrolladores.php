@@ -16,11 +16,13 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>wizard/css/wizard.css?v=<?php echo time();?>">  
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>openSans.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
+    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>wizard.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
@@ -83,94 +85,126 @@
         </section>
         <section id="desarrollador" class="section">
             <div class="js-container">
-            	<ul class="nav nav-tabs" role="tablist">
-				    <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-				    <li><a href="#menu1" aria-controls="menu1" role="tab" data-toggle="tab">Menu 1</a></li>
-			  	</ul>
-            	<div class="tab-content">
-    				<div id="home" class="tab-pane fade in active"><br>
-    					<div class="title">
-		            		<h3>DATOS PERSONALES:</h3>
-		            	</div>
-		            	<div class="col-xs-12 js-input">
-							<label for="empresa">Nombre de la empresa</label>
-							<input type="text" id="empresa">
+            	<div class="mdl-wizard">
+            		<div class="form-wizard form-wizard-horizontal m-b-10" id="rootwizard2">
+						<div class="form-wizard-nav">
+							<div class="progress">
+								<div class="progress-bar progress-bar-primary" id="progressBarPos"></div>
+							</div>
+							<ul class="nav nav-justified nav-pills">
+                                <li class="active" id="li1Pos">
+                                    <a data-toggle="tab" aria-expanded="true" href="#tab1Pos" id="step1Pos">
+                                        <span class="step"></span>
+                                    </a>
+                                    <span class="title">Informaci&oacute;n </span>
+                                </li>
+                                <li id="li2Pos">
+                                    <a data-toggle="tab" aria-expanded="false" href="#tab2Pos" class="my-link-pos" id="step2Pos"> 
+                                        <span class="step"></span>
+                                    </a>
+                                    <span class="title">Contrato</span>
+                                </li>
+							</ul>
 						</div>
-						<div class="col-xs-12 js-input js-select">
-							<select class="selectpicker" id="vertical" title="Ingrese su vertical" multiple>
-				                <?php echo $verticales ?>
-				            </select>
-				        </div>
-						<div class="col-xs-12 js-input js-select">
-							<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
-				                <option value="1">Dominican Republic</option>
-		                        <option value="2">Puerto Rico</option>
-		                        <option value="3">Panam&aacute;</option>
-		                        <option value="4">Costa Rica</option>
-		                        <option value="5">Guatemala</option>
-		                        <option value="6">El Salvador</option>
-		                        <option value="7">Nicaragua</option>
-		                        <option value="8">Honduras</option>
-		                        <option value="9">Haiti</option>
-		                        <option value="10">Aruba</option>
-		                        <option value="11">Curacao</option>
-		                        <option value="12">Guyana</option>
-		                        <option value="13">Netherlands Antilles</option>
-		                        <option value="14">St. Kitts & Nevis</option>
-		                        <option value="15">St. Maarten</option>
-		                        <option value="16">St Vincent & Grenadines</option>
-		                        <option value="17">Suriname</option>
-		                        <option value="18">Virgin Islands (U.S)</option>
-		                        <option value="19">Antigua & Bermuda</option>
-		                        <option value="20">Virgin Islands (British)</option>
-		                        <option value="21">Belize</option>
-		                        <option value="22">Turks & Caicos</option>
-		                        <option value="23">Dominica</option>
-		                        <option value="24">St Lucia</option>
-		                        <option value="25">Bonaire</option>
-		                        <option value="26">Martinique</option>
-		                        <option value="27">St Barthelem</option>
-		                        <option value="28">Anguilla</option>
-		                        <option value="29">Grenada</option>
-		                        <option value="30">Bahamas</option>
-		                        <option value="31">Barbados</option>
-		                        <option value="32">Cayman</option>
-		                        <option value="33">Jamaica</option>
-		                        <option value="34">Trinidad & Tobago</option>
-		                        <option value="35">Bermuda</option>
-				            </select>
-				        </div>
-						<div class="col-xs-12 js-input">
-						  	<label for="gerente">Nombre del gerente</label>
-							<input type="text" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
+						<div class="tab-content">
+							<div class="tab-pane pane-pos active" id="tab1Pos">    
+							    <div class="row-fluid">
+									<div class="col-xs-12 mdl-wizzard__tittle">
+										<h2 class="mdl-card__title-text">Personal</h2>
+									</div>
+									<div class="col-xs-12 title-wizard">
+                                        <h1>Datos Personales</h1>
+									</div>
+									<div class="col-xs-12 js-input">
+										<label for="empresa">Nombre de la empresa</label>
+										<input type="text" id="empresa">
+									</div>
+									<div class="col-xs-12 js-input js-select">
+										<select class="selectpicker" id="vertical" title="Ingrese su vertical" multiple>
+							                <?php echo $verticales ?>
+							            </select>
+							        </div>
+									<div class="col-xs-12 js-input js-select">
+										<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
+							                <option value="1">Dominican Republic</option>
+					                        <option value="2">Puerto Rico</option>
+					                        <option value="3">Panam&aacute;</option>
+					                        <option value="4">Costa Rica</option>
+					                        <option value="5">Guatemala</option>
+					                        <option value="6">El Salvador</option>
+					                        <option value="7">Nicaragua</option>
+					                        <option value="8">Honduras</option>
+					                        <option value="9">Haiti</option>
+					                        <option value="10">Aruba</option>
+					                        <option value="11">Curacao</option>
+					                        <option value="12">Guyana</option>
+					                        <option value="13">Netherlands Antilles</option>
+					                        <option value="14">St. Kitts & Nevis</option>
+					                        <option value="15">St. Maarten</option>
+					                        <option value="16">St Vincent & Grenadines</option>
+					                        <option value="17">Suriname</option>
+					                        <option value="18">Virgin Islands (U.S)</option>
+					                        <option value="19">Antigua & Bermuda</option>
+					                        <option value="20">Virgin Islands (British)</option>
+					                        <option value="21">Belize</option>
+					                        <option value="22">Turks & Caicos</option>
+					                        <option value="23">Dominica</option>
+					                        <option value="24">St Lucia</option>
+					                        <option value="25">Bonaire</option>
+					                        <option value="26">Martinique</option>
+					                        <option value="27">St Barthelem</option>
+					                        <option value="28">Anguilla</option>
+					                        <option value="29">Grenada</option>
+					                        <option value="30">Bahamas</option>
+					                        <option value="31">Barbados</option>
+					                        <option value="32">Cayman</option>
+					                        <option value="33">Jamaica</option>
+					                        <option value="34">Trinidad & Tobago</option>
+					                        <option value="35">Bermuda</option>
+							            </select>
+							        </div>
+									<div class="col-xs-12 js-input">
+									  	<label for="gerente">Nombre del gerente</label>
+										<input type="text" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
+									</div>
+									<div class="col-xs-12 js-input">
+									  	<label for="cont_comercial">Email del contacto comercial</label>
+									    <input type="email" id="cont_comercial">
+									</div>
+									<div class="col-xs-12 js-input">
+								 	 	<label for="cont_tecnico" class="col-2 col-form-label">Email del contacto t&eacute;cnico</label>
+									    <input type="email" id="cont_tecnico">
+									</div>
+									<div class="col-xs-12 js-input">
+									  	<label for="url" class="col-2 col-form-label">URL de su p&aacute;gina web</label>
+									    <input type="url" id="url">
+									</div>
+									<div class="col-xs-12 js-input">
+									  	<label for="telefono" class="col-2 col-form-label">Teléfono</label>
+									    <input type="tel" id="telefono">
+									</div>
+									<div class="col-xs-12 text-right">
+										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores()">Guardar</button>
+					            	</div>
+								</div>
+							</div>
+                            <div class="tab-pane pane-pos" id="tab2Pos">
+                                <div class="row-fluid">
+                                    <div class="col-xs-12 mdl-wizzard__tittle">
+                                        <h2 class="mdl-card__title-text">Contrato</h2>
+                                    </div>
+                                    <div class="col-xs-12 title-wizard">
+                                        <h1>Laboral</h1>
+									</div>
+                                    <?php echo $html ?>
+								  	<div class="col-xs-12 text-right">
+								  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="guardarDatosDeps()">Guardar</button>
+								  	</div>                                           
+                                </div>
+                            </div>
 						</div>
-						<div class="col-xs-12 js-input">
-						  	<label for="cont_comercial">Email del contacto comercial</label>
-						    <input type="email" id="cont_comercial">
-						</div>
-						<div class="col-xs-12 js-input">
-					 	 	<label for="cont_tecnico" class="col-2 col-form-label">Email del contacto t&eacute;cnico</label>
-						    <input type="email" id="cont_tecnico">
-						</div>
-						<div class="col-xs-12 js-input">
-						  	<label for="url" class="col-2 col-form-label">URL de su p&aacute;gina web</label>
-						    <input type="url" id="url">
-						</div>
-						<div class="col-xs-12 js-input">
-						  	<label for="telefono" class="col-2 col-form-label">Teléfono</label>
-						    <input type="tel" id="telefono">
-						</div>
-						<div class="col-xs-12 text-right">
-							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores()">Guardar</button>
-		            	</div>
-    				</div>
-    				<div id="menu1" class="tab-pane fade"><br>
-					  	<?php echo $html ?>
-					  	<div class="col-xs-12 text-right">
-					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="guardarDatosDeps()">Guardar</button>
-					  	</div>
-				    </div>
-    			</div>
+					</div>
+            	</div>
             </div>
         </section>
         <footer class="js-section col-xs-12">
@@ -238,6 +272,7 @@
         <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_PLUGINS?>wizard/js/jquery.bootstrap.wizard.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsutils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>desarrolladores.js?v=<?php echo time();?>"></script>

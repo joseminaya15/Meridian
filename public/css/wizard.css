@@ -1,0 +1,117 @@
+/* Wizard*/
+.mdl-wizard .form-wizard.form-wizard-horizontal .form-wizard-nav .progress {
+	top: 28.5px;
+	height: 1px;
+	box-shadow: inherit;
+	background-color: #e6e6e6;
+}
+.mdl-wizard .nav>li>a:focus,
+.mdl-wizard .nav>li>a:hover {
+	background-color: transparent;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .form-wizard-nav .progress .progress-bar-primary {
+	background-color: #004062;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .form-wizard-nav .nav-justified>li {
+	float: none;
+	display: -webkit-inline-box;
+	display: -moz-inline-stack;
+	display: inline-block;	
+	width: 24%;
+	margin: 0;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .form-wizard-nav .progress {
+	width: 72.5%;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.active .step, 
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li:hover .step {
+    border-color: #004062;
+    color: #004062;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.active .title,
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li:hover .title {
+    color: #004062;	
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li .title{
+	text-align: center;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.active .step {
+	position: relative;
+	top: -5px;
+	height: 45px;
+	width: 45px;	
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.complete.active .step:AFTER,
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.active .step:AFTER {
+	position: relative;
+	top: 4px;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.complete .step:AFTER,
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.complete.active .step:AFTER,
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.complete.active:HOVER .step:AFTER {
+	color: #FFFFFF
+}
+.mdl-wizard ul.nav.nav-pills>li>a {
+	padding: 10px 0
+}
+.mdl-wizard ul.nav.nav-pills>li:NTH-CHILD(1)>a span.step:AFTER {
+	content: "1";
+}
+.mdl-wizard ul.nav.nav-pills>li:NTH-CHILD(2)>a span.step:AFTER {
+	content: "2"
+}
+.mdl-wizard ul.nav.nav-pills>li:NTH-CHILD(3)>a span.step:AFTER {
+	content: "3"
+}
+.mdl-wizard ul.nav.nav-pills>li:NTH-CHILD(4)>a span.step:AFTER {
+	content: "4"
+}
+.mdl-wizard ul.nav.nav-pills>li:NTH-CHILD(5)>a span.step:AFTER {
+	content: "5"
+}
+.mdl-wizard ul.nav.nav-pills>li:NTH-CHILD(6)>a span.step:AFTER {
+	content: "6"
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.complete .step {
+    border-color: #004062;
+    background-color: #004062;
+    color: #FFFFFF;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li.complete .title {
+	color: #004062;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.mdl-wizard ul.nav.nav-pills>li.complete>a span.step:AFTER {
+    font-family: 'Material Icons' !important;
+	content: "\e9c1";
+}
+.mdl-wizard .tab-pane .mdl-wizzard__tittle,
+.mdl-wizard .tab-pane .mdl-card-supporting__title {
+	visibility: hidden; 
+	display: none;
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		 -o-transition: all .5s ease;
+			transition: all .5s ease;
+}
+.title-wizard h1{
+    font-size: 16px;
+    padding: 3px 0;
+    margin: 30px 10px;
+    border-bottom: 1px solid #f3f0f0;
+    color: #bfbfbf;
+	text-align: left;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav .step{
+    border: 4px solid transparent;
+    background: #9E9E9E;
+	line-height: 2;
+}
+.mdl-wizard .form-wizard.form-wizard-horizontal .nav li a{
+    width: 60px;
+    margin: auto;
+    background-color: #FFF;
+}
