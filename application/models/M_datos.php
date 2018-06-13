@@ -100,6 +100,15 @@ class M_datos extends  CI_Model{
         return $result->result();
     }
 
+    function getDatosCaracteristica($ids){
+        $sql = "SELECT dc.id_caract
+                  FROM detalle_caract dc
+                 WHERE dc.Id IN ?
+              GROUP BY dc.id_caract";
+        $result = $this->db->query($sql, array($ids));
+        //print_r($this->db->last_query());
+        return $result->result();
+    }
     /*
     function getIdByNameCate($cate){
       $sql = "SELECT c.Id

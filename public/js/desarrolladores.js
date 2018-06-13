@@ -109,8 +109,8 @@ function limpiarCampos(){
 	$('#pais').val("0");
 	$('.selectpicker').selectpicker('refresh');
 }
+var arrayIds = [];
 function guardarDatosDeps(){
-	arrayIds = [];
 	$(".js-radio .is-checked").each(function (){
 		var isChecked    = $(this);
 		var labelChecked = isChecked.find('.mdl-radio__label');
@@ -118,8 +118,26 @@ function guardarDatosDeps(){
 		if(textChecked == 'Sí'){
 			var valChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
 			var idChecked = $('#'+valChecked).val();
-			console.log(idChecked);
+			arrayIds.push(idChecked)
 		}
     })
     $('.btn-guardar-deps').prop("disabled", true);
+    $.ajax({
+		data : {id_detalle  : arrayIds.toString(),
+				arr_deta    : arrayIds},
+		url  : 'desarrolladores/guardarDatosDeps',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        	data = JSON.parse(data);
+        	if(data.error == 0){
+				arrayIds = [];
+				$('.mdl-radio').removeClass('is-checked');
+        	}else{
+        		return;
+        	}
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
 }

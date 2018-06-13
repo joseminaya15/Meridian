@@ -80,9 +80,33 @@ class Desarrolladores extends CI_Controller {
                                  'pagina'         => $url,
                                  'id_deps'        => $insetDep['Id'],
                                  'id_vertical'    => '',
-                                 'id_pais'        => intval($id_pais));
+                                 'id_pais'        => $id_pais);
             $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
+            $session    = array('id_contact' => $insetDatos['Id']);
+            $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
+        }catch(Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function guardarDatosDeps(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+          $id_detalle = $this->input->post('id_detalle');
+          $arr_deta   = $this->input->post('arr_deta');
+          $datos      = $this->M_datos->getDatosCaracteristica($arr_deta);
+          $array_cat  = array();
+          foreach ($datos as $key) {
+            array_push($array_cat, $key->id_caract);
+          }
+          $ids_caract = implode(",", $array_cat);
+          $arrayUpdate = array('id_detalle_caract' => $id_detalle,
+                               'id_caract'         => $ids_caract);
+          $this->M_datos->updateDatos($arrayUpdate, $this->session->userdata('id_contact'), 'contacto');
+          $this->session->unset_userdata('id_detalle');
+          $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }

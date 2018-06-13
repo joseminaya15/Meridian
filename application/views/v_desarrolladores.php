@@ -143,7 +143,7 @@
     				<div id="menu1" class="tab-pane fade"><br>
 					  	<?php echo $html ?>
 					  	<div class="col-xs-12 text-right">
-					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="guardarDatosDeps()">Guardar</button>
+					  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="guardarDatosDeps()">Guardar</button>
 					  	</div>
 				    </div>
     			</div>
