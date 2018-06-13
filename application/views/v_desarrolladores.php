@@ -27,7 +27,7 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <!-- <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default">
             <div class="container-fluid js-container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -40,17 +40,6 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <div class="form-group m-0">
-                            <input type="text" class="form-control" placeholder="Search" id="buscador" onkeyup="verificarDatos(event);">
-                        </div>
-                        <button type="submit" class="btn btn-default" onclick="buscadorPartner()">Submit</button>
-                        <div class="js-select">
-                            <select class="selectpicker" title="Español" id="idioma" onchange="filtroGeografia()">
-                                <option value="Español">Español</option>
-                                <option value="Inglés">Inglés</option>
-                                <option value="Portugués">Portugués</option>
-                            </select>
-                        </div>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt"></i></a>
                             <ul class="dropdown-menu">
@@ -63,7 +52,8 @@
                     </ul>
                 </div>
             </div>
-        </nav> -->
+        </nav>
+        <div style="height: 90px"></div>
         <section id="programa" class="js-section">
             <div class="js-fondo--programa"></div>
             <div class="js-container">

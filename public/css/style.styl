@@ -104,7 +104,7 @@ body
 	padding 0
 	font-family $regular
 	color #000000
-	background-color #FFFFFF
+	background-color #F8F8F8
 label
 	font-weight 100
 img
@@ -127,8 +127,15 @@ a
 			box-shadow none !important
 			outline 0 !important
 .navbar-default
-	.js-container
-		padding 20px 30px
+	background-color #FFFFFF
+	margin 0
+	position fixed
+	top 0
+	z-index 10
+	width 100%
+	padding 18px 0
+	border-radius 0
+	box-shadow 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
 	.navbar-right
 		flexCenter()
 .js-container
@@ -190,7 +197,7 @@ a
 		padding 10px 20px
 		position relative
 		.js-hide
-			height 100px
+			height 75px
 			overflow hidden
 			&.js-height
 				height 100%
@@ -211,18 +218,20 @@ a
 			width 100%
 			.js-card--partner__imagen
 				flexCenter()
-				justify-content center
+				justify-content flex-start
 				text-align center
-				height 125px
+				height 60px
 				img
-					max-width 200px
+					max-width 100px
 					width 100%
 					cursor pointer
 			.js-card--partner__contenido
-				padding 0 10px
+				padding 0
 				height 260px
 				p
-					line-height 20px
+					line-height 18px
+					font-size 13px
+					color #757575
 		.js-card--partner__back
 			-webkit-backface-visibility hidden
 			-moz-backface-visibility hidden
