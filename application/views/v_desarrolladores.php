@@ -181,7 +181,7 @@
 									    <input type="tel" id="telefono">
 									</div>
 									<div class="col-xs-12 text-right">
-										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores()">Guardar</button>
+										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores()">Guardar y continuar</button>
 					            	</div>
 								</div>
 							</div>
