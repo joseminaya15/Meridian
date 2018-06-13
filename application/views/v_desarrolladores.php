@@ -171,7 +171,6 @@
 								<div class="col-xs-12 js-input">
 							 	 	<label for="cont_tecnico" class="col-2 col-form-label">Email del contacto t&eacute;cnico</label>
 								    <input type="email" id="cont_tecnico">
->>>>>>> Stashed changes
 								</div>
 								<div class="col-xs-12 js-input">
 								  	<label for="url" class="col-2 col-form-label">URL de su p&aacute;gina web</label>
