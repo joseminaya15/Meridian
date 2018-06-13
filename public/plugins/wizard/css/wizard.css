@@ -470,10 +470,10 @@ to {
 	opacity: 1;
 }
 }
-.form-wizard.form-wizard-horizontal {
+.js-wizard {
 	position: relative;
 }
-.form-wizard.form-wizard-horizontal .form-wizard-nav .progress {
+.js-wizard .js-wizard__nav .js-progress {
 	position: absolute;
 	display: inline-block;
 	top: 23px;
@@ -482,36 +482,36 @@ to {
 	margin: auto;
 	height: 10px;
 }
-.form-wizard.form-wizard-horizontal .form-wizard-nav .progress .progress-bar-primary{
+.js-wizard .js-wizard__nav .js-progress .js-progress__bar{
 	background-color: #3f51b5;
 	opacity: 0.75;
 }
-.form-wizard.form-wizard-horizontal .form-wizard-nav .nav-justified>li{
+/*.js-wizard .js-wizard__nav .nav-justified>li{
 	width: 32.5%;
 	float: left;
-}
-.form-wizard.form-wizard-horizontal .nav {
+}*/
+.js-wizard .nav {
 	position: relative;
 }
-.form-wizard.form-wizard-horizontal .nav a {
+.js-wizard .nav a {
 	margin-bottom: 15px;
 	cursor: pointer;	
 }
-.form-wizard.form-wizard-horizontal .nav li.active a, .form-wizard.form-wizard-horizontal .nav li:hover a{
+.js-wizard .nav li.active a, .js-wizard .nav li:hover a{
 	color: inherit;
 	background-color: transparent;
 }
-.form-wizard.form-wizard-horizontal .nav li.active .step, .form-wizard.form-wizard-horizontal .nav li:hover .step{
+.js-wizard .nav li.active .step, .js-wizard .nav li:hover .step{
 	-webkit-transition: border-color 0.4s linear;
 	-o-transition: border-color 0.4s linear;
 	transition: border-color 0.4s linear;
 	border-color: #3f51b5;
 	color: #3f51b5;
 }
-.form-wizard.form-wizard-horizontal .nav li.active .title, .form-wizard.form-wizard-horizontal .nav li:hover .title{
+.js-wizard .nav li.active .title, .js-wizard .nav li:hover .title{
 	color: #3f51b5;
 }
-.form-wizard.form-wizard-horizontal .nav li.done .step {
+.js-wizard .nav li.done .step {
 	color: #ffffff;
 	border-color: #3f51b5;
 	background-color: #3f51b5;
@@ -520,7 +520,7 @@ to {
 	-o-transition: background-color 0.2s linear;
 	transition: background-color 0.2s linear;
 }
-.form-wizard.form-wizard-horizontal .nav .step {
+.js-wizard .nav .step {
 	display: inline-block;
 	line-height: 28px;
 	width: 36px;
@@ -530,14 +530,10 @@ to {
 	background: #ffffff;
 	color: #e5e6e6;
 }
-.form-wizard.form-wizard-horizontal .nav .title {
+.js-wizard .nav .title {
 	position: absolute;
 	width: 100%;
 	left: 0;
 	bottom: -15px;
 	color: #969c9c;
-}
-.no-padding .form-wizard .pager {
-	padding-left: 15px;
-	padding-right: 15px;
 }
