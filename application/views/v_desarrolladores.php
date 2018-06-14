@@ -107,19 +107,27 @@
 										<label for="empresa">Nombre de la empresa</label>
 										<input type="text" id="empresa">
 									</div>
+                                    <div class="col-xs-12 js-input">
+                                        <label for="telefono" class="col-2 col-form-label">Descripción de la empresa (M&aacute;x 300 caracteres)</label>
+                                        <input type="text" id="descripcion" maxlength="255">
+                                    </div>
 									<div class="col-xs-12 js-input js-select">
-										<select class="selectpicker" id="vertical" title="Ingrese su vertical" multiple>
+										<select class="selectpicker" id="vertical" data-actions-box="true" data-size="10" title="Indique los sectores que atiende" multiple>
 							                <?php echo $verticales ?>
 							            </select>
 							        </div>
 									<div class="col-xs-12 js-input js-select">
-										<select class="selectpicker" id="pais" title="Ingrese su país" multiple>
+										<select class="selectpicker" id="pais" title="Países de Cobertura" multiple>
 							                <?php echo $paises ?>
 							            </select>
 							        </div>
+                                    <div class="col-xs-12 js-input">
+                                        <label for="telefono" class="col-2 col-form-label">Teléfono</label>
+                                        <input type="text" id="telefono">
+                                    </div>
 									<div class="col-xs-12 js-input">
-									  	<label for="gerente">Email del gerente</label>
-										<input type="email" id="gerente" maxlength="100">
+									  	<label for="gerente">Nombre del contacto comercial</label>
+										<input type="text" id="gerente" maxlength="100">
 									</div>
 									<div class="col-xs-12 js-input">
 									  	<label for="cont_comercial">Email del contacto comercial</label>
@@ -127,22 +135,22 @@
 									</div>
 								</div>
 								<div class="colxs-12 col-sm-6">
+                                    <div class="col-xs-12 js-input">
+                                        <label for="mov_comercial" class="col-2 col-form-label">M&oacute;vil del contacto comercial</label>
+                                        <input type="text" id="mov_comercial">
+                                    </div>
+                                    <div class="col-xs-12 js-input">
+                                        <label for="nom_tecnico" class="col-2 col-form-label">Nombre del contacto t&eacute;cnico</label>
+                                        <input type="text" id="nom_tecnico">
+                                    </div>
 									<div class="col-xs-12 js-input">
 								 	 	<label for="cont_tecnico" class="col-2 col-form-label">Email del contacto t&eacute;cnico</label>
 									    <input type="email" id="cont_tecnico">
 									</div>
 									<div class="col-xs-12 js-input">
-									  	<label for="url" class="col-2 col-form-label">URL de su p&aacute;gina web</label>
+									  	<label for="url" class="col-2 col-form-label">P&aacute;gina web de la empresa</label>
 									    <input type="url" id="url">
 									</div>
-									<div class="col-xs-12 js-input">
-									  	<label for="telefono" class="col-2 col-form-label">Teléfono</label>
-									    <input type="tel" id="telefono">
-									</div>
-                                    <div class="col-xs-12 js-input">
-                                        <label for="telefono" class="col-2 col-form-label">Descripción de la empresa</label>
-                                        <input type="tel" id="descripcion" maxlength="255">
-                                    </div>
                                     <div class="col-xs-12 js-input js-file js-flex">
                                         <input class="js-disabled" type="text" id="archivoDocumento" name="archivoDocumento" maxlength="10" placeholder="Suba su logo (2MB Max)" style="pointer-events: none">
                                         <div class="js-icon">
