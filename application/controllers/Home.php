@@ -78,7 +78,7 @@ class Home extends CI_Controller {
                                   </div>
                               </div>
                               <div class="js-card--partner__button">
-                                  <button id="buttonzoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                  <button id="button'.$key->Empresa.'" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
                                     <i class="mdi mdi-arrow_downward"></i>
                                   </button>
                               </div>

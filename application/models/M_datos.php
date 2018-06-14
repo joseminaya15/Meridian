@@ -77,8 +77,7 @@ class M_datos extends  CI_Model{
                        d.Empresa,
                        d.Descripcion,
                        d.imagen,
-                       ip.id_pais,
-                       p.Nombre AS pais,
+                       GROUP_CONCAT(DISTINCT p.Nombre) AS pais,
                        v.nombre AS vertical
                   FROM contacto      c,
                        desarrolladores d,
@@ -96,7 +95,7 @@ class M_datos extends  CI_Model{
                    ".$sentPais."
                    ".$sentVert."
                    ".$sentCara."
-              GROUP BY p.Id, c.Id, c.id_deps
+              GROUP BY c.Id
               ORDER BY c.id_deps ASC";
         $result = $this->db->query($sql);
         return $result->result();
