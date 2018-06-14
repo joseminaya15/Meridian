@@ -219,3 +219,13 @@ function agregarDatos(){
       	}
     });
 }
+$("#archivo").change(function(e) {
+	var files = e.target.files,
+	    filesLength = files.length;
+	for (var i = 0; i < filesLength ; i++) {
+		var f = files[i]
+		var archivo = (f.name).replace(" ","");
+		nombre = archivo;
+	}
+	$('#archivoDocumento').val(nombre);
+});
