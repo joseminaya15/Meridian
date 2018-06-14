@@ -31,7 +31,7 @@ class M_datos extends  CI_Model{
                   FROM detalle_caract dc,
                        caracteristicas c
                  WHERE dc.id_caract = c.Id
-              ORDER BY nombre ASC";
+              ORDER BY name_caract ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
@@ -67,9 +67,9 @@ class M_datos extends  CI_Model{
         $caracteristica = ($caracteristica == '' ) ? '%': $caracteristica;
         $sql = "SELECT * 
                   FROM contacto
-                 WHERE id_pais IN "$pais"
-                   AND id_vertical IN "$vertical"
-                   AND id_detalle_caract IN "$caracteristica"
+                 WHERE id_pais IN ".$pais."
+                   AND id_vertical IN ".$vertical."
+                   AND id_detalle_caract IN ".$caracteristica."
                   ";
         $result = $this->db->query($sql);
         return $result->result();
