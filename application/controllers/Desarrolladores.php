@@ -78,17 +78,22 @@ class Desarrolladores extends CI_Controller {
             $telefono = $this->input->post('telefono');
             $id_pais  = $this->input->post('id_pais');
             $id_verti = $this->input->post('id_verti');
+            $mov_comercial = $this->input->post('mov_comercial');
+            $nom_tecnico = $this->input->post('nom_tecnico');
             $descripcion = $this->input->post('descripcion');
             $arrInserDep = array('Empresa'     => $empresa,
                                  'Descripcion' => $descripcion,
                                  'imagen'      => '');
             $insetDep = $this->M_datos->insertarDatos($arrInserDep, 'desarrolladores');
-            $arrayInsert = array('gerente'        => $gerente,
+            $arrayInsert = array('name_cont_comer'=> $gerente,
                                  'cont_comercial' => $cont_com,
                                  'cont_tecnico'   => $cont_tec,
                                  'pagina'         => $url,
                                  'id_deps'        => $insetDep['Id'],
-                                 'flg_activo'     => 0);
+                                 'flg_activo'     => 0,
+                                 'celular_cont_comer' => $mov_comercial,
+                                 'name_cont_tec' => $nom_tecnico,
+                                 'telefono' => $telefono);
             $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
             foreach ($id_verti as $key) {
               $arrayInsert1 = array('id_vertical' => $key,

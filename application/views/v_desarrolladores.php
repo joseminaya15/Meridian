@@ -108,7 +108,7 @@
 										<input type="text" id="empresa">
 									</div>
                                     <div class="col-xs-12 js-input">
-                                        <label for="telefono" class="col-2 col-form-label">Descripción de la empresa (M&aacute;x 300 caracteres)</label>
+                                        <label for="descripcion" class="col-2 col-form-label">Descripción de la empresa (M&aacute;x 300 caracteres)</label>
                                         <input type="text" id="descripcion" maxlength="255">
                                     </div>
 									<div class="col-xs-12 js-input js-select">

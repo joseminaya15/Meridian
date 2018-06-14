@@ -8,6 +8,8 @@ function guardarDesarrolladores(){
 	var pais 	 = $('#pais').val();
 	var vertical = $('#vertical').val();
 	var descripcion = $('#descripcion').val();
+	var mov_comercial = $('#mov_comercial').val();
+	var nom_tecnico = $('#nom_tecnico').val();
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese el nombre de su empresa');
 		return;
@@ -23,12 +25,6 @@ function guardarDesarrolladores(){
 	if(gerente == '' || gerente == null){
 		msj('error', 'Ingrese el nombre de su gerente');
 		return;
-	}
-	if (!validateEmail(gerente)){
-		$('#gerente').css('border-color','red');
-		return;
-	}else {
-		$('#gerente').css('border-color','');
 	}
 	if(cont_com == '' || cont_tec == null){
 		msj('error', 'Ingrese el Email de su contacto comercial');
@@ -72,7 +68,9 @@ function guardarDesarrolladores(){
 				telefono : telefono,
 				id_pais  : pais,
 				id_verti : vertical,
-				descripcion : descripcion},
+				descripcion : descripcion,
+				mov_comercial : mov_comercial,
+				nom_tecnico   : nom_tecnico},
 		url  : 'desarrolladores/guardarDesarrolladores',
 		type : 'POST'
 	}).done(function(data){
