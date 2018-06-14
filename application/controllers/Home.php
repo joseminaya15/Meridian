@@ -113,19 +113,15 @@ class Home extends CI_Controller {
                                               <div class="js-card--footer__texto">
                                                   <p><strong>Industrias: </strong>'.$key->industrias.'</p>
                                               </div>
-                                              <!-- <div class="js-card--footer__texto">
-                                                  <p>Contacto Técnico</p>
-                                                  <a href="mailto:'.$key->cont_tecnico.'">'.$key->cont_tecnico.'</a>
-                                              </div> -->
                                           </div>
                                           <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                              <a class="mdl-button mdl-js-button mdl-button--icon">
-                                                  <i class="mdi mdi-email"></i>
-                                              </a>
-                                              <a class="mdl-button mdl-js-button mdl-button--icon">
-                                                  <i class="mdi mdi-desktop_mac"></i>
-                                              </a>
-                                          </div>
+                                          <a href="mailto:'.$key->cont_comercial.'" class="mdl-button mdl-js-button mdl-button--icon">
+                                              <i class="mdi mdi-email"></i>
+                                          </a>
+                                          <a href="'.$key->pagina.'" target="_blank" class="mdl-button mdl-js-button mdl-button--icon">
+                                              <i class="mdi mdi-desktop_mac"></i>
+                                          </a>
+                                      </div>
                                       </div>
                                   </div>
                                   <div class="js-card--partner__button">
