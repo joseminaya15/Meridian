@@ -75,20 +75,34 @@
             <div class="js-container">
                 <div class="js-flex">
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" id="pais" title="Typically your Country" onchange="buscarGeneral()" >
+                        <select class="selectpicker" multiple="multiple" id="pais" title="Seleccione su país" onchange="buscarGeneral()" >
                             <?php echo $paises?>
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" id="vertical" title="Typically your Vertical" onchange="buscarGeneral();">
+                        <select class="selectpicker" multiple="multiple" id="vertical" title="Seleccione su industria" onchange="buscarGeneral();">
                             <?php echo $vertical ?>
                         </select>
                     </div>
-                    <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple"  id="caracteristica" data-live-search="true" title="Choose the characteristic..." onchange ="buscarGeneral();">
+                    <!-- <div class="js-input js-select">
+                        <select class="selectpicker" multiple="multiple"  id="caracteristica" data-live-search="true" title="Seleccione su característic" onchange ="buscarGeneral();">
                             <?php echo $caracter ?>
                         </select>
-                    </div>
+                    </div> -->
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica</button>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="mdl-card">
+                        <div class="mdl-card__title">
+                            
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                                <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                                <span class="mdl-checkbox__label">Checkbox</span>
+                            </label>
+                        </div>
+                  </div>
                 </div>
                 <div class="js-cards">
                     <div class="js-card--partner js-card--partner1">
@@ -561,8 +575,8 @@
         <section id="contacto" class="js-section">
             <div class="js-container">
                 <div class="js-contacto text-center">
-                   <h2>¿Eres desarrollador, quieres ser parte de nuestro programa&#63;</h2>
-                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">P&oacute;ngase en contacto con nosotros</a>
+                   <h2>¿Eres desarrollador y quieres aparecer en este portal&#63;</h2>
+                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nosotros</a>
                 </div>
             </div>
         </section>

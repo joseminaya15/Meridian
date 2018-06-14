@@ -1,3 +1,4 @@
+/*
 function filtrarIndustria(){
 	var industria = $('#industria').val();
 	$.ajax({
@@ -80,6 +81,8 @@ function buscadorPartner(){
 	  	}
 	});
 }
+*/
+
 function verificarDatos(e){
 	if(e.keyCode === 13){
 		e.preventDefault();

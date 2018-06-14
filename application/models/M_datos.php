@@ -14,6 +14,7 @@ class M_datos extends  CI_Model{
         }
         return array("error" => EXIT_SUCCESS, "msj" => MSJ_INS, "Id" => $sol);
     }
+
     function updateDatos($arrayData, $id, $tabla){
         $this->db->where('Id'  , $id);
         $this->db->update($tabla, $arrayData);
@@ -22,25 +23,27 @@ class M_datos extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
+
     function getCaracteristicas(){
         $sql = "SELECT dc.Id,
                        dc.tipo,
                        c.name_caract
                   FROM detalle_caract dc,
                        caracteristicas c
-                 WHERE dc.id_caract = c.Id";
+                 WHERE dc.id_caract = c.Id
+              ORDER BY name_caract ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
 
-
-    function getPais(){
+    function getPais() {
         $sql = "SELECT * 
                   FROM pais
               ORDER BY Nombre ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
+
     function getVertical() {
         $sql = "SELECT * 
                   FROM vertical
@@ -48,13 +51,7 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
-    function getCaract(){
-        $sql = "SELECT * 
-                  FROM caracteristicas
-              ORDER BY name_caract ASC" ;
-        $result = $this->db->query($sql);
-        return $result->result();
-    }
+
     function getDetalleCaract($id) {
         $sql = "SELECT *
                   FROM detalle_caract
@@ -63,15 +60,33 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
-    function filtroGeneral() {
+    
+    function filtroGeneral($pais, $vertical, $caracteristica) {
+        $pais = ($pais == '' ) ? '%': $pais;
+        $vertical = ($vertical == '' ) ? '%': $vertical;
+        $caracteristica = ($caracteristica == '' ) ? '%': $caracteristica;
         $sql = "SELECT * 
-                  FROM contacto";
+                  FROM contacto
+                 WHERE id_pais IN ".$pais."
+                   AND id_vertical IN ".$vertical."
+                   AND id_detalle_caract IN ".$caracteristica."
+                  ";
         $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+    function getDatosCaracteristica($ids){
+        $sql = "SELECT dc.id_caract
+                  FROM detalle_caract dc
+                 WHERE dc.Id IN ?
+              GROUP BY dc.id_caract";
+        $result = $this->db->query($sql, array($ids));
         return $result->result();
     }
 
 //_________________________________________________________________
 
+    /*
     function getPartners($industria){
         $sql = "SELECT contenido,
                        imagenes
@@ -106,22 +121,5 @@ class M_datos extends  CI_Model{
                     OR p.industria LIKE '%".$buscador."%'";
         $result = $this->db->query($sql);
         return $result->result();
-    }
-
-    function getDatosCaracteristica($ids){
-        $sql = "SELECT dc.id_caract
-                  FROM detalle_caract dc
-                 WHERE dc.Id IN ?
-              GROUP BY dc.id_caract";
-        $result = $this->db->query($sql, array($ids));
-        return $result->result();
-    }
-    /*
-    function getIdByNameCate($cate){
-      $sql = "SELECT c.Id
-                FROM categorias c
-               WHERE (c.Nombre LIKE '%".$cate."%')";
-      $result = $this->db->query($sql);
-      return $result->row()->Id;
     }*/
 }
