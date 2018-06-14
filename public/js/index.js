@@ -28,6 +28,7 @@ function buscarGeneral(){
 	pais     	   = (pais == null) ? '' : pais.toString();
 	vertical 	   = (vertical == null) ? '' : vertical.toString();
 	caracteristica = (caracteristica == null) ? '' : caracteristica.toString();
+	console.log(caracteristica);
 	$.ajax({
 		data : { pais     		: pais,
 				 vertical 		: vertical,
