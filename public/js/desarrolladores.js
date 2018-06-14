@@ -162,6 +162,7 @@ function guardarDatosDeps(){
 				arrayIds = [];
 				$('.mdl-radio').removeClass('is-checked');
 				$('#li2Pos').addClass('complete');
+				$('.js-observacion').find('input').val('');
         	}else{
         		return;
         	}

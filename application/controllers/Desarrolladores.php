@@ -87,7 +87,8 @@ class Desarrolladores extends CI_Controller {
                                  'cont_comercial' => $cont_com,
                                  'cont_tecnico'   => $cont_tec,
                                  'pagina'         => $url,
-                                 'id_deps'        => $insetDep['Id']);
+                                 'id_deps'        => $insetDep['Id'],
+                                 'flg_activo'     => 0);
             $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
             foreach ($id_verti as $key) {
               $arrayInsert1 = array('id_vertical' => $key,
