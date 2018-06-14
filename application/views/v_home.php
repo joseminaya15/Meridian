@@ -84,7 +84,7 @@
                             <?php echo $vertical ?>
                         </select>
                     </div>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica <i class="mdi mdi-arrow_drop_down"></i></button>
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="mdl-card">
