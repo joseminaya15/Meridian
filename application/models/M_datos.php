@@ -70,20 +70,23 @@ class M_datos extends  CI_Model{
     }
     
     function filtroGeneral($pais, $vertical, $caracteristica) {
-        $pais = ($pais == '' ) ? '%': $pais;
-        $vertical = ($vertical == '' ) ? '%': $vertical;
-        $caracteristica = ($caracteristica == '' ) ? '%': $caracteristica;
-        $sql = "SELECT * 
-                  FROM contacto c,
-                       insrt_detalle id,
-                       insrt_pais ip,
-                       insrt_vertical iv
-                 WHERE 
-                   id_pais IN ".$pais."
-                   AND id_vertical IN ".$vertical."
-                   AND id_detalle_caract IN ".$caracteristica."
-                  ";
+        $sentPais = (empty($pais)) ? "" : "AND ip.id_pais IN (".$pais.") ";
+        $sentVert = (empty($vertical)) ? "" : "AND iv.id_vertical IN (".$vertical.") ";
+        $sentCara = (empty($caracteristica)) ? "" : "AND id.id_detalle IN (".$caracteristica.") ";
+        $sql = "SELECT c.*
+                 FROM contacto c,
+                      insrt_detalle id,
+                      insrt_pais ip,
+                      insrt_vertical iv
+                WHERE id.id_contacto = c.Id 
+                  AND ip.id_contacto = c.Id 
+                  AND iv.id_contacto = c.Id
+                  ".$sentPais."
+                  ".$sentVert."
+                  ".$sentCara."
+                GROUP BY c.Id ";
         $result = $this->db->query($sql);
+        print_r($this->db->last_query());
         return $result->result();
     }
 

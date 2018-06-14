@@ -23,12 +23,9 @@ function buscarGeneral (){
 	var pais 		   = $('#pais').val();
 	var vertical 	   = $('#vertical').val();
 	var caracteristica = $('#caracteristica').val();
-	// pais     	   = (pais == null) ? '' : pais.toString();
-	// vertical 	   = (vertical == null) ? '' : vertical.toString();
-	// caracteristica = (caracteristica == null) ? '' : caracteristica.toString();
-	console.log(pais);
-	// console.log(vertical);
-	// console.log(caracteristica);
+	pais     	   = (pais == null) ? '' : pais.toString();
+	vertical 	   = (vertical == null) ? '' : vertical.toString();
+	caracteristica = (caracteristica == null) ? '' : caracteristica.toString();
 	$.ajax({
 		data : { pais     		: pais,
 				 vertical 		: vertical,

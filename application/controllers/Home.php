@@ -36,7 +36,7 @@ class Home extends CI_Controller {
             foreach ($detalleCarac as $value) {
                 $optionCarac .= '<div class="js-checbox col-xs-12 col-sm-6 col-md-4">
                                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$value->Id.'">
-                                        <input type="checkbox" id="checkbox-'.$value->Id.'" class="mdl-checkbox__input">
+                                        <input type="checkbox" id="checkbox-'.$value->Id.'" class="mdl-checkbox__input" onchange="buscarGeneral();" >
                                         <span class="mdl-checkbox__label">'.$value->tipo.'</span>
                                     </label>
                                 </div>';
@@ -54,12 +54,11 @@ class Home extends CI_Controller {
     function busquedaGeneral () {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
-        try { 
+        try {
             $pais           = $this->input->post('pais');
             $vertical       = $this->input->post('vertical');
             $caracteristica = $this->input->post('caracteristica');
-
-            $datos          = $this->M_datos->filtroGeneral();
+            $datos          = $this->M_datos->filtroGeneral($pais, $vertical, $caracteristica);
             
         } catch (Exception $ex){
             $data['msj'] = $ex->getMessage();
