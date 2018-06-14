@@ -80,10 +80,18 @@ class Desarrolladores extends CI_Controller {
                                  'cont_comercial' => $cont_com,
                                  'cont_tecnico'   => $cont_tec,
                                  'pagina'         => $url,
-                                 'id_deps'        => $insetDep['Id'],
-                                 'id_vertical'    => $id_verti,
-                                 'id_pais'        => $id_pais);
+                                 'id_deps'        => $insetDep['Id']);
             $insetDatos = $this->M_datos->insertarDatos($arrayInsert, 'contacto');
+            foreach ($id_verti as $key) {
+              $arrayInsert1 = array('id_vertical' => $key,
+                                    'id_contacto' => $insetDatos['Id']);
+              $insetDatos1   = $this->M_datos->insertarDatos($arrayInsert1, 'insrt_vertical');
+            }
+            foreach ($id_pais as $val) {
+              $arrayInsert2 = array('id_pais'     => $val,
+                                    'id_contacto' => $insetDatos['Id']);
+              $insetDatos2   = $this->M_datos->insertarDatos($arrayInsert2, 'insrt_pais');
+            }
             $session    = array('id_contact' => $insetDatos['Id']);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
@@ -98,7 +106,12 @@ class Desarrolladores extends CI_Controller {
         try {
           $id_detalle = $this->input->post('id_detalle');
           $arr_deta   = $this->input->post('arr_deta');
-          $datos      = $this->M_datos->getDatosCaracteristica($arr_deta);
+          foreach ($arr_deta as $value) {
+              $arrayInsert3 = array('id_detalle'  => $value,
+                                    'id_contacto' => $this->session->userdata('id_contact'));
+              $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
+          }
+         /* $datos      = $this->M_datos->getDatosCaracteristica($arr_deta);
           $array_cat  = array();
           foreach ($datos as $key) {
             array_push($array_cat, $key->id_caract);
@@ -106,7 +119,7 @@ class Desarrolladores extends CI_Controller {
           $ids_caract = implode(",", $array_cat);
           $arrayUpdate = array('id_detalle_caract' => $id_detalle,
                                'id_caract'         => $ids_caract);
-          $this->M_datos->updateDatos($arrayUpdate, $this->session->userdata('id_contact'), 'contacto');
+          $this->M_datos->updateDatos($arrayUpdate, $this->session->userdata('id_contact'), 'contacto');*/
           $this->session->unset_userdata('id_detalle');
           $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
@@ -117,7 +130,7 @@ class Desarrolladores extends CI_Controller {
 
     function comboVerticales(){
       $html = '';
-      $datos = $this->M_datos->getVerticales();
+      $datos = $this->M_datos->getVertical();
       foreach ($datos as $key) {
         $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
       }

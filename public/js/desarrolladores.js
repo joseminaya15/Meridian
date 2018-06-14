@@ -59,8 +59,8 @@ function guardarDesarrolladores(){
 				cont_tec : cont_tec,
 				url 	 : url,
 				telefono : telefono,
-				id_pais  : pais.toString(),
-				id_verti : vertical.toString()},
+				id_pais  : pais,
+				id_verti : vertical},
 		url  : 'desarrolladores/guardarDesarrolladores',
 		type : 'POST'
 	}).done(function(data){

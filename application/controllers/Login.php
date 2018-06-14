@@ -24,12 +24,9 @@ class Login extends CI_Controller {
 			$usuario  = $this->input->post('usuario');
 			$password = $this->input->post('password');
 			$username = $this->M_usuario->verificarUsuario($usuario, $password);
-			/*echo $username[0]->idioma;
-			exit;*/
 			if(count($username) != 0){
 				if(strtolower($username[0]->usuario) == strtolower($usuario)){
 					$session = array('usuario' => $usuario,
-									 'Idioma'  => $username[0]->idioma,
 							 		 'Id_user' => $username[0]->Id);
 					$this->session->set_userdata($session);
 		          	$data['error'] = EXIT_SUCCESS;

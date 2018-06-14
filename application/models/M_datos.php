@@ -116,11 +116,6 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql, array($ids));
         return $result->result();
     }
-    function getVerticales(){
-        $sql = "SELECT * FROM vertical";
-        $result = $this->db->query($sql);
-        return $result->result();
-    }
     /*
     function getIdByNameCate($cate){
       $sql = "SELECT c.Id

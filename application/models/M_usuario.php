@@ -8,8 +8,7 @@ class M_usuario extends  CI_Model{
         $sql = "SELECT *
                   FROM persons
                  WHERE usuario = ?
-                   AND pass = ?
-                   AND activo = 1;";
+                   AND pass = ?";
         $result = $this->db->query($sql, array($user, $pass));
         return $result->result();
     }

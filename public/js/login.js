@@ -9,11 +9,13 @@ function ingresar(){
 		sessionStorage.setItem('CHECK', '0');
 	}
 	if(usuario == null){
-		$('#usuario').parent().addClass('is-invalid');
+		//$('#usuario').parent().addClass('is-invalid');
+    msj('error', 'Ingrese un usuario');
 		return;
 	}
 	if(password == null){
-		$('#password').parent().addClass('is-invalid');
+		//$('#password').parent().addClass('is-invalid');
+    msj('error', 'Ingrese una contraseña');
 		return;
 	}
 	$.ajax({
@@ -25,12 +27,12 @@ function ingresar(){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'admin'/*data.href*/;
+        	location.href = 'admin';
         	$('#usuario').val("");
         	$('#password').val("");
         }else {
-				$('#usuario').parent().addClass('is-invalid');
-				$('#password').parent().addClass('is-invalid');
+  				$('#usuario').parent().addClass('is-invalid');
+  				$('#password').parent().addClass('is-invalid');
         	return;
         }
       }catch(err){
