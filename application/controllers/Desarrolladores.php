@@ -33,7 +33,7 @@ class Desarrolladores extends CI_Controller {
           $h3    = '';
           if($nombre == $key->name_caract){
             if($i == 1){
-              $h3 = '<div class="col-xs-12"><h3 class="text-center">'.$key->name_caract.'</h3></div>';
+              $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract.'</h3></div>';
             }
             $i = 2;
           }
