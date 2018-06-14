@@ -59,6 +59,7 @@ class Home extends CI_Controller {
     }
 //________________________________________________________________________________________________________________________________________
 
+    /*
     function filtrarIndustria(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -440,4 +441,5 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
+    */
 }
