@@ -19,7 +19,13 @@ class Desarrolladores extends CI_Controller {
       $cont1     = '';
       $titulo    = '';
       $html_titu = '';
+      $optionPaises = '';
       $i         = 1;
+      $datosPaises = $this->M_datos->getPais();
+      foreach($datosPaises as $key) {
+          $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
+      }
+      $data['paises'] = $optionPaises;
       $datos = $this->M_datos->getCaracteristicas();
       $nombre = $datos[0]->name_caract;
       foreach ($datos as $key) {
