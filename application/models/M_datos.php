@@ -24,7 +24,15 @@ class M_datos extends  CI_Model{
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
 
-    function getCaracteristicas(){
+    function getCaract(){
+        $sql = "SELECT c.*
+                  FROM caracteristicas c
+              ORDER BY name_caract ASC";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+     function getCaracteristicas(){
         $sql = "SELECT dc.Id,
                        dc.tipo,
                        c.name_caract

@@ -18,7 +18,7 @@ class Home extends CI_Controller {
         $data['vertical'] = '';
         $datosPaises      = $this->M_datos->getPais();
         $datosVertical    = $this->M_datos->getVertical();
-        $datosCarac       = $this->M_datos->getCaracteristicas();
+        $datosCarac       = $this->M_datos->getCaract();
         $optionPaises     = '';
         $optionVertical   = '';
         $optionCarac      = '';
