@@ -4,14 +4,14 @@
     <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible"  content="IE=edge">
     <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="description"            content="Aruba | Meridian">
-    <meta name="keywords"               content="Aruba | Meridian">
+    <meta name="description"            content="Aruba Meridian">
+    <meta name="keywords"               content="Aruba Meridian">
     <meta name="robots"                 content="Index,Follow">
     <meta name="date"                   content="January 25, 2018"/>
     <meta name="language"               content="es">
     <meta name="theme-color"            content="#000000">
-	  <title>Meridian</title>
-    <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
+	  <title>Aruba | Meridian</title>
+    <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
