@@ -36,6 +36,7 @@ function buscarGeneral (){
 		try {
 			data = JSON.parse(data);
 			if (data.error == 0) {
+				$('#cardDesarrolladores').html(null);
 				$('#cardDesarrolladores').html(data.html);
 			}
 		}catch (err){

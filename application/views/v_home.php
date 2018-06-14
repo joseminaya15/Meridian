@@ -94,7 +94,8 @@
                   </div>
                 </div>
                 <div class="js-cards" id="cardDesarrolladores">
-                    <div class="js-card--partner js-card--partner1">
+                    <?php echo $html; ?>
+                    <!-- <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">
                                 <img src="<?php echo RUTA_IMG?>logo/zoox.png" alt="">
@@ -109,12 +110,12 @@
                                         <div class="js-card--footer__texto">
                                             <p><strong>Industrias: </strong>Centros Comerciales, Educación, Retail, Salud, Aeropuertos, Plazas públicas, Transportes, Hotelería / Restaurantes, Manufactura</p>
                                             <p><strong>Tipo de Licenciamiento: </strong>Por Suscripci&oacute;n</p>
-                                        </div>
-                                        <!-- <div class="js-card--footer__texto">
-                                            <p>Contacto Técnico</p>
-                                            <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
                                         </div> -->
-                                    </div>
+                                                <!-- <div class="js-card--footer__texto">
+                                                    <p>Contacto Técnico</p>
+                                                    <a href="mailto:demis.cunha@skyfii.com">demis.cunha@skyfii.com</a>
+                                                </div> -->
+                                    <!-- </div>
                                     <div class="col-sm-3 col-xs-4 js--card--footer__contact">
                                         <a class="mdl-button mdl-js-button mdl-button--icon">
                                             <i class="mdi mdi-email"></i>
@@ -316,7 +317,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>

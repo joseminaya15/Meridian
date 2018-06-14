@@ -49,43 +49,44 @@ class Home extends CI_Controller {
             $html .= '<div class="js-card--partner js-card--partner1">
                           <div class="js-card--partner__front">
                               <div class="js-card--partner__imagen">
-                                  <img src="<?php echo RUTA_IMG?>'.$key->imagen.'" alt="">
+                                  <img src="'.RUTA_IMG.$key->imagen.'" alt="">
                               </div>
                               <div class="js-hide">
                                   <div class="js-card--partner__contenido">
                                       <p>'.$key->Descripcion.'</p>
-                                      <!-- <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
+                                      <p><strong>Alcance de la soluci&oacute;n: </strong>Portales cautivos, Analíticas, Marketing, Integración, Reportes, Monitoreo Infraestructura, Integración con CRM, Adquisición de datos.</p>
                                   </div>
                                   <div class="js-card--partner__footer">
                                       <div class="col-sm-9 col-xs-8 p-l-0">
                                           <div class="js-card--footer__texto">
-                                              <p>Contacto Comercial</p>
-                                              <a href="mailto:'.$key->cont_comercial.'">'.$key->cont_comercial.'</a>
+                                              <p><strong>Industrias: </strong>Centros Comerciales, Educación, Retail, Salud, Aeropuertos, Plazas públicas, Transportes, Hotelería / Restaurantes, Manufactura</p>
+                                              <p><strong>Tipo de Licenciamiento: </strong>Por Suscripci&oacute;n</p>
                                           </div>
-                                          <div class="js-card--footer__texto">
+                                          <!-- <div class="js-card--footer__texto">
                                               <p>Contacto Técnico</p>
                                               <a href="mailto:'.$key->cont_tecnico.'">'.$key->cont_tecnico.'</a>
-                                          </div>
+                                          </div> -->
                                       </div>
                                       <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                          <button class="mdl-button mdl-js-button mdl-button--icon">
+                                          <a class="mdl-button mdl-js-button mdl-button--icon">
                                               <i class="mdi mdi-email"></i>
-                                          </button>
-                                          <button class="mdl-button mdl-js-button mdl-button--icon">
-                                              <i class="mdi mdi-chat"></i>
-                                          </button>
+                                          </a>
+                                          <a class="mdl-button mdl-js-button mdl-button--icon">
+                                              <i class="mdi mdi-desktop_mac"></i>
+                                          </a>
                                       </div>
                                   </div>
                               </div>
                               <div class="js-card--partner__button">
                                   <button id="buttonzoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
-                                      <i class="mdi mdi-arrow_downward"></i>
+                                    <i class="mdi mdi-arrow_downward"></i>
                                   </button>
                               </div>
                           </div>
                       </div>';
         }
 
+        $data['html'] = $html;
         $data['paises']   = $optionPaises;
         $data['vertical'] = $optionVertical;
         $data['caracter'] = $optionCarac;
@@ -105,37 +106,37 @@ class Home extends CI_Controller {
                 $html .= '<div class="js-card--partner js-card--partner1">
                               <div class="js-card--partner__front">
                                   <div class="js-card--partner__imagen">
-                                      <img src="<?php echo RUTA_IMG?>'.$key->imagen.'" alt="">
+                                      <img src="'.RUTA_IMG.$key->imagen.'" alt="">
                                   </div>
                                   <div class="js-hide">
                                       <div class="js-card--partner__contenido">
                                           <p>'.$key->Descripcion.'</p>
-                                          <!-- <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
+                                          <p><strong>Alcance de la soluci&oacute;n: </strong>Portales cautivos, Analíticas, Marketing, Integración, Reportes, Monitoreo Infraestructura, Integración con CRM, Adquisición de datos.</p>
                                       </div>
                                       <div class="js-card--partner__footer">
                                           <div class="col-sm-9 col-xs-8 p-l-0">
                                               <div class="js-card--footer__texto">
-                                                  <p>Contacto Comercial</p>
-                                                  <a href="mailto:'.$key->cont_comercial.'">'.$key->cont_comercial.'</a>
+                                                  <p><strong>Industrias: </strong>Centros Comerciales, Educación, Retail, Salud, Aeropuertos, Plazas públicas, Transportes, Hotelería / Restaurantes, Manufactura</p>
+                                                  <p><strong>Tipo de Licenciamiento: </strong>Por Suscripci&oacute;n</p>
                                               </div>
-                                              <div class="js-card--footer__texto">
+                                              <!-- <div class="js-card--footer__texto">
                                                   <p>Contacto Técnico</p>
                                                   <a href="mailto:'.$key->cont_tecnico.'">'.$key->cont_tecnico.'</a>
-                                              </div>
+                                              </div> -->
                                           </div>
                                           <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                              <button class="mdl-button mdl-js-button mdl-button--icon">
+                                              <a class="mdl-button mdl-js-button mdl-button--icon">
                                                   <i class="mdi mdi-email"></i>
-                                              </button>
-                                              <button class="mdl-button mdl-js-button mdl-button--icon">
-                                                  <i class="mdi mdi-chat"></i>
-                                              </button>
+                                              </a>
+                                              <a class="mdl-button mdl-js-button mdl-button--icon">
+                                                  <i class="mdi mdi-desktop_mac"></i>
+                                              </a>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="js-card--partner__button">
-                                      <button id="buttonzoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
-                                          <i class="mdi mdi-arrow_downward"></i>
+                                      <button id="button'.$key->Empresa.'" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                        <i class="mdi mdi-arrow_downward"></i>
                                       </button>
                                   </div>
                               </div>
