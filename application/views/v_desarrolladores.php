@@ -86,13 +86,13 @@
                                 <a data-toggle="tab" aria-expanded="true" href="#tab1Pos" id="step1Pos">
                                     <span class="step"></span>
                                 </a>
-                                <span class="title">Informaci&oacute;n</span>
+                                <span class="js-nav__title">Informaci&oacute;n</span>
                             </li>
                             <li id="li2Pos">
                                 <a data-toggle="tab" aria-expanded="false" href="#tab2Pos" class="my-link-pos" id="step2Pos" style="pointer-events: none;"> 
                                     <span class="step"></span>
                                 </a>
-                                <span class="title">Caracter&iacute;sticas</span>
+                                <span class="js-nav__title">Caracter&iacute;sticas</span>
                             </li>
 						</ul>
 					</div>

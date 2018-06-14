@@ -77,20 +77,27 @@ class M_datos extends  CI_Model{
                        d.Empresa,
                        d.Descripcion,
                        d.imagen,
-                       ip.id_pais
+                       ip.id_pais,
+                       p.Nombre AS pais,
+                       v.nombre AS vertical
                   FROM contacto      c,
                        desarrolladores d,
                        insrt_detalle  id,
                        insrt_pais     ip,
-                       insrt_vertical iv
+                       insrt_vertical iv,
+                       pais           p,
+                       vertical       v
                  WHERE id.id_contacto = c.Id 
                    AND d.Id = c.id_deps
                    AND ip.id_contacto = c.Id 
-                   AND iv.id_contacto = c.Id 
+                   AND iv.id_contacto = c.Id
+                   AND p.Id = ip.id_pais
+                   AND v.Id = iv.id_vertical
                    ".$sentPais."
                    ".$sentVert."
                    ".$sentCara."
-              GROUP BY c.Id ";
+              GROUP BY p.Id, c.Id, c.id_deps
+              ORDER BY c.id_deps ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }

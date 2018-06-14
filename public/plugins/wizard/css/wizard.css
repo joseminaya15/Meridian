@@ -516,10 +516,3 @@ to {
 	background: #ffffff;
 	color: #e5e6e6;
 }
-.js-wizard .nav .title {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: -15px;
-	color: #969c9c;
-}

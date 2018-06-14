@@ -9,32 +9,6 @@
 .js-wizard .nav>li>a:hover {
 	background-color: transparent;
 }
-/*.js-wizard .js-wizard__nav .js-progress .js-progress__bar {
-	background-color: #004062;
-}*/
-/*.js-wizard .js-wizard__nav .nav-justified>li {
-	float: none;
-	display: -webkit-inline-box;
-	display: -moz-inline-stack;
-	display: inline-block;	
-	width: 24%;
-	margin: 0;
-}*/
-/*.js-wizard .js-wizard__nav .js-progress {
-	width: 72.5%;
-}*/
-.js-wizard .nav li.active .step, 
-.js-wizard .nav li:hover .step {
-    border-color: #004062;
-    color: #004062;
-}
-.js-wizard .nav li.active .title,
-.js-wizard .nav li:hover .title {
-    color: #004062;	
-}
-.js-wizard .nav li .title{
-	text-align: center;
-}
 .js-wizard .nav li.active .step {
 	position: relative;
 	top: -5px;
@@ -71,11 +45,6 @@
 }
 .js-wizard ul.nav.nav-pills>li:NTH-CHILD(6)>a span.step:AFTER {
 	content: "6"
-}
-.js-wizard .nav li.complete .step {
-    border-color: #004062;
-    background-color: #004062;
-    color: #FFFFFF;
 }
 .js-wizard .nav li.complete .title {
 	color: #004062;
