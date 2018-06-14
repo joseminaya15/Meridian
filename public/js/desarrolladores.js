@@ -141,7 +141,12 @@ function guardarDatosDeps(){
 	$(".js-radio .is-checked").each(function (){
 		var isChecked    = $(this);
 		var labelChecked = isChecked.find('.mdl-radio__label');
-		var textChecked = isChecked.find('.mdl-radio__label').text()
+		var textChecked = isChecked.find('.mdl-radio__label').text();
+		/*console.log(textChecked);
+		if(textChecked == null || textChecked == '' || textChecked == undefined){
+			msj('error', 'Seleccione las características de su empresa');
+			return;
+		}*/
 		if(textChecked == 'Sí'){
 			var attrChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
 			var idChecked   = $('#'+attrChecked);
