@@ -109,7 +109,8 @@
 									</div>
                                     <div class="col-xs-12 js-input">
                                         <label for="descripcion" class="col-2 col-form-label">Descripción de la empresa (M&aacute;x 300 caracteres)</label>
-                                        <input type="text" id="descripcion" maxlength="255">
+                                        <input type="text" id="descripcion" maxlength="300">
+                                        <!-- <span class="mdl-textfield__limit" for="descripcion" data-limit="300">0/300</span> -->
                                     </div>
 									<div class="col-xs-12 js-input js-select">
 										<select class="selectpicker" id="vertical" data-actions-box="true" data-size="10" title="Indique los sectores que atiende" multiple>
@@ -251,6 +252,7 @@
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>desarrolladores.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
+            // init();
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
             } else {

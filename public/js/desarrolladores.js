@@ -1,3 +1,6 @@
+// function init(){
+//     initLimitInputs('descripcion');
+// }
 function guardarDesarrolladores(){
 	var empresa  = $('#empresa').val();
 	var gerente  = $('#gerente').val();
