@@ -19,6 +19,9 @@ class Home extends CI_Controller {
         $datosPaises      = $this->M_datos->getPais();
         $datosVertical    = $this->M_datos->getVertical();
         $datosCarac       = $this->M_datos->getCaract();
+        $optionPaises     = '';
+        $optionVertical   = '';
+        $optionCarac      = '';
         foreach($datosPaises as $key) {
             $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
         }
