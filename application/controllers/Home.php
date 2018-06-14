@@ -81,7 +81,6 @@ class Home extends CI_Controller {
                           </div>
                       </div>';
         }
-
         $data['html'] = $html;
         $data['paises']   = $optionPaises;
         $data['vertical'] = $optionVertical;

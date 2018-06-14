@@ -77,9 +77,9 @@ class M_datos extends  CI_Model{
                        d.Empresa,
                        d.Descripcion,
                        d.imagen,
-                       GROUP_CONCAT(DISTINCT p.Nombre) AS pais,
-                       GROUP_CONCAT(DISTINCT v.nombre) AS industrias,
-                       GROUP_CONCAT(DISTINCT dc.tipo) AS caract
+                       GROUP_CONCAT(DISTINCT p.Nombre SEPARATOR ', ') AS pais,
+                       GROUP_CONCAT(DISTINCT v.nombre SEPARATOR ', ') AS industrias,
+                       GROUP_CONCAT(DISTINCT ca.name_caract SEPARATOR ', ') AS caract
                   FROM contacto        co,
                        caracteristicas ca,
                        desarrolladores  d,
@@ -96,6 +96,7 @@ class M_datos extends  CI_Model{
                    AND p.Id = ip.id_pais
                    AND v.Id = iv.id_vertical
                    AND dc.id_caract = ca.Id
+                   AND dc.Id = id.id_detalle
                    AND co.flg_activo = 1
                    ".$sentPais."
                    ".$sentVert."
