@@ -90,6 +90,7 @@ defined('RUTA_FONTS')   OR define('RUTA_FONTS'  , 'http://'.(isset($_SERVER['HTT
 defined('RUTA_IMG')     OR define('RUTA_IMG'    , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/Meridian/public/img/');
 defined('RUTA_JS')      OR define('RUTA_JS'     , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/Meridian/public/js/');
 defined('RUTA_PLUGINS') OR define('RUTA_PLUGINS', 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/Meridian/public/plugins/');
+defined('RUTA_ARCHIVOS') OR define('RUTA_ARCHIVOS', 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/Meridian/public/archivos/');
 
 defined('MSJ_INS') OR define('MSJ_INS', 'Se Registr&oacute; Correctamente');
 defined('MSJ_UPT') OR define('MSJ_UPT', 'Se Edit&oacute; Correctamente');

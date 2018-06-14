@@ -31,13 +31,20 @@ class Admin extends CI_Controller {
                     </tr>';
         }
         foreach ($datos as $key) {
+            $img     = '';
+            if($key->imagen == null || $key->imagen == ''){
+                $img = 'nouser.png';
+            }else {
+                $img = $key->imagen;
+            }
             $html .= '<tr>
+                        <td><img src="'.RUTA_ARCHIVOS.'1'.$img.'" style="width:  100%;max-width: 80px;"></td>
                         <td>'.$key->gerente.'</td>
                         <td>'.$key->cont_comercial.'</td>
                         <td>'.$key->cont_tecnico.'</td>
                         <td>'.$key->pagina.'</td>
                         <td>'.$key->pais.'</td>
-                        <td>'.$key->vertical.'</td>
+                        <td>'.$key->industrias.'</td>
                     </tr>';
         }
         $data['html'] = $html;

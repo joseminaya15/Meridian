@@ -48,6 +48,7 @@
                     <table id="example" class="table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
+                                <th class="text-left">Logo</th>
                                 <th class="text-left">Gerente</th>
                                 <th class="text-left">Contacto Comercial</th>
                                 <th class="text-left">Contacto Técnico</th>
