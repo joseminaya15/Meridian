@@ -84,21 +84,12 @@
                             <?php echo $vertical ?>
                         </select>
                     </div>
-                    <!-- <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple"  id="caracteristica" data-live-search="true" title="Seleccione su característic" onchange ="buscarGeneral();">
-                            <?php echo $caracter ?>
-                        </select>
-                    </div> -->
                     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica</button>
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="mdl-card">
                         <div class="mdl-card__supporting-text">
                             <?php echo $caracter ?>
-                            <!-- <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                                <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                                <span class="mdl-checkbox__label">Checkbox</span>
-                            </label> -->
                         </div>
                   </div>
                 </div>
