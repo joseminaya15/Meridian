@@ -1,3 +1,6 @@
+$default   = #FF8300
+$primary   = #9FD4C9
+$secondary = #D5D654
 .js-wizard
 	position relative
 	.js-wizard__nav
@@ -10,6 +13,25 @@
 			&>li
 				display inline-block
 				width 48.5%
+				&:hover
+				&.active
+					.step
+						border-color $default
+						color $default
+					.js-nav__title
+						color $default
+				&.complete
+					.step
+						border-color $default
+						background-color $default
+						color #FFFFFF
+				.js-nav__title
+					text-align center
+					position absolute
+					width 100%
+					left 0
+					bottom -15px
+					color #757575
 			a
 				margin-bottom 5px
 				cursor pointer
