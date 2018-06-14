@@ -123,20 +123,6 @@ class Desarrolladores extends CI_Controller {
                                   'comentario'    => $key[1]);
             $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
           }
-          /*foreach ($arr_deta as $value) {
-              $arrayInsert3 = array('id_detalle'  => $value,
-                                    'id_contacto' => $this->session->userdata('id_contact'));
-              $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
-          }*/
-         /* $datos      = $this->M_datos->getDatosCaracteristica($arr_deta);
-          $array_cat  = array();
-          foreach ($datos as $key) {
-            array_push($array_cat, $key->id_caract);
-          }
-          $ids_caract = implode(",", $array_cat);
-          $arrayUpdate = array('id_detalle_caract' => $id_detalle,
-                               'id_caract'         => $ids_caract);
-          $this->M_datos->updateDatos($arrayUpdate, $this->session->userdata('id_contact'), 'contacto');*/
           $this->session->unset_userdata('id_detalle');
           $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
