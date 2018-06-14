@@ -151,7 +151,7 @@ a
 	color #FFFFFF
 	.js-fondo--programa
 		absolute()
-		background url(../img/fondo/fondo-header.png) center center no-repeat
+		background url(../img/fondo/fondo-header.png) top right no-repeat
 		background-size cover
 .js-contenido
 	background-color $secondary
@@ -325,6 +325,7 @@ a
 			color $default
 			font-size 18px
 			font-family $light
+			line-height 16px
 			i
 				vertical-align middle
 				color $default
@@ -513,6 +514,19 @@ footer
 // @media ( max-width: 1400px )
 // @media ( max-width: 1200px )
 // @media ( max-width: 768px )
+@media ( max-width: 1000px )
+	.js-partner 
+		.js-partner--imagen
+			&::after
+				display none
+		.js-partner--contenido
+			position relative
+			color #000000
+			h2
+				font-size 28px
+				font-family $regular
+			p
+				font-size 16px
 @media ( max-width: 600px )
 	.js-cards 
 		.js-card--partner 
