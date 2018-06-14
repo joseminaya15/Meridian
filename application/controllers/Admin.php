@@ -45,6 +45,7 @@ class Admin extends CI_Controller {
                         <td>'.$key->pagina.'</td>
                         <td>'.$key->pais.'</td>
                         <td>'.$key->industrias.'</td>
+                        <td>'.$key->Descripcion.'</td>
                     </tr>';
         }
         $data['html'] = $html;

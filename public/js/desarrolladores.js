@@ -62,6 +62,7 @@ function guardarDesarrolladores(){
 		msj('error', 'Ingrese la descripción de su empresa');
 		return;
 	}
+	return;
 	$('.btn-guardar').prop("disabled", true);
 	$.ajax({
 		data : {empresa  : empresa,

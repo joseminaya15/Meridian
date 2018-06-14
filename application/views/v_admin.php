@@ -55,10 +55,11 @@
                                 <th class="text-left">Página web</th>
                                 <th class="text-left">País</th>
                                 <th class="text-left">Verticales</th>
+                                <th class="text-left">Descripción</th>
                             </tr>
                         </thead>
                       <tbody>
-                          <?php echo $html ?>  
+                          <?php echo $html ?>
                       </tbody>
                     </table>
                 </div>
