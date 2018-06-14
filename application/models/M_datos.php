@@ -73,7 +73,7 @@ class M_datos extends  CI_Model{
         $sentPais = (empty($pais)) ? "" : "AND ip.id_pais IN (".$pais.") ";
         $sentVert = (empty($vertical)) ? "" : "AND iv.id_vertical IN (".$vertical.") ";
         $sentCara = (empty($caracteristica)) ? "" : "AND id.id_detalle IN (".$caracteristica.") ";
-        $sql = "SELECT co.*,
+        $sql = "                SELECT co.*,
                        d.Empresa,
                        d.Descripcion,
                        d.imagen,
@@ -96,6 +96,7 @@ class M_datos extends  CI_Model{
                    AND p.Id = ip.id_pais
                    AND v.Id = iv.id_vertical
                    AND dc.id_caract = ca.Id
+                   AND co.flg_activo = 1
                    ".$sentPais."
                    ".$sentVert."
                    ".$sentCara."
