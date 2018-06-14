@@ -63,9 +63,13 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql, array($id));
         return $result->result();
     }
-    function filtroGeneral() {
+    function filtroGeneral($pais, $vertical, $caracteristica) {
+        $pais = ($pais == '' ) ? '%': $pais;
+        $vertical = ($vertical == '' ) ? '%': $vertical;
+        $caracteristica = ($caracteristica == '' ) ? '%': $caracteristica;
         $sql = "SELECT * 
-                  FROM contacto";
+                  FROM contacto
+                  ";
         $result = $this->db->query($sql);
         return $result->result();
     }
