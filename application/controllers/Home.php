@@ -62,16 +62,12 @@ class Home extends CI_Controller {
                                               <p><strong>Industrias: </strong>'.$key->industrias.'</p>
                                               <p><strong>Tipo de Licenciamiento: </strong>Por Suscripci&oacute;n</p>
                                           </div>
-                                          <!-- <div class="js-card--footer__texto">
-                                              <p>Contacto Técnico</p>
-                                              <a href="mailto:'.$key->cont_tecnico.'">'.$key->cont_tecnico.'</a>
-                                          </div> -->
                                       </div>
                                       <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                          <a class="mdl-button mdl-js-button mdl-button--icon">
+                                          <a href="mailto:'.$key->cont_comercial.'" class="mdl-button mdl-js-button mdl-button--icon">
                                               <i class="mdi mdi-email"></i>
                                           </a>
-                                          <a class="mdl-button mdl-js-button mdl-button--icon">
+                                          <a href="'.$key->pagina.'" target="_blank" class="mdl-button mdl-js-button mdl-button--icon">
                                               <i class="mdi mdi-desktop_mac"></i>
                                           </a>
                                       </div>

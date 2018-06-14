@@ -19,7 +19,7 @@ function showCard(id){
 // 	var card   = idCard.parents('.js-card--partner1').removeClass('effect1');
 // }
 
-function buscarGeneral (){
+function buscarGeneral(){
 	var pais 		   = $('#pais').val();
 	var vertical 	   = $('#vertical').val();
 	var caracteristica = $('#caracteristica').val();
