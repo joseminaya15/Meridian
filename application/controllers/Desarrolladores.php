@@ -49,9 +49,9 @@ class Desarrolladores extends CI_Controller {
                               <span class="mdl-radio__label">No</span>
                           </label>
                       </div>
-                      <div class="col-xs-12 js-input">
-                          <label for="observacion1">Observacion</label>
-                          <input type="text" id="observacion1" maxlength="50">
+                      <div class="col-xs-12 js-input js-observacion">
+                          <label for="observacion'.$cont.'">Observacion</label>
+                          <input type="text" id="observacion'.$cont.'" maxlength="50">
                       </div>
                     </div>';
           $cont = $cont1+1;
@@ -106,11 +106,19 @@ class Desarrolladores extends CI_Controller {
         try {
           $id_detalle = $this->input->post('id_detalle');
           $arr_deta   = $this->input->post('arr_deta');
-          foreach ($arr_deta as $value) {
+          $obsChecked = $this->input->post('obsChecked');
+          $arrayGeneral = $this->input->post('arrayGeneral');
+          foreach ($arrayGeneral as $key) {
+            $arrayInsert3 = array('id_detalle'    => $key[0],
+                                    'id_contacto' => $this->session->userdata('id_contact'),
+                                  'comentario'    => $key[1]);
+            $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
+          }
+          /*foreach ($arr_deta as $value) {
               $arrayInsert3 = array('id_detalle'  => $value,
                                     'id_contacto' => $this->session->userdata('id_contact'));
               $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
-          }
+          }*/
          /* $datos      = $this->M_datos->getDatosCaracteristica($arr_deta);
           $array_cat  = array();
           foreach ($datos as $key) {

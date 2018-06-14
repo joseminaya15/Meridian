@@ -121,22 +121,32 @@ function limpiarCampos(){
 	$('#pais').val("0");
 	$('.selectpicker').selectpicker('refresh');
 }
-var arrayIds = [];
+var arrayIds    = [];
+var arraycomets = [];
+var arrayGeneral = [];
+var obsChecked = '';
 function guardarDatosDeps(){
 	$(".js-radio .is-checked").each(function (){
 		var isChecked    = $(this);
 		var labelChecked = isChecked.find('.mdl-radio__label');
 		var textChecked = isChecked.find('.mdl-radio__label').text()
 		if(textChecked == 'Sí'){
-			var valChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
-			var idChecked = $('#'+valChecked).val();
-			arrayIds.push(idChecked)
+			var attrChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
+			var idChecked   = $('#'+attrChecked);
+			var valChecked  = idChecked.val();
+			arrayIds.push(valChecked);
+			obsChecked  = idChecked.parents('.js-radio').siblings('.js-observacion').find('input').val();
+			arraycomets.push(obsChecked);
+			arrayGeneral.push([valChecked,
+								obsChecked]);
 		}
     })
     $('.btn-guardar-deps').prop("disabled", true);
     $.ajax({
-		data : {id_detalle  : arrayIds.toString(),
-				arr_deta    : arrayIds},
+		data : {id_detalle   : arrayIds.toString(),
+				arr_deta     : arrayIds,
+				obsChecked   : obsChecked,
+				arrayGeneral : arrayGeneral},
 		url  : 'desarrolladores/guardarDatosDeps',
 		type : 'POST'
 	}).done(function(data){
