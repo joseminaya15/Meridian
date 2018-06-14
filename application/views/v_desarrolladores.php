@@ -100,7 +100,7 @@
 						<div class="tab-pane pane-pos active" id="tab1Pos">    
 						    <div class="row-fluid">
 								<div class="col-xs-12 js-wizard__title">
-                                    <h2>Datos Personales</h2>
+                                    <h2>Datos de la Empresa</h2>
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<div class="col-xs-12 js-input">
