@@ -19,9 +19,6 @@ class Home extends CI_Controller {
         $datosPaises      = $this->M_datos->getPais();
         $datosVertical    = $this->M_datos->getVertical();
         $datosCarac       = $this->M_datos->getCaract();
-        $optionPaises     = '';
-        $optionVertical   = '';
-        $optionCarac      = '';
         foreach($datosPaises as $key) {
             $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
         }
@@ -60,74 +57,6 @@ class Home extends CI_Controller {
             $caracteristica = $this->input->post('caracteristica');
 
             $datos          = $this->M_datos->filtroGeneral();
-            $arr_pais       = array();
-            $arr_pais2      = array();
-            $arr_pais3      = array();
-            $arr_pais_final = array();
-            $arr_pais_finalito = array();
-
-            $arr_vert       = array();
-            $arr_vert2      = array();
-            $arr_vert_final = array();
-
-            $arr_cara       = array();
-            $arr_cara2      = array();
-            $arr_cara_final = array();
-
-            foreach($datos as $key) {
-                array_push($arr_pais, explode(',', $key->id_pais));
-                array_push($arr_vert, explode(',', $key->id_vertical));
-                array_push($arr_cara, explode(',', $key->id_detalle_caract));
-            }
-
-            if(!empty($pais)) {
-                foreach ($pais as $val) {
-                    array_push($arr_pais2, $val);
-                }
-                foreach ($arr_pais as $value) {
-                    array_push($arr_pais_final,array_intersect($arr_pais2, $value));
-                    // foreach ($arr_pais_final as $valor) {
-                    //     if (sizeof($valor) != 0) {
-                    //         array_push($arr_pais_finalito, $valor);
-                    //     }
-                    // }
-                }
-                print_r($arr_pais_final);
-            }
-            exit;
-
-            if(!empty($vertical)) {
-                foreach ($vertical as $val) {
-                    array_push($arr_vert2 , $val);
-                }
-                foreach ($arr_vert as $value) {
-                    $array_push($arr_vert_final,array_intersect($arr_vert2, $value));
-                }
-            }
-            
-            if(!empty($caracteristica)) {
-                foreach ($caracteristica as $val) {
-                    array_push($arr_cara2, $val);
-                }
-                foreach ($arr_cara as $value) {
-                    array_push($arr_cara_final,array_intersect($arr_cara2, $value));
-                }
-            }
-
-            // foreach ($datos as $valor) {
-            //     var_dump($arr_pais_final);
-            //     print_r("   ");
-            //     var_dump($valor);
-            //     // if (sizeof(array_intersect($arr_pais_final, $valor)) > 0) {
-            //     //     print_r(array_intersect($arr_pais_final, $valor));
-            //     // } 
-            // }
-            print_r($arr_pais_final);
-            print_r("   ");
-            print_r($arr_vert_final);
-            print_r("   ");
-            print_r($arr_cara_final);
-            exit;
             
         } catch (Exception $ex){
             $data['msj'] = $ex->getMessage();
@@ -136,6 +65,7 @@ class Home extends CI_Controller {
     }
 //________________________________________________________________________________________________________________________________________
 
+    /*
     function filtrarIndustria(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
@@ -517,4 +447,5 @@ class Home extends CI_Controller {
         }
         echo json_encode($data);
     }
+    */
 }

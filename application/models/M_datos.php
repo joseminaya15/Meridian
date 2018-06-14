@@ -74,8 +74,12 @@ class M_datos extends  CI_Model{
         $vertical = ($vertical == '' ) ? '%': $vertical;
         $caracteristica = ($caracteristica == '' ) ? '%': $caracteristica;
         $sql = "SELECT * 
-                  FROM contacto
-                 WHERE id_pais IN ".$pais."
+                  FROM contacto c,
+                       insrt_detalle id,
+                       insrt_pais ip,
+                       insrt_vertical iv
+                 WHERE 
+                   id_pais IN ".$pais."
                    AND id_vertical IN ".$vertical."
                    AND id_detalle_caract IN ".$caracteristica."
                   ";
