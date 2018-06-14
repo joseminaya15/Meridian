@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
 
 	public function index(){
         $html    = '';
-        $datos   = $this->M_datos->filtroGeneral();
+        $datos   = $this->M_datos->filtroGeneral(null, null, null);
         $arr_pais = array();
         if(count($datos) == 0){
             $html = '<tr>

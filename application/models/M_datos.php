@@ -76,7 +76,8 @@ class M_datos extends  CI_Model{
         $sql = "SELECT c.*,
                        d.Empresa,
                        d.Descripcion,
-                       d.imagen
+                       d.imagen,
+                       ip.id_pais
                   FROM contacto      c,
                        desarrolladores d,
                        insrt_detalle  id,
