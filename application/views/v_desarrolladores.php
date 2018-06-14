@@ -117,7 +117,7 @@
 							            </select>
 							        </div>
 									<div class="col-xs-12 js-input js-select">
-										<select class="selectpicker" id="pais" title="Países de Cobertura" multiple>
+										<select class="selectpicker" id="pais" data-size="10" title="Países de Cobertura" multiple>
 							                <?php echo $paises ?>
 							            </select>
 							        </div>
