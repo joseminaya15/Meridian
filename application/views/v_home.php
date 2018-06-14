@@ -131,44 +131,6 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="js-card--partner__back">
-                            <div class="text-right">
-                                <button id="hidezoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
-                            </div>
-                            <h2>Alcance de la Soluci&oacute;n</h2>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td>Portales Cautivos</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marketing</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Integración</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Monitoreo infraestructura</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Integración con POS / CRM</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Adquisición de datos</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Verticalización</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
@@ -205,46 +167,6 @@
                                 <button id="buttonelun" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
                                     <i class="mdi mdi-arrow_downward"></i>
                                 </button>
-                            </div>
-                        </div>
-                        <div class="js-card--partner__back">
-                            <div class="js-card--par">
-                                <div class="text-right">
-                                    <button id="hideelun" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
-                                </div>
-                                <h2>Alcance de la Soluci&oacute;n</h2>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Portales Cautivos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marketing</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Monitoreo infraestructura</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración con POS / CRM</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adquisición de datos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Verticalización</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
@@ -285,44 +207,6 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="js-card--partner__back">
-                            <div class="text-right">
-                                <button id="hidedatawifi" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
-                            </div>
-                            <h2>Alcance de la Soluci&oacute;n</h2>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td>Portales Cautivos</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marketing</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Integración</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Monitoreo infraestructura</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Integración con POS / CRM</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Adquisición de datos</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Verticalización</td>
-                                        <td><i class="mdi mdi-done"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
@@ -359,46 +243,6 @@
                                 <button id="buttonskyfii" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
                                     <i class="mdi mdi-arrow_downward"></i>
                                 </button>
-                            </div>
-                        </div>
-                        <div class="js-card--partner__back">
-                            <div class="js-card--par">
-                                <div class="text-right">
-                                    <button id="hideskifii" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
-                                </div>
-                                <h2>Alcance de la Soluci&oacute;n</h2>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Portales Cautivos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marketing</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Monitoreo infraestructura</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración con POS / CRM</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adquisición de datos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Verticalización</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
@@ -439,46 +283,6 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="js-card--partner__back">
-                            <div class="js-card--par">
-                                <div class="text-right">
-                                    <button id="hideohmyfi" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
-                                </div>
-                                <h2>Alcance de la Soluci&oacute;n</h2>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Portales Cautivos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marketing</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Monitoreo infraestructura</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración con POS / CRM</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adquisición de datos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Verticalización</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                     </div>
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
@@ -515,46 +319,6 @@
                                 <button id="buttonlab3" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
                                     <i class="mdi mdi-arrow_downward"></i>
                                 </button>
-                            </div>
-                        </div>
-                        <div class="js-card--partner__back">
-                            <div class="js-card--par">
-                                <div class="text-right">
-                                    <button id="hidelab3" class="mdl-button mdl-js-button mdl-button--icon" onclick="hideHover(this.id)"><i class="mdi mdi-arrow_back"></i></button>
-                                </div>
-                                <h2>Alcance de la Soluci&oacute;n</h2>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Portales Cautivos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Marketing</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Monitoreo infraestructura</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Integración con POS / CRM</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Adquisición de datos</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Verticalización</td>
-                                            <td><i class="mdi mdi-done"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
