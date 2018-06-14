@@ -16,7 +16,6 @@ class Admin extends CI_Controller {
 	public function index(){
         $html    = '';
         $datos   = $this->M_datos->filtroGeneral(null, null, null);
-        $arr_pais = array();
         if(count($datos) == 0){
             $html = '<tr>
                         <td></td>
@@ -32,12 +31,13 @@ class Admin extends CI_Controller {
                     </tr>';
         }
         foreach ($datos as $key) {
-        	array_push($arr_pais, explode(',', $key->id_pais));
             $html .= '<tr>
                         <td>'.$key->gerente.'</td>
                         <td>'.$key->cont_comercial.'</td>
                         <td>'.$key->cont_tecnico.'</td>
                         <td>'.$key->pagina.'</td>
+                        <td>'.$key->pais.'</td>
+                        <td>'.$key->vertical.'</td>
                     </tr>';
         }
         $data['html'] = $html;

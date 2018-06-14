@@ -52,6 +52,8 @@
                                 <th class="text-left">Contacto Comercial</th>
                                 <th class="text-left">Contacto Técnico</th>
                                 <th class="text-left">Página web</th>
+                                <th class="text-left">País</th>
+                                <th class="text-left">Verticales</th>
                             </tr>
                         </thead>
                       <tbody>

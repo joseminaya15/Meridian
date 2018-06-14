@@ -7,6 +7,7 @@ function guardarDesarrolladores(){
 	var telefono = $('#telefono').val();
 	var pais 	 = $('#pais').val();
 	var vertical = $('#vertical').val();
+	var descripcion = $('#descripcion').val();
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese el nombre de su empresa');
 		return;
@@ -51,6 +52,10 @@ function guardarDesarrolladores(){
 		msj('error', 'Ingrese su teléfono de contacto');
 		return;
 	}
+	if(descripcion == '' || descripcion == null){
+		msj('error', 'Ingrese la descripción de su empresa');
+		return;
+	}
 	$('.btn-guardar').prop("disabled", true);
 	$.ajax({
 		data : {empresa  : empresa,
@@ -60,7 +65,8 @@ function guardarDesarrolladores(){
 				url 	 : url,
 				telefono : telefono,
 				id_pais  : pais,
-				id_verti : vertical},
+				id_verti : vertical,
+				descripcion : descripcion},
 		url  : 'desarrolladores/guardarDesarrolladores',
 		type : 'POST'
 	}).done(function(data){
@@ -163,4 +169,46 @@ function guardarDatosDeps(){
         msj('error',err.message);
       }
 	});
+}
+function subirFactura(){
+	$("#archivo").trigger("click");
+}
+function agregarDatos(){
+	var datos = new FormData();
+	factura = $('#archivo')[0].files[0];
+	if(factura == undefined){
+		//msj('error', 'Seleccione una factura');
+		return;
+	}
+	if(factura['size'] > 2048000){
+		msj('error', 'La factura debe ser menor a 2MB');
+		return;
+	}
+	if(factura == undefined){
+		msj('error', 'Seleccione una factura');
+		return;
+	}
+    datos.append('archivo',$('#archivo')[0].files[0]);
+     $.ajax({
+        type     	:"post",
+        dataType 	:"json",
+        url		    :"desarrolladores/cargarFact",
+        contentType :false,
+        data 		:datos,
+        processData :false,
+      }).done(function(respuesta){
+      	if(respuesta.error == 0) {
+      		/*modal('ModalQuestion');
+      		setTimeout(function() {
+				modal('modalDetalles');
+				$('#bodyPuntaje').html(respuesta.html);
+        		$('#puntajeGeneral').html(respuesta.puntosGeneral);
+        		$('#bodyUltimaCotizacion').html(respuesta.bodyCotizaciones);
+        		$('#bodyCanales').html(respuesta.bodyCanales);
+        		//limpiarCampos();
+			}, 250);*/
+      	} else {
+        	msj('error', respuesta.mensaje);
+      	}
+    });
 }

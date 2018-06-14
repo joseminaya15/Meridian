@@ -72,8 +72,9 @@ class Desarrolladores extends CI_Controller {
             $telefono = $this->input->post('telefono');
             $id_pais  = $this->input->post('id_pais');
             $id_verti = $this->input->post('id_verti');
+            $descripcion = $this->input->post('descripcion');
             $arrInserDep = array('Empresa'     => $empresa,
-                                 'Descripcion' => '',
+                                 'Descripcion' => $descripcion,
                                  'imagen'      => '');
             $insetDep = $this->M_datos->insertarDatos($arrInserDep, 'desarrolladores');
             $arrayInsert = array('gerente'        => $gerente,
@@ -92,7 +93,8 @@ class Desarrolladores extends CI_Controller {
                                     'id_contacto' => $insetDatos['Id']);
               $insetDatos2   = $this->M_datos->insertarDatos($arrayInsert2, 'insrt_pais');
             }
-            $session    = array('id_contact' => $insetDatos['Id']);
+            $session    = array('id_contact' => $insetDatos['Id'],
+                                'id_deps'    => $insetDep['Id']);
             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
@@ -143,5 +145,36 @@ class Desarrolladores extends CI_Controller {
         $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
       }
       return $html;
+    }
+
+    function cargarFact(){
+        $respuesta = new stdClass();
+        $respuesta->mensaje = "";
+        if(count($_FILES) == 0){
+            $respuesta->mensaje = 'Seleccione su factura';
+        }else {
+            $tipo = $_FILES['archivo']['type']; 
+            $tamanio = $_FILES['archivo']['size']; 
+            $archivotmp = $_FILES['archivo']['tmp_name'];
+            $namearch = $_FILES['archivo']['name'];
+            $nuevo = explode(".",$namearch);
+            if($tamanio > '2000000'){
+                $respuesta->mensaje = 'El tamaño de su pdf debe ser menor';
+            }else {
+                if($nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
+                    if(move_uploaded_file($archivotmp, $target) ){
+                       $arrUpdt = array('imagen' => $namearch);
+                       $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
+                       $respuesta->mensaje = 'Su logo se subió correctamente';
+                    } else {
+                       $respuesta->mensaje = 'Hubo un problema en la subida de su logo';
+                    }
+                }else {
+                    $respuesta->mensaje = 'El formato del logo es incorrecto';
+                }
+            }
+            echo json_encode($respuesta);
+        }
     }
 }

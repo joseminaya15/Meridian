@@ -173,8 +173,20 @@
 									  	<label for="telefono" class="col-2 col-form-label">Teléfono</label>
 									    <input type="tel" id="telefono">
 									</div>
+                                    <div class="col-xs-12 js-input">
+                                        <label for="telefono" class="col-2 col-form-label">Descripción de la empresa</label>
+                                        <input type="tel" id="descripcion" maxlength="255">
+                                    </div>
+                                    <div class="col-xs-12 js-input js-file js-flex">
+                                        <input class="js-disabled" type="text" id="archivoDocumento" name="archivoDocumento" maxlength="10" placeholder="Suba su logo (2MB Max)" style="pointer-events: none">
+                                        <div class="js-icon">
+                                            <button type="button" class="mdl-button mdl-js-button mdl-button--icon js-disabled" onclick="subirFactura()">
+                                                <i class="mdi mdi-backup"></i>
+                                            </button>
+                                        </div>
+                                    </div>
 									<div class="col-xs-12 text-right">
-										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores()">Guardar y continuar</button>
+										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores();agregarDatos();">Guardar y continuar</button>
 					            	</div>
 								</div>
 							</div>
@@ -249,6 +261,10 @@
                 </div>
             </div>
         </footer>
+        <form id="frmArchivo" method="post" style="display: none;">
+            <input id="archivo" type="file" name="archivo" />
+            <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+        </form>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
