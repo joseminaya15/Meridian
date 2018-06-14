@@ -118,8 +118,8 @@
 							            </select>
 							        </div>
 									<div class="col-xs-12 js-input">
-									  	<label for="gerente">Nombre del gerente</label>
-										<input type="text" id="gerente" maxlength="50" onkeypress="return soloLetras(event);">
+									  	<label for="gerente">Email del gerente</label>
+										<input type="email" id="gerente" maxlength="100">
 									</div>
 									<div class="col-xs-12 js-input">
 									  	<label for="cont_comercial">Email del contacto comercial</label>

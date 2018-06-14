@@ -24,6 +24,12 @@ function guardarDesarrolladores(){
 		msj('error', 'Ingrese el nombre de su gerente');
 		return;
 	}
+	if (!validateEmail(gerente)){
+		$('#gerente').css('border-color','red');
+		return;
+	}else {
+		$('#gerente').css('border-color','');
+	}
 	if(cont_com == '' || cont_tec == null){
 		msj('error', 'Ingrese el Email de su contacto comercial');
 		return;
