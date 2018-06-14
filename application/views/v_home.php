@@ -93,7 +93,7 @@
                         </div>
                   </div>
                 </div>
-                <div class="js-cards">
+                <div class="js-cards" id="cardDesarrolladores">
                     <div class="js-card--partner js-card--partner1">
                         <div class="js-card--partner__front">
                             <div class="js-card--partner__imagen">

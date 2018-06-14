@@ -33,9 +33,13 @@ function buscarGeneral (){
 		url  : 'Home/busquedaGeneral',
 		type : 'POST'
 	}).done(function(data){
-		// data = JSON.parse(data);
-		// if (data.error) {
-
-		// }
+		try {
+			data = JSON.parse(data);
+			if (data.error == 0) {
+				$('#cardDesarrolladores').html(data.html);
+			}
+		}catch (err){
+        	msj('error',err.message);
+		}
 	});
 }

@@ -30,7 +30,6 @@ class Home extends CI_Controller {
         }
         foreach ($datosCarac as $key) {
             $detalleCarac = $this->M_datos->getDetalleCaract($key->Id);
-            // $optionCarac .= '<optgroup label="'.$key->name_caract.'">';
             $optionCarac .= '<div class="col-xs-12">
                                 <div class="js-checkbox__title">'.$key->name_caract.'</div>';
             foreach ($detalleCarac as $value) {
@@ -42,9 +41,51 @@ class Home extends CI_Controller {
                                 </div>';
             }
             $optionCarac .= '</div>';
-            // <option value="'.$value->Id.'">'.$value->tipo.'</option>';
-            // $optionCarac .= '</optgroup>';
         }
+
+        $html           = '';
+        $datos          = $this->M_datos->filtroGeneral(null, null, null);
+        foreach ($datos as $key) {
+            $html .= '<div class="js-card--partner js-card--partner1">
+                          <div class="js-card--partner__front">
+                              <div class="js-card--partner__imagen">
+                                  <img src="<?php echo RUTA_IMG?>'.$key->imagen.'" alt="">
+                              </div>
+                              <div class="js-hide">
+                                  <div class="js-card--partner__contenido">
+                                      <p>'.$key->Descripcion.'</p>
+                                      <!-- <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
+                                  </div>
+                                  <div class="js-card--partner__footer">
+                                      <div class="col-sm-9 col-xs-8 p-l-0">
+                                          <div class="js-card--footer__texto">
+                                              <p>Contacto Comercial</p>
+                                              <a href="mailto:'.$key->cont_comercial.'">'.$key->cont_comercial.'</a>
+                                          </div>
+                                          <div class="js-card--footer__texto">
+                                              <p>Contacto Técnico</p>
+                                              <a href="mailto:'.$key->cont_tecnico.'">'.$key->cont_tecnico.'</a>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                          <button class="mdl-button mdl-js-button mdl-button--icon">
+                                              <i class="mdi mdi-email"></i>
+                                          </button>
+                                          <button class="mdl-button mdl-js-button mdl-button--icon">
+                                              <i class="mdi mdi-chat"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="js-card--partner__button">
+                                  <button id="buttonzoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                      <i class="mdi mdi-arrow_downward"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>';
+        }
+
         $data['paises']   = $optionPaises;
         $data['vertical'] = $optionVertical;
         $data['caracter'] = $optionCarac;
@@ -55,11 +96,53 @@ class Home extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+            $html           = '';
             $pais           = $this->input->post('pais');
             $vertical       = $this->input->post('vertical');
             $caracteristica = $this->input->post('caracteristica');
             $datos          = $this->M_datos->filtroGeneral($pais, $vertical, $caracteristica);
-            
+            foreach ($datos as $key) {
+                $html .= '<div class="js-card--partner js-card--partner1">
+                              <div class="js-card--partner__front">
+                                  <div class="js-card--partner__imagen">
+                                      <img src="<?php echo RUTA_IMG?>'.$key->imagen.'" alt="">
+                                  </div>
+                                  <div class="js-hide">
+                                      <div class="js-card--partner__contenido">
+                                          <p>'.$key->Descripcion.'</p>
+                                          <!-- <a id="showzoox" onclick="showHover(this.id)">Ver alcance de soluci&oacute;n</a> -->
+                                      </div>
+                                      <div class="js-card--partner__footer">
+                                          <div class="col-sm-9 col-xs-8 p-l-0">
+                                              <div class="js-card--footer__texto">
+                                                  <p>Contacto Comercial</p>
+                                                  <a href="mailto:'.$key->cont_comercial.'">'.$key->cont_comercial.'</a>
+                                              </div>
+                                              <div class="js-card--footer__texto">
+                                                  <p>Contacto Técnico</p>
+                                                  <a href="mailto:'.$key->cont_tecnico.'">'.$key->cont_tecnico.'</a>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-3 col-xs-4 js--card--footer__contact">
+                                              <button class="mdl-button mdl-js-button mdl-button--icon">
+                                                  <i class="mdi mdi-email"></i>
+                                              </button>
+                                              <button class="mdl-button mdl-js-button mdl-button--icon">
+                                                  <i class="mdi mdi-chat"></i>
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="js-card--partner__button">
+                                      <button id="buttonzoox" class="mdl-button mdl-js-button mdl-button--icon" onclick="showCard(this.id)">
+                                          <i class="mdi mdi-arrow_downward"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>';
+            }
+            $data['html'] = $html;
+            $data['error'] = EXIT_SUCCESS;
         } catch (Exception $ex){
             $data['msj'] = $ex->getMessage();
         }
