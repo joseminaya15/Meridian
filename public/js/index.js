@@ -36,8 +36,10 @@ function buscarGeneral(){
 		try {
 			data = JSON.parse(data);
 			if (data.error == 0) {
+				$('.js-card--partner').fadeOut();
 				$('#cardDesarrolladores').html(null);
 				$('#cardDesarrolladores').html(data.html);
+				$('.js-card--partner').fadeIn();
 			}
 		}catch (err){
         	msj('error',err.message);
