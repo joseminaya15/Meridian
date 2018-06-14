@@ -54,12 +54,12 @@ class Home extends CI_Controller {
                               <div class="js-hide">
                                   <div class="js-card--partner__contenido">
                                       <p>'.$key->Descripcion.'</p>
-                                      <p><strong>Alcance de la soluci&oacute;n: </strong>Portales cautivos, Analíticas, Marketing, Integración, Reportes, Monitoreo Infraestructura, Integración con CRM, Adquisición de datos.</p>
+                                      <p><strong>Alcance de la soluci&oacute;n: </strong>'.$key->caract.'</p>
                                   </div>
                                   <div class="js-card--partner__footer">
                                       <div class="col-sm-9 col-xs-8 p-l-0">
                                           <div class="js-card--footer__texto">
-                                              <p><strong>Industrias: </strong>Centros Comerciales, Educación, Retail, Salud, Aeropuertos, Plazas públicas, Transportes, Hotelería / Restaurantes, Manufactura</p>
+                                              <p><strong>Industrias: </strong>'.$key->industrias.'</p>
                                               <p><strong>Tipo de Licenciamiento: </strong>Por Suscripci&oacute;n</p>
                                           </div>
                                           <!-- <div class="js-card--footer__texto">
@@ -111,13 +111,12 @@ class Home extends CI_Controller {
                                   <div class="js-hide">
                                       <div class="js-card--partner__contenido">
                                           <p>'.$key->Descripcion.'</p>
-                                          <p><strong>Alcance de la soluci&oacute;n: </strong>Portales cautivos, Analíticas, Marketing, Integración, Reportes, Monitoreo Infraestructura, Integración con CRM, Adquisición de datos.</p>
+                                          <p><strong>Alcance de la soluci&oacute;n: </strong>'.$key->caract.'</p>
                                       </div>
                                       <div class="js-card--partner__footer">
                                           <div class="col-sm-9 col-xs-8 p-l-0">
                                               <div class="js-card--footer__texto">
-                                                  <p><strong>Industrias: </strong>Centros Comerciales, Educación, Retail, Salud, Aeropuertos, Plazas públicas, Transportes, Hotelería / Restaurantes, Manufactura</p>
-                                                  <p><strong>Tipo de Licenciamiento: </strong>Por Suscripci&oacute;n</p>
+                                                  <p><strong>Industrias: </strong>'.$key->industrias.'</p>
                                               </div>
                                               <!-- <div class="js-card--footer__texto">
                                                   <p>Contacto Técnico</p>

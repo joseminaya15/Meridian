@@ -73,30 +73,34 @@ class M_datos extends  CI_Model{
         $sentPais = (empty($pais)) ? "" : "AND ip.id_pais IN (".$pais.") ";
         $sentVert = (empty($vertical)) ? "" : "AND iv.id_vertical IN (".$vertical.") ";
         $sentCara = (empty($caracteristica)) ? "" : "AND id.id_detalle IN (".$caracteristica.") ";
-        $sql = "SELECT c.*,
+        $sql = "SELECT co.*,
                        d.Empresa,
                        d.Descripcion,
                        d.imagen,
                        GROUP_CONCAT(DISTINCT p.Nombre) AS pais,
-                       v.nombre AS vertical
-                  FROM contacto      c,
-                       desarrolladores d,
-                       insrt_detalle  id,
-                       insrt_pais     ip,
-                       insrt_vertical iv,
-                       pais           p,
-                       vertical       v
-                 WHERE id.id_contacto = c.Id 
-                   AND d.Id = c.id_deps
-                   AND ip.id_contacto = c.Id 
-                   AND iv.id_contacto = c.Id
+                       GROUP_CONCAT(DISTINCT v.nombre) AS industrias,
+                       GROUP_CONCAT(DISTINCT dc.tipo) AS caract
+                  FROM contacto        co,
+                       caracteristicas ca,
+                       desarrolladores  d,
+                       insrt_detalle   id,
+                       insrt_pais      ip,
+                       insrt_vertical  iv,
+                       pais             p,
+                       vertical         v,
+                       detalle_caract  dc
+                 WHERE id.id_contacto = co.Id 
+                   AND d.Id = co.id_deps
+                   AND ip.id_contacto = co.Id 
+                   AND iv.id_contacto = co.Id
                    AND p.Id = ip.id_pais
                    AND v.Id = iv.id_vertical
+                   AND dc.id_caract = ca.Id
                    ".$sentPais."
                    ".$sentVert."
                    ".$sentCara."
-              GROUP BY c.Id
-              ORDER BY c.id_deps ASC";
+              GROUP BY co.Id
+              ORDER BY co.id_deps ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
