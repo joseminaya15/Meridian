@@ -116,12 +116,12 @@
                                         </div> -->
                                     </div>
                                     <div class="col-sm-3 col-xs-4 js--card--footer__contact">
-                                        <button class="mdl-button mdl-js-button mdl-button--icon">
+                                        <a class="mdl-button mdl-js-button mdl-button--icon">
                                             <i class="mdi mdi-email"></i>
-                                        </button>
-                                        <button class="mdl-button mdl-js-button mdl-button--icon">
-                                            <i class="mdi mdi-chat"></i>
-                                        </button>
+                                        </a>
+                                        <a class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="mdi mdi-desktop_mac"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
