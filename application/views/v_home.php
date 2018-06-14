@@ -93,14 +93,12 @@
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="mdl-card">
-                        <div class="mdl-card__title">
-                            
-                        </div>
                         <div class="mdl-card__supporting-text">
-                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                            <?php echo $caracter ?>
+                            <!-- <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
                                 <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
                                 <span class="mdl-checkbox__label">Checkbox</span>
-                            </label>
+                            </label> -->
                         </div>
                   </div>
                 </div>
@@ -576,7 +574,7 @@
             <div class="js-container">
                 <div class="js-contacto text-center">
                    <h2>¿Eres desarrollador y quieres aparecer en este portal&#63;</h2>
-                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nosotros</a>
+                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nuestro programa</a>
                 </div>
             </div>
         </section>

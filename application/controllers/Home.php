@@ -30,11 +30,20 @@ class Home extends CI_Controller {
         }
         foreach ($datosCarac as $key) {
             $detalleCarac = $this->M_datos->getDetalleCaract($key->Id);
-            $optionCarac .= '<optgroup label="'.$key->name_caract.'">';
+            // $optionCarac .= '<optgroup label="'.$key->name_caract.'">';
+            $optionCarac .= '<div class="col-xs-12">
+                                <div class="js-checkbox__title">'.$key->name_caract.'</div>';
             foreach ($detalleCarac as $value) {
-                $optionCarac .= '<option value="'.$value->Id.'">'.$value->tipo.'</option>';
+                $optionCarac .= '<div class="js-checbox col-xs-12 col-sm-6 col-md-4">
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$value->Id.'">
+                                        <input type="checkbox" id="checkbox-'.$value->Id.'" class="mdl-checkbox__input">
+                                        <span class="mdl-checkbox__label">'.$value->tipo.'</span>
+                                    </label>
+                                </div>';
             }
-            $optionCarac .= '</optgroup>';
+            $optionCarac .= '</div>';
+            // <option value="'.$value->Id.'">'.$value->tipo.'</option>';
+            // $optionCarac .= '</optgroup>';
         }
         $data['paises']   = $optionPaises;
         $data['vertical'] = $optionVertical;
