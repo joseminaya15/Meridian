@@ -40,12 +40,6 @@
 .js-wizardul.nav.nav-pills>li:NTH-CHILD(4)>a span.step:AFTER {
 	content: "4"
 }
-.js-wizard ul.nav.nav-pills>li:NTH-CHILD(5)>a span.step:AFTER {
-	content: "5"
-}
-.js-wizard ul.nav.nav-pills>li:NTH-CHILD(6)>a span.step:AFTER {
-	content: "6"
-}
 .js-wizard .nav li.complete .title {
 	color: #004062;
 	overflow: hidden;
