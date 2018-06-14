@@ -197,7 +197,7 @@ a
 	flex-wrap wrap
 	justify-content center
 	.js-card--partner
-		// transitionHeight()
+		transition all 1s linear
 		box-shadow 5px 5px 10px rgba(0, 0, 0, 0.2)
 		background-color #FFFFFF
 		max-width 345px
@@ -205,6 +205,12 @@ a
 		margin 10px
 		padding 10px 20px
 		position relative
+		&.js-scale
+			-webkit-transform scale(0)
+			-moz-transform scale(0)
+			-ms-transform scale(0)
+			-o-transform scale(0)
+			transform scale(0)
 		.js-hide
 			height 75px
 			overflow hidden
@@ -244,41 +250,6 @@ a
 					strong
 						font-weight 100
 						font-family $bold
-		.js-card--partner__back
-			-webkit-backface-visibility hidden
-			-moz-backface-visibility hidden
-			backface-visibility hidden
-			position absolute
-			top 0
-			left 0
-			padding 20px
-			h2
-				font-size 22px
-				line-height 24px
-				margin 5px 0
-			i
-				color #FFFFFF
-				font-weight bold
-			table
-				margin-top 20px
-		&:nth-child(1)
-			.js-card--partner__back
-				background-color #004876
-		&:nth-child(2)
-			.js-card--partner__back
-				background-color $secondary
-		&:nth-child(3)
-			.js-card--partner__back
-				background-color $primary
-		&:nth-child(4)
-			.js-card--partner__back
-				background-color #646569
-		&:nth-child(5)
-			.js-card--partner__back
-				background-color #A0D5C9
-		&:nth-child(6)
-			.js-card--partner__back
-				background-color #008375
 .js-contenido--filtro
 	flexCenter()
 	margin 20px 0 30px 0

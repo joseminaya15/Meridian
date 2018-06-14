@@ -20,6 +20,8 @@ function showCard(id){
 // }
 
 function buscarGeneral(){
+	$('.js-card--partner').addClass('js-scale')
+	$('.js-card--partner').css('transform','scale(0)');
 	var pais 		   = $('#pais').val();
 	var vertical 	   = $('#vertical').val();
 	var caracteristica = $('#caracteristica').val();
@@ -36,10 +38,9 @@ function buscarGeneral(){
 		try {
 			data = JSON.parse(data);
 			if (data.error == 0) {
-				$('.js-card--partner').fadeOut();
 				$('#cardDesarrolladores').html(null);
 				$('#cardDesarrolladores').html(data.html);
-				$('.js-card--partner').fadeIn();
+				$('.js-card--partner').removeClass('js-scale')
 			}
 		}catch (err){
         	msj('error',err.message);
