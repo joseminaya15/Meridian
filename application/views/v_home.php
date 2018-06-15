@@ -63,7 +63,7 @@
                     <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
                 </div>
                 <div class="js-partner--contenido">
-                    <h2>Partners del programa Meridian Engage</h2>
+                    <h2>Partners del Programa Meridian Engage</h2>
                     <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
                     AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
                     categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>

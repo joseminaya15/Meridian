@@ -28,7 +28,7 @@
                 <img class="js-partner" src="<?php echo RUTA_IMG?>logo/aruba-logo.png">
             </div>
             <div class="js-header--right">
-                <p>Programa Partners Meridian - Admisi&oacute;n</p>
+                <p>Programa Partners Engage Meridian - Admisi&oacute;n</p>
             </div>
         </div>
         <section class="js-section js-height">
