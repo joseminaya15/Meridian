@@ -21,7 +21,6 @@ function showCard(id){
 
 function buscarGeneral(){
 	$('.js-card--partner').addClass('js-scale')
-	$('.js-card--partner').css('transform','scale(0)');
 	var pais 		   = $('#pais').val();
 	var vertical 	   = $('#vertical').val();
 	var caracteristica = $('#caracteristica').val();
