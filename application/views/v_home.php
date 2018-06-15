@@ -80,7 +80,7 @@
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" data-size="10" id="vertical" title="Seleccione su industria" onchange="buscarGeneral();">
+                        <select class="selectpicker" multiple="multiple" data-actions-box="true" data-size="10" id="vertical" title="Seleccione su industria" onchange="buscarGeneral();">
                             <?php echo $vertical ?>
                         </select>
                     </div>
