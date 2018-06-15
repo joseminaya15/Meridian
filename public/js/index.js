@@ -9,7 +9,6 @@ function showCard(id){
 	// 	cardHide.toggleClass('js-height');
 	// });
 }
-
 var idCaract = [];
 function buscarGeneral(id){
 	$('.js-card--partner').addClass('js-scale')

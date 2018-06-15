@@ -31,19 +31,14 @@
         }
     </style>
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid js-container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand p-0" href="#"><img src="<?php echo RUTA_IMG?>logo/logo_aruba.svg" alt=""></a>
-            </div>
+    <div class="js-header js-fixed">
+        <div class="js-header--left">
+            <img class="js-partner" src="<?php echo RUTA_IMG?>logo/logo_aruba.svg">
         </div>
-    </nav>
+        <div class="js-header--right">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+        </div>
+    </div>
     <section id="principal">
         <div id="content" class="js-container">
             <div class="mdl-card mdl-card-table contenido-admin">
