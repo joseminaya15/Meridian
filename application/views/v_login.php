@@ -18,17 +18,17 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>openSans.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    	<!-- <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>"> -->
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <div class="js-header js-header--login">
+        <!-- <div class="js-header js-header--login">
             <div class="js-header--left">
                 <img class="js-partner" src="<?php echo RUTA_IMG?>logo/aruba-logo.png" style="width: 10% !important">
                 <img src="<?php echo RUTA_IMG?>logo/favicon.png" style="width: 10% !important">
             </div>
-        </div>
+        </div> -->
         <section class="js-section js-height">
             <div class="js-fondo--login"></div>
             <div class="js-container js-flex">
