@@ -34,8 +34,8 @@ class Home extends CI_Controller {
                                 <div class="js-checkbox__title">'.$key->name_caract.'</div>';
             foreach ($detalleCarac as $value) {
                 $optionCarac .= '<div class="js-checbox col-xs-12 col-sm-6 col-md-4">
-                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" value="'.$value->Id.'" for="checkbox-'.$value->Id.'" >
-                                        <input type="checkbox" id="checkbox-'.$value->Id.'" class="mdl-checkbox__input" onchange="buscarGeneral();" >
+                                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-'.$value->Id.'" >
+                                        <input type="checkbox" id="checkbox-'.$value->Id.'" class="mdl-checkbox__input" value="'.$value->Id.'" onclick="buscarGeneral(this.id);" >
                                         <span class="mdl-checkbox__label">'.$value->tipo.'</span>
                                     </label>
                                 </div>';

@@ -10,24 +10,24 @@ function showCard(id){
 	// });
 }
 
-// function showHover(id){
-// 	var idCard = $('#'+id);
-// 	var card   = idCard.parents('.js-card--partner1').addClass('effect1');
-// }
-// function hideHover(id){
-// 	var idCard = $('#'+id);
-// 	var card   = idCard.parents('.js-card--partner1').removeClass('effect1');
-// }
-
-function buscarGeneral(){
+var idCaract = [];
+function buscarGeneral(id){
 	$('.js-card--partner').addClass('js-scale')
 	var pais 		   = $('#pais').val();
 	var vertical 	   = $('#vertical').val();
-	var caracteristica = $('#caracteristica').val();
+	var caracteristica = "";
+	if (id != null) {
+		var info   = $("#"+id).val();
+		var indice = idCaract.indexOf(info.toString());
+		if( idCaract.indexOf(info.toString()) == -1 ) {
+			idCaract.push(info.toString());
+		} else {
+			idCaract.splice(indice, 1);
+		}
+	}
 	pais     	   = (pais == null) ? '' : pais.toString();
 	vertical 	   = (vertical == null) ? '' : vertical.toString();
-	caracteristica = (caracteristica == null) ? '' : caracteristica.toString();
-	console.log(caracteristica);
+	caracteristica = (idCaract == null) ? '' : idCaract.toString();
 	$.ajax({
 		data : { pais     		: pais,
 				 vertical 		: vertical,
