@@ -72,7 +72,7 @@
                     categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
                     <a href="https://www.arubanetworks.com/es/partners/programa/engage/engage-form/"><i class="mdi mdi-arrow_forward"></i>P&oacute;ngase en contacto con nosotros para obtener m&aacute;s informaci&oacute;n</a>
                 </div>
-            </div>
+            </div> 
         </section>
         <section id="desarrollador" class="js-section col-xs-12">
             <div class="js-container">
