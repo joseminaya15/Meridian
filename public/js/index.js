@@ -46,3 +46,10 @@ function buscarGeneral(id){
 		}
 	});
 }
+function clearSearch() {
+	$('.selectpicker').val('0');
+	$('.selectpicker').selectpicker('refresh');
+	$('.mdl-checkbox').removeClass('is-checked');
+	idCaract = [];
+	buscarGeneral();
+}
