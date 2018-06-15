@@ -23,12 +23,14 @@
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <!-- <div class="js-header js-header--login">
+        <div class="js-header js-header--login">
             <div class="js-header--left">
-                <img class="js-partner" src="<?php echo RUTA_IMG?>logo/aruba-logo.png" style="width: 10% !important">
-                <img src="<?php echo RUTA_IMG?>logo/favicon.png" style="width: 10% !important">
+                <img class="js-partner" src="<?php echo RUTA_IMG?>logo/aruba-logo.png">
             </div>
-        </div> -->
+            <div class="js-header--right">
+                <p>Programa Partners Meridian - Admisi&oacute;n</p>
+            </div>
+        </div>
         <section class="js-section js-height">
             <div class="js-fondo--login"></div>
             <div class="js-container js-flex">

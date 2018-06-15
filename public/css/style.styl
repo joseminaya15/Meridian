@@ -113,6 +113,8 @@ a
 	text-decoration none !important
 .js-flex
 	flexCenter()
+.js-height
+	height 100vh
 .js-section
 	position relative
 	padding 40px 20px
@@ -123,6 +125,54 @@ a
 		font-size 30px
 		line-height 30px
 		font-family $regular
+.js-header
+	position fixed
+	top 0
+	width 100%
+	background-color transparent
+	z-index 5
+	padding 10px 25px
+	color #FFFFFF
+	flexCenter()
+	img
+		width 100%
+		max-width 130px
+	.js-header--left
+		flexCenter()
+		width 100%
+		justify-content flex-start
+		p
+			font-family $bold
+			margin-left 10px
+			font-size 16px
+			line-height 16px
+	.js-header--right
+		flexCenter()
+		width 100%
+		justify-content flex-end
+		flex-wrap wrap
+		text-align right
+		p
+			font-size 20px
+			line-height 22px
+		a
+			width 100%
+			text-decoration none
+			cursor pointer
+			font-size 18px
+			font-family $medium
+			color $default
+	&.js-relative
+		position relative
+		color #000000
+		box-shadow 1px 2px 3px rgba(0,0,0,.2)
+	&.js-fixed
+		background-color #FFFFFF
+		color #000000
+		box-shadow 1px 2px 3px rgba(0,0,0,.2)
+	&.js-header--login
+		color #000000
+		padding 35px
 .js-idioma
 	.btn-group
 		width 100% !important
@@ -154,6 +204,11 @@ a
 	margin auto
 	flex-direction column
 	position relative
+.js-fondo--login
+	absolute()
+	background url(../img/fondo/fondo-login.jpg) no-repeat center center
+	background-size cover
+	height 100vh
 #programa
 	color #FFFFFF
 	.js-fondo--programa
@@ -194,7 +249,7 @@ a
 	.js-select
 		margin 10px
 		width 100%
-		max-width 230px
+		max-width 250px
 		.filter-option
 			overflow hidden
 			text-overflow ellipsis
@@ -438,6 +493,9 @@ a
 		height 48px
 		i
 			vertical-align middle
+	&.js-button--login
+		width 100%
+		margin 20px 0
 footer
 	background-color #F3F3F4
 	h2

@@ -58,7 +58,7 @@
         </div>
     </nav>
     <section id="principal">
-        <div id="content" class="mdl-container">
+        <div id="content" class="js-container">
             <div class="mdl-card mdl-card-table contenido-admin">
                 <div class="table-responsive">
                     <table id="example" class="table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
