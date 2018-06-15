@@ -49,7 +49,7 @@ class Home extends CI_Controller {
             $html .= '<div class="js-card--partner">
                           <div class="js-card--partner__front">
                               <div class="js-card--partner__imagen">
-                                  <img src="'.RUTA_IMG.$key->imagen.'" alt="">
+                                  <img src="'.RUTA_ARCHIVOS.$key->imagen.'" alt="">
                               </div>
                               <div class="js-hide">
                                   <div class="js-card--partner__contenido">
@@ -101,7 +101,7 @@ class Home extends CI_Controller {
                 $html .= '<div class="js-card--partner">
                               <div class="js-card--partner__front">
                                   <div class="js-card--partner__imagen">
-                                      <img src="'.RUTA_IMG.$key->imagen.'" alt="">
+                                      <img src="'.RUTA_ARCHIVOS.$key->imagen.'" alt="">
                                   </div>
                                   <div class="js-hide">
                                       <div class="js-card--partner__contenido">
