@@ -21,6 +21,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>openSans.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index1.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
@@ -33,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand p-0" href="#"><img src="<?php echo RUTA_IMG?>logo/logo_aruba.svg" alt=""></a>
+                    <a class="navbar-brand p-0" href="https://www.arubanetworks.com/" target="_blank"><img src="<?php echo RUTA_IMG?>logo/logo_aruba.svg" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
@@ -45,7 +46,7 @@
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Cont&aacute;ctenos</a></li>
+                        <li><a href="https://www.arubanetworks.com/latam/empresa/contactese-con-nosotros/formulario-de-contacto/" target="_blank">Cont&aacute;ctenos</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +55,7 @@
         <section id="programa" class="js-section">
             <div class="js-fondo--programa"></div>
             <div class="js-container">
-                <h2>Programa de partners Meridian Engage Technology</h2>
+                <h2>Programa de Desarrolladores Partners</h2>
             </div>
         </section>
         <section id="partner" class="js-section">
@@ -63,7 +64,7 @@
                     <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
                 </div>
                 <div class="js-partner--contenido">
-                    <h2>Partners del Programa Meridian Engage</h2>
+                    <h2>Partners del Programa Engage</h2>
                     <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
                     AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
                     categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
@@ -102,10 +103,23 @@
                 
             </div>
         </section>
+        <section id="ubicacion" class="js-section">
+            <div class="js-container">
+                <div class="js-ubication">
+                    <div class="js-ubication__left">
+                        <div class="js-ubication__left--img"></div>
+                    </div>
+                    <div class="js-ubication__right">
+                        <h2>Nuestra soluciones incluyen capacidades de direccionamiento, campañas de proximidad, seguimiento de activos y anal&iacute;ticos de ubicaci&oacute;n.</h2>
+                        <a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Conoce la Soluci&oacute;n de Servicios de Ubicaci&oacute;n</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="contacto" class="js-section">
             <div class="js-container">
                 <div class="js-contacto text-center">
-                   <h2>¿Eres desarrollador y quieres aparecer en este portal&#63;</h2>
+                   <h2>¿Deseas ser un Desarrollador Partner&#63;</h2>
                    <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nuestro programa</a>
                 </div>
             </div>
@@ -150,6 +164,7 @@
                                 <li><a href="https://www.arubanetworks.com/es/servicios-de-apoyo/servicios-profesionales/">Servicios profesionales</a></li>
                                 <li><a href="https://cf.passport.hpe.com/hppcf/login.do?cc=US&lang=EN&applandingpage=https%3a%2f%2fh10145.www1.hpe.com%2flicense%2fGenerateLicense.aspx%3fsmp%3d1&hpappid=118682_MYNETWORKING_PRO_HPE"  target="_blank">Inicio de sesi&oacute;n con licencia</a></li>
                                 <li><a href="https://ase.arubanetworks.com/?source=footer" target="_blank">Aruba Solution Exchange</a></li>
+                                <li><a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank">Soluci&oacute;n de Servicios de Ubicaci&oacute;n</a></li>
                             </ul>
                         </div>
                     </div>
