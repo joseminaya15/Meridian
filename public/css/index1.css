@@ -20,7 +20,8 @@
 }
 .js-ubication__right h2{
 	margin-top: 0 !important;
-	line-height: 1.15;
+	line-height: 30px;
+	font-size: 24px;
 	font-family: 'OpenSansLight';
 }
 .js-ubication__left--img{
@@ -31,5 +32,22 @@
 	left: 0;
 	background: url(../img/fondo/fondo-ubicacion.jpg) no-repeat center center;
 	background-size: cover;
-	height: 250px;
+	height: 215px;
+}
+.js-button--default{
+	background-color: transparent !important;
+	text-transform: initial;
+	color: #ff8300 !important;
+	font-size: 18px;
+	box-shadow: none;
+	padding: 0;
+}
+.js-ubication__right a i{
+	color: #ff8300 !important;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.js-ubication__right p{
+	color: #ff8300 !important;
+	font-size: 24px;
 }

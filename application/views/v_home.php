@@ -38,6 +38,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+                        <!-- <li toggle="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Es/Pt</li> -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt"></i></a>
                             <ul class="dropdown-menu">
@@ -110,8 +111,10 @@
                         <div class="js-ubication__left--img"></div>
                     </div>
                     <div class="js-ubication__right">
-                        <h2>Nuestra soluciones incluyen capacidades de direccionamiento, campañas de proximidad, seguimiento de activos y anal&iacute;ticos de ubicaci&oacute;n.</h2>
-                        <a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Conoce la Soluci&oacute;n de Servicios de Ubicaci&oacute;n</a>
+                        <p>Conoce la Soluci&oacute;n de Servicios de Ubicaci&oacute;n</p>
+                        <!-- <br> -->
+                        <h2>Nuestras soluciones incluyen capacidades de direccionamiento, campañas de proximidad, seguimiento de activos y anal&iacute;ticos de ubicaci&oacute;n.</h2>
+                        <a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--default"><i class="mdi mdi-arrow_forward"></i>Ver m&aacute;s</a>
                     </div>
                 </div>
             </div>
