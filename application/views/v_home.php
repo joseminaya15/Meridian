@@ -38,7 +38,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- <li toggle="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Es/Pt</li> -->
+                        <li role="button" id="languaje" onclick="changeLang(languaje)"><span id="es" style="color:#ff8300">Espa&ntilde;ol</span><span> / </span><span id="pt">Portugu&eacute;s</span></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt"></i></a>
                             <ul class="dropdown-menu">
@@ -203,6 +203,7 @@
             } else {
                 $('select').selectpicker();
             }
+            var languaje = 0;
         </script>
     </body>
 </html>

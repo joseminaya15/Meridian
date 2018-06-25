@@ -53,3 +53,16 @@ function clearSearch() {
 	idCaract = [];
 	buscarGeneral();
 }
+function changeLang(indice) {
+	var colorEs = '';
+	var colorPt = '';
+	if(indice == 0){
+		$('#es').css('color','#ff8300');
+		$('#pt').css('color','#333');
+		languaje = 1;
+	} else {
+		$('#es').css('color', 'color:#333');
+		$('#pt').css('color', 'color:#ff8300');
+		languaje = 0;
+	}
+}
