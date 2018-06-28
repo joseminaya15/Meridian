@@ -89,10 +89,22 @@
                                 <span class="js-nav__title">Informaci&oacute;n</span>
                             </li>
                             <li id="li2Pos">
-                                <a data-toggle="tab" aria-expanded="false" href="#tab2Pos" class="my-link-pos" id="step2Pos" style="pointer-events: none;"> 
+                                <a data-toggle="tab" aria-expanded="true" href="#tab2Pos" class="my-link-pos" id="step2Pos"> 
                                     <span class="step"></span>
                                 </a>
                                 <span class="js-nav__title">Caracter&iacute;sticas</span>
+                            </li>
+                            <li id="li3Pos">
+                                <a data-toggle="tab" aria-expanded="true" href="#tab3Pos" class="my-link-pos" id="step3Pos"> 
+                                    <span class="step"></span>
+                                </a>
+                                <span class="js-nav__title">Reglas del programa</span>
+                            </li>
+                            <li id="li4Pos">
+                                <a data-toggle="tab" aria-expanded="false" href="#tab4Pos" class="my-link-pos" id="step4Pos"> 
+                                    <span class="step"></span>
+                                </a>
+                                <span class="js-nav__title">Documentos de soporte</span>
                             </li>
 						</ul>
 					</div>
@@ -172,6 +184,34 @@
 							  	<div class="col-xs-12 text-right">
 							  		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="guardarDatosDeps()">Guardar</button>
 							  	</div>                                           
+                            </div>
+                        </div>
+                        <div class="tab-pane pane-pos" id="tab3Pos">
+                            <div class="col-xs-12 text-center">
+                                <h2>REGLAS PARA PARTICIPAR EN EL PROGRAMA</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>1. El aspirante debe diligenciar su perfil a través del  micrositio </p>
+                                <p>2. Diligenciar el formulario no garantiza que el perfil va a ser creado y la información publicada, se debe ajustar a la mayor cantidad de parámetros posibles</p>
+                                <p>3. El Formulario y la descripción del alcance del servicio del desarrollador va a estar sujeto a verificación por parte del personal técnico de Aruba</p>
+                                <p>4. El aspirante debe diligenciar una forma adicional donde autoriza a Aruba a postear su información en el sitio y a ser contactado en cualquier momento por otros socios de negocio, clientes o personal Aruba</p>
+                                <p>5. Es mandatorio que el desarrollador al ser contactado a través del micrositio responda de manera eficiente y con celeridad a quienes lo requieran</p>
+                                <p>6. El desarrollador debe una vez se dé de alta, acceder al track de entrenamientos que recibirá en su carta de bienvenida</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane pane-pos" id="tab4Pos">
+                            <div class="col-xs-12 text-center">
+                                <h2>DOCUMENTOS SOPORTE</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>1. Carta de autorización por parte del desarrollador para postear su información en el portal de Aruba</p>
+                                <p>2. Documento del programa</p>
+                                <p class="m-l-20">a. Reglas del programa</p>
+                                <p class="m-l-20">b. Beneficios</p>
+                                <p class="m-l-40">i. Incentivo por cada desarrollo exitoso y documentado</p>
+                                <p class="m-l-40">ii. Demo kit</p>
+                                <p class="m-l-40">iii. Training No formal – sesiones SEs</p>
+                                <p>3. Formato para la documentación del caso de éxito</p>
                             </div>
                         </div>
 					</div>
