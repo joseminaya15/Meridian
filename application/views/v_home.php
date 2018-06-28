@@ -113,7 +113,7 @@
                     <div class="js-ubication__right">
                         <p>Conoce la Soluci&oacute;n de Servicios de Ubicaci&oacute;n</p>
                         <!-- <br> -->
-                        <h2>Nuestras soluciones incluyen capacidades de direccionamiento, campañas de proximidad, seguimiento de activos y anal&iacute;ticos de ubicaci&oacute;n.</h2>
+                        <h2>Los servicios basados en localización de Aruba cubren la brecha entre el mundo digital y físico, permitiendo la interacción bajo un nuevo modelo de negocio más eficiente. Sea parte del programa que potencia y promociona sus capacidades para desarrollar soluciones de navegación en espacios físicos, campañas de proximidad, seguimiento de activos y analítica sobre la ubicación de sus usuarios y dispositivos.</h2>
                         <a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--default"><i class="mdi mdi-arrow_forward"></i>Ver m&aacute;s</a>
                     </div>
                 </div>
