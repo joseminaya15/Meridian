@@ -66,3 +66,12 @@ function changeLang(indice) {
 		languaje = 0;
 	}
 }
+function closeCollapse(){
+	$('#principal').find('.collapse').removeClass('in');
+}
+$('[data-id=vertical]').click(function(){
+	$('#principal').find('.collapse').removeClass('in');
+});
+$('[data-id=pais]').click(function(){
+	$('#principal').find('.collapse').removeClass('in');
+});

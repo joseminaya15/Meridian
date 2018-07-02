@@ -94,6 +94,9 @@
                         <div class="mdl-card__supporting-text">
                             <?php echo $caracter ?>
                         </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-button js-button--icon" onclick="closeCollapse()">Cerrar<i class="mdi mdi-close"></i></button>
+                        </div>
                   </div>
                 </div>
                 <div class="js-cards" id="cardDesarrolladores">
