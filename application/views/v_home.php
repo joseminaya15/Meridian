@@ -73,9 +73,9 @@
                 </div>
             </div>
         </section>
-        <section id="principal">
+        <section id="principal" class="js-section p-t-0">
             <div class="js-container">
-                <div class="js-flex">
+                <div class="js-flex js-wrap js-justify">
                     <div class="js-input js-select">
                         <select class="selectpicker" multiple="multiple" data-size="10" id="pais" title="Seleccione su país" onchange="buscarGeneral()" >
                             <?php echo $paises?>
@@ -86,10 +86,8 @@
                             <?php echo $vertical ?>
                         </select>
                     </div>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica <i class="mdi mdi-arrow_drop_down"></i></button>
-                    <div class="" id="clear">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select" type="button" onclick="clearSearch();" >Limpiar busqueda<i class="mdi mdi-clear"></i></button>
-                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select js-select" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica <i class="mdi mdi-arrow_drop_down"></i></button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select js-select" type="button" onclick="clearSearch();" >Limpiar busqueda<i class="mdi mdi-clear"></i></button>
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="mdl-card">

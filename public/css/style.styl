@@ -113,6 +113,10 @@ a
 	text-decoration none !important
 .js-flex
 	flexCenter()
+.js-wrap
+	flex-wrap wrap
+.js-justify
+	justify-content center
 .js-height
 	height 100vh
 .js-section
@@ -493,9 +497,32 @@ a
 		height 48px
 		i
 			vertical-align middle
+			position absolute
+			right 5px
 	&.js-button--login
 		width 100%
 		margin 20px 0
+.js-ubication
+	flexStart()
+	.js-ubication__left
+		flexCenter()
+		position relative
+		width 100%
+		max-width calc(100% - 600px)
+		.js-ubication__left--img
+			absolute()
+			background url(../img/fondo/fondo-ubicacion.jpg) no-repeat center center
+			background-size cover
+			height: 240px
+	.js-ubication__right
+		padding 20px
+		padding-top 0
+		width 100%
+		max-width 600px
+		text-align left
+		p
+			font-size 24px
+			color $default !important			
 footer
 	background-color #F3F3F4
 	h2
@@ -544,9 +571,6 @@ footer
 ::-webkit-scrollbar-thumb
 	background-color #AAAAAA
 	border-radius 10px
-// @media ( max-width: 1400px )
-// @media ( max-width: 1200px )
-// @media ( max-width: 768px )
 @media ( max-width: 1000px )
 	.js-partner 
 		.js-partner--imagen
@@ -560,10 +584,36 @@ footer
 				font-family $regular
 			p
 				font-size 16px
+	.js-ubication
+		flexStart()
+		.js-ubication__left
+			max-width calc(100% - 450px)
+		.js-ubication__right
+			max-width 450px
+	#principal
+		.js-select
+			max-width 350px
+			text-align left
+@media ( max-width: 768px )
+	.js-ubication
+		flexStart()
+		.js-ubication__left
+			max-width calc(100% - 350px)
+		.js-ubication__right
+			max-width 350px
 @media ( max-width: 600px )
 	.js-cards 
 		.js-card--partner 
 			.js-card--partner__front 
 				.js-card--partner__contenido
 					padding 0
+	.js-ubication
+		display block
+		.js-ubication__left
+			position relative
+			max-width 100%
+			height 240px
+		.js-ubication__right
+			max-width 100%
+			padding 20px 0
 					
