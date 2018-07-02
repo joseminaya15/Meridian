@@ -5,14 +5,14 @@ $secondary = #D5D654
 	position relative
 	.js-wizard__nav
 		.js-progress
-			width 48%
+			width 75%
 			.js-progress__bar
 				background-color #004062
 		.js-nav
 			position relative
 			&>li
 				display inline-block
-				width 48.5%
+				width 24%
 				&:hover
 				&.active
 					.step
@@ -30,7 +30,7 @@ $secondary = #D5D654
 					position absolute
 					width 100%
 					left 0
-					bottom -15px
+					bottom -20px
 					color #757575
 			a
 				margin-bottom 5px
@@ -43,3 +43,11 @@ $secondary = #D5D654
 			border-bottom 1px solid #757575
 			color #757575
 			text-align left
+@media ( max-width: 768px )
+	.js-wizard 
+		.js-wizard__nav 
+			.js-nav
+				&>li 
+					width 23%
+					.js-nav__title
+						display none

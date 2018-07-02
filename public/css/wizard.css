@@ -1,6 +1,6 @@
 /* Wizard*/
 .js-wizard .js-wizard__nav .js-progress {
-	top: 28.5px;
+	top: 20px;
 	height: 1px;
 	box-shadow: inherit;
 	background-color: #e6e6e6;
@@ -11,7 +11,7 @@
 }
 .js-wizard .nav li.active .step {
 	position: relative;
-	top: -5px;
+	top: 0;
 	height: 45px;
 	width: 45px;	
 }
@@ -26,7 +26,7 @@
 	color: #FFFFFF
 }
 .js-wizard ul.nav.nav-pills>li>a {
-	padding: 10px 0
+	padding:  0;
 }
 .js-wizard ul.nav.nav-pills>li:NTH-CHILD(1)>a span.step:AFTER {
 	content: "1";
@@ -37,7 +37,7 @@
 .js-wizard ul.nav.nav-pills>li:NTH-CHILD(3)>a span.step:AFTER {
 	content: "3"
 }
-.js-wizardul.nav.nav-pills>li:NTH-CHILD(4)>a span.step:AFTER {
+.js-wizard ul.nav.nav-pills>li:NTH-CHILD(4)>a span.step:AFTER {
 	content: "4"
 }
 .js-wizard .nav li.complete .title {
