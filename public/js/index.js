@@ -1,17 +1,12 @@
 function showCard(id){
 	var idCard   = $('#'+id);
 	var cardHide = idCard.parents('.js-card--partner').find('.js-hide');
-	// $('.js-hide').removeClass('js-height');
 	idCard.toggleClass('rotate');
 	cardHide.toggleClass('js-height');
-	// idCard.click(function(){
-	// 	idCard.toggleClass('rotate');
-	// 	cardHide.toggleClass('js-height');
-	// });
 }
 var idCaract = [];
 function buscarGeneral(id){
-	$('.js-card--partner').addClass('js-scale')
+	$('.js-card--partner').addClass('js-scale');
 	var pais 		   = $('#pais').val();
 	var vertical 	   = $('#vertical').val();
 	var caracteristica = "";
@@ -39,7 +34,7 @@ function buscarGeneral(id){
 			if (data.error == 0) {
 				$('#cardDesarrolladores').html(null);
 				$('#cardDesarrolladores').html(data.html);
-				$('.js-card--partner').removeClass('js-scale')
+				$('.js-card--partner').removeClass('js-scale');
 			}
 		}catch (err){
         	msj('error',err.message);
