@@ -198,10 +198,8 @@
                             </ol>
                             <div class="col-xs-12 text-right">
                                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" href="Home">Declinar</a>
-                            </div> 
-                            <div class="col-xs-12 text-right">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="nextSoporte()">Aceptar</button>
-                            </div> 
+                            </div>
                         </div>
                         <div class="tab-pane pane-pos" id="tab4Pos">
                             <h3>Documentos de Soporte</h3>
