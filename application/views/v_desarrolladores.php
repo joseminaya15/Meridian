@@ -187,32 +187,32 @@
                             </div>
                         </div>
                         <div class="tab-pane pane-pos" id="tab3Pos">
-                            <div class="col-xs-12 text-center">
-                                <h3>Reglas para participar en el programa</h3>
-                            </div>
-                            <div class="col-xs-12">
-                                <p>1. El aspirante debe diligenciar su perfil a través del  micrositio </p>
-                                <p>2. Diligenciar el formulario no garantiza que el perfil va a ser creado y la información publicada, se debe ajustar a la mayor cantidad de parámetros posibles</p>
-                                <p>3. El Formulario y la descripción del alcance del servicio del desarrollador va a estar sujeto a verificación por parte del personal técnico de Aruba</p>
-                                <p>4. El aspirante debe diligenciar una forma adicional donde autoriza a Aruba a postear su información en el sitio y a ser contactado en cualquier momento por otros socios de negocio, clientes o personal Aruba</p>
-                                <p>5. Es mandatorio que el desarrollador al ser contactado a través del micrositio responda de manera eficiente y con celeridad a quienes lo requieran</p>
-                                <p>6. El desarrollador debe una vez se dé de alta, acceder al track de entrenamientos que recibirá en su carta de bienvenida</p>
-                            </div>
+                            <h3>Reglas para participar en el programa</h3>
+                            <ol>
+                                <li>El aspirante debe diligenciar su perfil a través del  micrositio.</li>
+                                <li>Diligenciar el formulario no garantiza que el perfil va a ser creado y la información publicada, se debe ajustar a la mayor cantidad de parámetros posibles.</li>
+                                <li>El Formulario y la descripción del alcance del servicio del desarrollador va a estar sujeto a verificación por parte del personal técnico de Aruba.</li>
+                                <li>El aspirante debe diligenciar una forma adicional donde autoriza a Aruba a postear su información en el sitio y a ser contactado en cualquier momento por otros socios de negocio, clientes o personal Aruba.</li>
+                                <li>Es mandatorio que el desarrollador al ser contactado a través del micrositio responda de manera eficiente y con celeridad a quienes lo requieran.</li>
+                                <li>El desarrollador debe una vez se dé de alta, acceder al track de entrenamientos que recibirá en su carta de bienvenida.</li>
+                            </ol>
                         </div>
                         <div class="tab-pane pane-pos" id="tab4Pos">
-                            <div class="col-xs-12 text-center">
-                                <h2>DOCUMENTOS SOPORTE</h2>
-                            </div>
-                            <div class="col-xs-12">
-                                <p>1. Carta de autorización por parte del desarrollador para postear su información en el portal de Aruba</p>
-                                <p>2. Documento del programa</p>
-                                <p class="m-l-20">a. Reglas del programa</p>
-                                <p class="m-l-20">b. Beneficios</p>
-                                <p class="m-l-40">i. Incentivo por cada desarrollo exitoso y documentado</p>
-                                <p class="m-l-40">ii. Demo kit</p>
-                                <p class="m-l-40">iii. Training No formal – sesiones SEs</p>
-                                <p>3. Formato para la documentación del caso de éxito</p>
-                            </div>
+                            <h3>Documentos de Soporte</h3>
+                            <ol>
+                                <li>Carta de autorizaci&oacute;n por parte del desarrollador para postear su informaci&oacute;n en el portal de Aruba</li>
+                                <li>Documento del programa</li>
+                                <ol class="js-letras">
+                                    <li>Reglas del programa</li>
+                                    <li>Beneficios</li>
+                                    <ol class="js-romanos">
+                                        <li>Incentivo por cada desarrollo exitoso y documentado</li>
+                                        <li>Demo kit</li>
+                                        <li>Training No formal – sesiones SEs</li>
+                                    </ol>
+                                </ol>
+                                <li>Formato para la documentaci&oacute;n del caso de &eacute;xito</li>
+                            </ol>
                         </div>
 					</div>
 				</div>
