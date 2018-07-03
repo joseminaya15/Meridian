@@ -13,7 +13,6 @@ function guardarDesarrolladores(){
 	var descripcion = $('#descripcion').val();
 	var mov_comercial = $('#mov_comercial').val();
 	var nom_tecnico = $('#nom_tecnico').val();
-	console.log('entra');
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese el nombre de su empresa');
 		return;
