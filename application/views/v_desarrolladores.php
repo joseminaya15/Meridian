@@ -188,7 +188,7 @@
                         </div>
                         <div class="tab-pane pane-pos" id="tab3Pos">
                             <div class="col-xs-12 text-center">
-                                <h2>REGLAS PARA PARTICIPAR EN EL PROGRAMA</h2>
+                                <h3>Reglas para participar en el programa</h3>
                             </div>
                             <div class="col-xs-12">
                                 <p>1. El aspirante debe diligenciar su perfil a través del  micrositio </p>
