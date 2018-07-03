@@ -197,7 +197,10 @@
                                 <li>El desarrollador debe una vez se dé de alta, acceder al track de entrenamientos que recibirá en su carta de bienvenida.</li>
                             </ol>
                             <div class="col-xs-12 text-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="nextSoporte()">Continuar</button>
+                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" href="Home">Declinar</a>
+                            </div> 
+                            <div class="col-xs-12 text-right">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="nextSoporte()">Aceptar</button>
                             </div> 
                         </div>
                         <div class="tab-pane pane-pos" id="tab4Pos">
@@ -215,6 +218,7 @@
                                     </ol>
                                 </ol>
                                 <li>Formato para la documentaci&oacute;n del caso de &eacute;xito</li>
+                                <p>Toda esta información deberá ser enviada por mail a Marcela Diaz -  <a href="mailto:marcela.diaz.saavedra@hpe.com">marcela.diaz.saavedra@hpe.com</a></p>
                             </ol>
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="finalizar()">Finalizar</button>
                         </div>
