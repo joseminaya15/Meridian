@@ -13,6 +13,7 @@ function guardarDesarrolladores(){
 	var descripcion = $('#descripcion').val();
 	var mov_comercial = $('#mov_comercial').val();
 	var nom_tecnico = $('#nom_tecnico').val();
+	console.log('entra');
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese el nombre de su empresa');
 		return;
@@ -81,12 +82,12 @@ function guardarDesarrolladores(){
         	data = JSON.parse(data);
         	if(data.error == 0){
 				limpiarCampos();
+				$('#step2Pos').css('pointer-events', '');
 				$('#li1Pos').addClass('complete');
 				$('#li1Pos').removeClass('active');
 				$('#li2Pos').addClass('active');
 				$('#tab1Pos').removeClass('active');
 				$('#tab2Pos').addClass('active');
-				$('#step2Pos').css('pointer-events', '');
         	}else{
         		return;
         	}
@@ -143,11 +144,6 @@ function guardarDatosDeps(){
 		var isChecked    = $(this);
 		var labelChecked = isChecked.find('.mdl-radio__label');
 		var textChecked = isChecked.find('.mdl-radio__label').text();
-		/*console.log(textChecked);
-		if(textChecked == null || textChecked == '' || textChecked == undefined){
-			msj('error', 'Seleccione las características de su empresa');
-			return;
-		}*/
 		if(textChecked == 'Sí'){
 			var attrChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
 			var idChecked   = $('#'+attrChecked);
@@ -173,8 +169,13 @@ function guardarDatosDeps(){
         	if(data.error == 0){
 				arrayIds = [];
 				$('.mdl-radio').removeClass('is-checked');
+				$('#step3Pos').css('pointer-events', '');
 				$('#li2Pos').addClass('complete');
 				$('.js-observacion').find('input').val('');
+				$('#li1Pos').addClass('complete');
+				$('#li3Pos').addClass('active');
+				$('#tab2Pos').removeClass('active');
+				$('#tab3Pos').addClass('active');
         	}else{
         		return;
         	}
@@ -235,3 +236,15 @@ $("#archivo").change(function(e) {
 	}
 	$('#archivoDocumento').val(nombre);
 });
+
+function nextSoporte(){
+	$('#step4Pos').css('pointer-events', '');
+	$('#li3Pos').addClass('complete');
+	$('#li4Pos').addClass('active');
+	$('#tab3Pos').removeClass('active');
+	$('#tab4Pos').addClass('active');
+}
+function finalizar(){
+	$('#li4Pos').addClass('complete');
+	location.href = 'Desarrolladores';
+}
