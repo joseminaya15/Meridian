@@ -197,7 +197,7 @@
                                 <li>El desarrollador debe una vez se dé de alta, acceder al track de entrenamientos que recibirá en su carta de bienvenida.</li>
                             </ol>
                             <div class="col-xs-12 text-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="nextSoporte()">Continuar</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="nextSoporte()">Continuar</button>
                             </div> 
                         </div>
                         <div class="tab-pane pane-pos" id="tab4Pos">
@@ -216,7 +216,7 @@
                                 </ol>
                                 <li>Formato para la documentaci&oacute;n del caso de &eacute;xito</li>
                             </ol>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button btn-guardar-deps" type="button" onclick="finalizar()">Finalizar</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="button" onclick="finalizar()">Finalizar</button>
                         </div>
 					</div>
 				</div>

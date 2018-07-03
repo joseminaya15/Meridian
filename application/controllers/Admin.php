@@ -38,8 +38,8 @@ class Admin extends CI_Controller {
                 $img = $key->imagen;
             }
             $html .= '<tr>
-                        <td><img src="'.RUTA_ARCHIVOS.'1'.$img.'" style="width:  100%;max-width: 80px;"></td>
-                        <td>'.$key->gerente.'</td>
+                        <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 80px;"></td>
+                        <td>'.$key->name_cont_comer.'</td>
                         <td>'.$key->cont_comercial.'</td>
                         <td>'.$key->cont_tecnico.'</td>
                         <td>'.$key->pagina.'</td>
