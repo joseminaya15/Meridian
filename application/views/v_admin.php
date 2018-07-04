@@ -22,12 +22,11 @@
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet"    href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css">
-    <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     <style type="text/css">
         body{
             overflow-y: scroll;
-            background-color: #EDEDED;
+            background-color: #FFFFFF;
         }
     </style>
 <body>
@@ -39,11 +38,11 @@
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
         </div>
     </div>
-    <section id="principal">
-        <div id="content" class="js-container">
-            <div class="mdl-card mdl-card-table contenido-admin">
+    <section class="js-section js-section--admin">
+        <div class="js-container">
+            <div class="mdl-card">
                 <div class="table-responsive">
-                    <table id="example" class="table table-bordered table-hover dt-responsive" cellspacing="0" width="100%">
+                    <table id="example" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
                                 <th class="text-left">Logo</th>
