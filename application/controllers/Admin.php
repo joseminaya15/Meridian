@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
 
 	public function index(){
         $html    = '';
-        $datos   = $this->M_datos->filtroGeneral(null, null, null);
+        $datos   = $this->M_datos->filtroGeneral(null, null, null, 'admin');
         if(count($datos) == 0){
             $html = '<tr>
                         <td></td>

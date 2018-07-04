@@ -44,7 +44,7 @@ class Home extends CI_Controller {
         }
 
         $html           = '';
-        $datos          = $this->M_datos->filtroGeneral(null, null, null);
+        $datos          = $this->M_datos->filtroGeneral(null, null, null, null);
         foreach ($datos as $key) {
             $html .= '<div class="js-card--partner">
                           <div class="js-card--partner__front">
@@ -96,7 +96,7 @@ class Home extends CI_Controller {
             $pais           = $this->input->post('pais');
             $vertical       = $this->input->post('vertical');
             $caracteristica = $this->input->post('caracteristica');
-            $datos          = $this->M_datos->filtroGeneral($pais, $vertical, $caracteristica);
+            $datos          = $this->M_datos->filtroGeneral($pais, $vertical, $caracteristica, null);
             foreach ($datos as $key) {
                 $html .= '<div class="js-card--partner">
                               <div class="js-card--partner__front">

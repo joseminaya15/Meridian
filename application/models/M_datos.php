@@ -69,10 +69,14 @@ class M_datos extends  CI_Model{
         return $result->result();
     }
     
-    function filtroGeneral($pais, $vertical, $caracteristica) {
+    function filtroGeneral($pais, $vertical, $caracteristica, $admin) {
         $sentPais = (empty($pais)) ? "" : "AND ip.id_pais IN (".$pais.") ";
         $sentVert = (empty($vertical)) ? "" : "AND iv.id_vertical IN (".$vertical.") ";
         $sentCara = (empty($caracteristica)) ? "" : "AND id.id_detalle IN (".$caracteristica.") ";
+        $flg      = '';
+        if($admin != 'admin'){
+          $flg = 'AND co.flg_activo = 1';
+        }
         $sql = "SELECT co.*,
                        d.Empresa,
                        d.Descripcion,
@@ -97,7 +101,7 @@ class M_datos extends  CI_Model{
                    AND v.Id = iv.id_vertical
                    AND dc.id_caract = ca.Id
                    AND dc.Id = id.id_detalle
-                   AND co.flg_activo = 1
+                   ".$flg."
                    ".$sentPais."
                    ".$sentVert."
                    ".$sentCara."
