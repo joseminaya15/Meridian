@@ -103,7 +103,7 @@
             });
           $('.buttons-excel').empty();
           $('.buttons-print').empty();
-          $('.buttons-excel').append('<i class="fa fa-download" style="font-size: 18px; vertical-align: middle;"></i>');
+          $('.buttons-excel').append('<i class="fa fa-file-excel" style="font-size: 18px; vertical-align: middle;"></i>');
           $('.buttons-print').append('<i class="fa fa-print"></i>');
       });
     </script>
