@@ -57,7 +57,7 @@
         <section id="programa" class="js-section">
             <div class="js-fondo--programa"></div>
             <div class="js-container">
-                <h2>Programa de partners Meridian Engage Technology</h2>
+                <h2>Solicitud de Participaci&oacute;n Programa Partners Desarrolladores</h2>
             </div>
         </section>
         <section id="partner" class="js-section">
@@ -66,11 +66,10 @@
                     <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
                 </div>
                 <div class="js-partner--contenido">
-                    <h2>Partners del programa Meridian Engage</h2>
+                    <h2>Te invitamos a formar parte del Programa Partners Desarrolladores</h2>
                     <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
                     AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
                     categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
-                    <a href="https://www.arubanetworks.com/es/partners/programa/engage/engage-form/"><i class="mdi mdi-arrow_forward"></i>P&oacute;ngase en contacto con nosotros para obtener m&aacute;s informaci&oacute;n</a>
                 </div>
             </div> 
         </section>
