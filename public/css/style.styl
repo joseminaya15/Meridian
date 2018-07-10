@@ -59,6 +59,12 @@ absolute()
 	left 0
 	right 0
 	bottom 0
+relative()
+	position relative
+	top 0
+	left 0
+	right 0
+	bottom 0
 flipCard()
 	-moz-backface-visibility hidden
 	-webkit-backface-visibility hidden
@@ -359,6 +365,14 @@ ol
 			height 100%
 			width 100%
 			content ''
+		&.js-partner--absolute
+			relative()
+			height 325px
+			width 100%
+			background url(../img/fondo/fondo1.jpg) no-repeat center center
+			background-size cover
+			&::after
+				display none
 	.js-partner--contenido
 		position absolute
 		text-align center
@@ -616,6 +630,8 @@ table
 		.js-partner--imagen
 			&::after
 				display none
+			&.js-partner--absolute
+				height 250px
 		.js-partner--contenido
 			position relative
 			color #000000
@@ -656,4 +672,8 @@ table
 		.js-ubication__right
 			max-width 100%
 			padding 20px 0
+	.js-partner 
+		.js-partner--imagen
+			&.js-partner--absolute
+				height 200px
 					

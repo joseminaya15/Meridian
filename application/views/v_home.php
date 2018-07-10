@@ -10,7 +10,7 @@
         <meta name="date"                   content="May 7, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#FF8300">
-    	<title>Aruba | Meridian</title>
+    	<title>Aruba | Programa de Partners Desarrolladores</title>
         <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">

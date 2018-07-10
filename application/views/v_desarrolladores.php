@@ -10,7 +10,7 @@
         <meta name="date"                   content="May 7, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#FF8300">
-    	<title>Aruba | Meridian</title>
+    	<title>Aruba | Programa de Partners Desarrolladores</title>
         <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
@@ -62,14 +62,9 @@
         </section>
         <section id="partner" class="js-section">
             <div class="js-container js-flex js-partner">
-                <div class="js-partner--imagen">
-                    <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
-                </div>
+                <div class="js-partner--imagen js-partner--absolute"></div>
                 <div class="js-partner--contenido">
                     <h2>Te invitamos a formar parte del Programa Partners Desarrolladores</h2>
-                    <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
-                    AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
-                    categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
                 </div>
             </div> 
         </section>
