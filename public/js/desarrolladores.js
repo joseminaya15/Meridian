@@ -13,6 +13,7 @@ function guardarDesarrolladores(){
 	var descripcion = $('#descripcion').val();
 	var mov_comercial = $('#mov_comercial').val();
 	var nom_tecnico = $('#nom_tecnico').val();
+	factura = $('#archivo')[0].files[0];
 	if(empresa == '' || empresa == null){
 		msj('error', 'Ingrese el nombre de su empresa');
 		return;
@@ -61,6 +62,12 @@ function guardarDesarrolladores(){
 		msj('error', 'Ingrese la descripción de su empresa');
 		return;
 	}
+	if(factura == undefined){
+		return;
+	}
+	if(factura['size'] > 2048000){
+		return;
+	}
 	$('.btn-guardar').prop("disabled", true);
 	$.ajax({
 		data : {empresa  : empresa,
@@ -74,7 +81,7 @@ function guardarDesarrolladores(){
 				descripcion : descripcion,
 				mov_comercial : mov_comercial,
 				nom_tecnico   : nom_tecnico},
-		url  : 'desarrolladores/guardarDesarrolladores',
+		url  : 'Registros/guardarDesarrolladores',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -160,7 +167,7 @@ function guardarDatosDeps(){
 				arr_deta     : arrayIds,
 				obsChecked   : obsChecked,
 				arrayGeneral : arrayGeneral},
-		url  : 'desarrolladores/guardarDatosDeps',
+		url  : 'Registros/guardarDatosDeps',
 		type : 'POST'
 	}).done(function(data){
 		try{
@@ -205,7 +212,7 @@ function agregarDatos(){
      $.ajax({
         type     	:"post",
         dataType 	:"json",
-        url		    :"desarrolladores/cargarFact",
+        url		    :"Registros/cargarFact",
         contentType :false,
         data 		:datos,
         processData :false,
@@ -245,5 +252,5 @@ function nextSoporte(){
 }
 function finalizar(){
 	$('#li4Pos').addClass('complete');
-	location.href = 'Desarrolladores';
+	location.href = 'Registros';
 }
