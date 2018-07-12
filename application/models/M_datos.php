@@ -35,7 +35,9 @@ class M_datos extends  CI_Model{
      function getCaracteristicas(){
         $sql = "SELECT dc.Id,
                        dc.tipo,
-                       c.name_caract
+                       dc.tipo_pt,
+                       c.name_caract,
+                       c.name_caract_pt
                   FROM detalle_caract dc,
                        caracteristicas c
                  WHERE dc.id_caract = c.Id
@@ -80,10 +82,13 @@ class M_datos extends  CI_Model{
         $sql = "SELECT co.*,
                        d.Empresa,
                        d.Descripcion,
+                       d.Descripcion_pt,
                        d.imagen,
                        GROUP_CONCAT(DISTINCT p.Nombre SEPARATOR ', ') AS pais,
                        GROUP_CONCAT(DISTINCT v.nombre SEPARATOR ', ') AS industrias,
-                       GROUP_CONCAT(DISTINCT ca.name_caract SEPARATOR ', ') AS caract
+                       GROUP_CONCAT(DISTINCT v.nombre_pt SEPARATOR ', ') AS industrias_pt,
+                       GROUP_CONCAT(DISTINCT ca.name_caract SEPARATOR ', ') AS caract,
+                       GROUP_CONCAT(DISTINCT ca.name_caract_pt SEPARATOR ', ') AS caract_pt
                   FROM contacto        co,
                        caracteristicas ca,
                        desarrolladores  d,

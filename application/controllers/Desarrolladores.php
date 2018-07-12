@@ -21,6 +21,7 @@ class Desarrolladores extends CI_Controller {
       $html_titu = '';
       $optionPaises = '';
       $i         = 1;
+      $idioma    = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'es';
       $datosPaises = $this->M_datos->getPais();
       foreach($datosPaises as $key) {
           $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
@@ -33,7 +34,7 @@ class Desarrolladores extends CI_Controller {
           $h3    = '';
           if($nombre == $key->name_caract){
             if($i == 1){
-              $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract.'</h3></div>';
+              $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract_pt.'</h3></div>';
             }
             $i = 2;
           }
@@ -45,7 +46,7 @@ class Desarrolladores extends CI_Controller {
           $html .= ''.$h3.'
                     <div class="col-sm-6 col-xs-12">
                       <div class="col-xs-12 js-input js-radio">
-                          <label>'.$key->tipo.'</label>
+                          <label>'.$key->tipo_pt.'</label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
                               <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
                               <span class="mdl-radio__label">Sí</span>
@@ -56,7 +57,7 @@ class Desarrolladores extends CI_Controller {
                           </label>
                       </div>
                       <div class="col-xs-12 js-input js-observacion">
-                          <label for="observacion'.$cont.'">Observacion</label>
+                          <label for="observacion'.$cont.'">Observação</label>
                           <input type="text" id="observacion'.$cont.'" maxlength="50">
                       </div>
                     </div>';
@@ -64,7 +65,7 @@ class Desarrolladores extends CI_Controller {
       }
       $data['verticales'] = $this->comboVerticales();
       $data['html'] = $html;
-		$this->load->view('v_desarrolladores', $data);
+		$this->load->view($idioma.'/v_desarrolladores', $data);
 	}
     function guardarDesarrolladores(){
         $data['error'] = EXIT_ERROR;
@@ -139,8 +140,13 @@ class Desarrolladores extends CI_Controller {
     function comboVerticales(){
       $html = '';
       $datos = $this->M_datos->getVertical();
+      $idioma    = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'es';
       foreach ($datos as $key) {
-        $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
+          if ($idioma == 'es') {
+              $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
+          } else if ($idioma == 'pt') {
+              $html .= '<option value="'.$key->Id.'">'.$key->nombre_pt.'</option>';
+          }
       }
       return $html;
     }

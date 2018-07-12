@@ -48,18 +48,29 @@ function clearSearch() {
 	idCaract = [];
 	buscarGeneral();
 }
-function changeLang(indice) {
-	var colorEs = '';
-	var colorPt = '';
-	if(indice == 0){
-		$('#es').css('color','#ff8300');
-		$('#pt').css('color','#333');
-		languaje = 1;
-	} else {
-		$('#es').css('color', 'color:#333');
-		$('#pt').css('color', 'color:#ff8300');
-		languaje = 0;
-	}
+function changeLang(idioma){
+	$.ajax({
+		data : {idioma : idioma},
+		url  : 'Home/goTo',
+		type : 'POST'
+	}).done(function(data){
+	  	try{
+		    data = JSON.parse(data);
+		    if(data.error == 0){
+		    	location.href = "Home";
+		    	$('.menu_header').css('display','none');
+	        	$('.search-filter.home').css('display','none');
+	        	sessionStorage.setItem('OPEN_MODAL2', '2');
+		    }else {
+		    	toastr.remove();
+	          	msj('error', data.msj);
+		    	return;
+		    }
+	  	}catch(err){
+	    	toastr.remove();
+          	msj('error',err.message);
+	  	}
+	});
 }
 function closeCollapse(){
 	$('#principal').find('.collapse').removeClass('in');

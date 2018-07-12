@@ -14,42 +14,46 @@ class Admin extends CI_Controller {
     }
 
 	public function index(){
-        $html    = '';
-        $datos   = $this->M_datos->filtroGeneral(null, null, null, 'admin');
-        if(count($datos) == 0){
-            $html = '<tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>';
-        }
-        foreach ($datos as $key) {
-            $img     = '';
-            if($key->imagen == null || $key->imagen == ''){
-                $img = 'nouser.png';
-            }else {
-                $img = $key->imagen;
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
+        }else {
+            $html    = '';
+            $datos   = $this->M_datos->filtroGeneral(null, null, null, 'admin');
+            if(count($datos) == 0){
+                $html = '<tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>';
             }
-            $html .= '<tr>
-                        <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
-                        <td>'.$key->name_cont_comer.'</td>
-                        <td>'.$key->cont_comercial.'</td>
-                        <td>'.$key->cont_tecnico.'</td>
-                        <td>'.$key->pagina.'</td>
-                        <td>'.$key->pais.'</td>
-                        <td>'.$key->industrias.'</td>
-                        <td>'.$key->Descripcion.'</td>
-                    </tr>';
+            foreach ($datos as $key) {
+                $img     = '';
+                if($key->imagen == null || $key->imagen == ''){
+                    $img = 'nouser.png';
+                }else {
+                    $img = $key->imagen;
+                }
+                $html .= '<tr>
+                            <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
+                            <td>'.$key->name_cont_comer.'</td>
+                            <td>'.$key->cont_comercial.'</td>
+                            <td>'.$key->cont_tecnico.'</td>
+                            <td>'.$key->pagina.'</td>
+                            <td>'.$key->pais.'</td>
+                            <td>'.$key->industrias.'</td>
+                            <td>'.$key->Descripcion.'</td>
+                        </tr>';
+            }
+            $data['html'] = $html;
+            $this->load->view('v_admin', $data);
         }
-        $data['html'] = $html;
-		$this->load->view('v_admin', $data);
 	}
 	function cerrarCesion(){
         $data['error'] = EXIT_ERROR;

@@ -10,7 +10,7 @@
         <meta name="date"                   content="May 7, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#FF8300">
-    	<title>Aruba | Programa de Partners Desarrolladores</title>
+    	<title>Aruba | Programa de Partners Desenvolvedores</title>
         <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li role="button" id="languaje" onclick="changeLang(languaje)"><span id="es" style="color:#ff8300">Espa&ntilde;ol</span><span> / </span><span id="pt">Portugu&eacute;s</span></li>
+                        <li role="button" onclick="changeLang('es')"><span>Espa&ntilde;ol</span><span> / </span><span style="color:#ff8300">Portugu&eacute;s</span></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt"></i></a>
                             <ul class="dropdown-menu">
@@ -47,7 +47,7 @@
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             </ul>
                         </li>
-                        <li><a href="https://www.arubanetworks.com/latam/empresa/contactese-con-nosotros/formulario-de-contacto/" target="_blank">Cont&aacute;ctenos</a></li>
+                        <li><a href="https://www.arubanetworks.com/latam/empresa/contactese-con-nosotros/formulario-de-contacto/" target="_blank">Entre em contato conosco</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,7 +56,7 @@
         <section id="programa" class="js-section">
             <div class="js-fondo--programa"></div>
             <div class="js-container">
-                <h2>Programa de Partners Desarrolladores</h2>
+                <h2>Programa de Partners Desenvolvedores</h2>
             </div>
         </section>
         <section id="partner" class="js-section">
@@ -65,11 +65,9 @@
                     <img src="<?php echo RUTA_IMG?>fondo/fondo-meridian.jpg">
                 </div>
                 <div class="js-partner--contenido">
-                    <h2>Partners del Programa Desarrolladores</h2>
-                    <p>Tanto si va a crear una aplicaci&oacute;n m&oacute;vil desde cero como si est&aacute; inici&aacute;ndose en Meridian 
-                    AppMaker o integrando datos de servicio de ubicaci&oacute;n en una plataforma ya existente, nuestros partners de 
-                    categor&iacute;a mundial estar&aacute;n encantados de ayudarle.</p>
-                    <a href="https://www.arubanetworks.com/es/partners/programa/engage/engage-form/"><i class="mdi mdi-arrow_forward"></i>P&oacute;ngase en contacto con nosotros para obtener m&aacute;s informaci&oacute;n</a>
+                    <h2>Parceiros do Programa de Desenvolvedores</h2>
+                    <p>Se você estiver criando um aplicativo para dispositivos móveis a partir do zero ou iniciando com o Meridian AppMaker ou integrando dados de serviço de localização em uma (numa) plataforma existente, nossos parceiros de nível internacional terão prazer em ajudar ( ajudá-lo).</p>
+                    <a href="https://www.arubanetworks.com/es/partners/programa/engage/engage-form/"><i class="mdi mdi-arrow_forward"></i>Entre em contato conosco para mais informações</a>
                 </div>
             </div>
         </section>
@@ -77,17 +75,17 @@
             <div class="js-container">
                 <div class="js-flex js-wrap js-justify">
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" data-size="10" id="pais" title="Seleccione su país" onchange="buscarGeneral()" >
+                        <select class="selectpicker" multiple="multiple" data-size="10" id="pais" title="Selecione seu país" onchange="buscarGeneral()" >
                             <?php echo $paises?>
                         </select>
                     </div>
                     <div class="js-input js-select">
-                        <select class="selectpicker" multiple="multiple" data-actions-box="true" data-size="10" id="vertical" title="Seleccione su industria" onchange="buscarGeneral();">
+                        <select class="selectpicker" multiple="multiple" data-actions-box="true" data-size="10" id="vertical" title="Selecione seu setor" onchange="buscarGeneral();">
                             <?php echo $vertical ?>
                         </select>
                     </div>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select js-select" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Seleccione su caracteristica <i class="mdi mdi-arrow_drop_down"></i></button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select js-select" type="button" onclick="clearSearch();" >Limpiar busqueda<i class="mdi mdi-clear"></i></button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select js-select" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Selecione seu caracteristica <i class="mdi mdi-arrow_drop_down"></i></button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--select js-select" type="button" onclick="clearSearch();" >Limpar pesquisa<i class="mdi mdi-clear"></i></button>
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="mdl-card">
@@ -95,7 +93,7 @@
                             <?php echo $caracter ?>
                         </div>
                         <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-button js-button--icon" onclick="closeCollapse()">Cerrar<i class="mdi mdi-close"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-button js-button--icon" onclick="closeCollapse()">Fechar<i class="mdi mdi-close"></i></button>
                         </div>
                   </div>
                 </div>
@@ -112,10 +110,10 @@
                         <div class="js-ubication__left--img"></div>
                     </div>
                     <div class="js-ubication__right">
-                        <p>Conoce la Soluci&oacute;n de Servicios de Ubicaci&oacute;n</p>
+                        <p>Conheça a solução de serviços de localização</p>
                         <!-- <br> -->
-                        <h2>Los servicios basados en localización de Aruba cubren la brecha entre el mundo digital y físico, permitiendo la interacción bajo un nuevo modelo de negocio más eficiente. Sea parte del programa que potencia y promociona sus capacidades para desarrollar soluciones de navegación en espacios físicos, campañas de proximidad, seguimiento de activos y analítica sobre la ubicación de sus usuarios y dispositivos.</h2>
-                        <a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--default"><i class="mdi mdi-arrow_forward"></i>Ver m&aacute;s</a>
+                        <h2>Os serviços baseados em localização da Aruba preenchem a lacuna entre o mundo digital e o mundo físico, permitindo a interação sob um modelo de negócios novo e mais eficiente. Seja parte do programa que fortalece e promove seus recursos para desenvolver soluções de navegação em espaços físicos, campanhas de proximidade, acompanhamento de recursos e análises sobre a localização de seus usuários e dispositivos.</h2>
+                        <a href="https://www.arubanetworks.com/latam/soluciones/servicios-de-ubicacion/" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button--default"><i class="mdi mdi-arrow_forward"></i>Ver mais</a>
                     </div>
                 </div>
             </div>
@@ -123,8 +121,8 @@
         <section id="contacto" class="js-section">
             <div class="js-container">
                 <div class="js-contacto text-center">
-                   <h2>¿Deseas ser un Desarrollador Partner&#63;</h2>
-                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nuestro programa</a>
+                   <h2>Você quer ser um parceiro desenvolvedor&#63;</h2>
+                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Participe do nosso programa</a>
                 </div>
             </div>
         </section>
