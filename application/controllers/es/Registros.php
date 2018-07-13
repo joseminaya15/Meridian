@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Desarrolladores extends CI_Controller {
+class Registros extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -34,7 +34,7 @@ class Desarrolladores extends CI_Controller {
           $h3    = '';
           if($nombre == $key->name_caract){
             if($i == 1){
-              $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract_pt.'</h3></div>';
+              $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract.'</h3></div>';
             }
             $i = 2;
           }
@@ -46,7 +46,7 @@ class Desarrolladores extends CI_Controller {
           $html .= ''.$h3.'
                     <div class="col-sm-6 col-xs-12">
                       <div class="col-xs-12 js-input js-radio">
-                          <label>'.$key->tipo_pt.'</label>
+                          <label>'.$key->tipo.'</label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
                               <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
                               <span class="mdl-radio__label">Sí</span>
@@ -119,18 +119,18 @@ class Desarrolladores extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-          $id_detalle = $this->input->post('id_detalle');
-          $arr_deta   = $this->input->post('arr_deta');
-          $obsChecked = $this->input->post('obsChecked');
-          $arrayGeneral = $this->input->post('arrayGeneral');
-          foreach ($arrayGeneral as $key) {
-            $arrayInsert3 = array('id_detalle'    => $key[0],
-                                    'id_contacto' => $this->session->userdata('id_contact'),
-                                  'comentario'    => $key[1]);
-            $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
-          }
-          $this->session->unset_userdata('id_detalle');
-          $data['error'] = EXIT_SUCCESS;
+            $id_detalle = $this->input->post('id_detalle');
+            $arr_deta   = $this->input->post('arr_deta');
+            $obsChecked = $this->input->post('obsChecked');
+            $arrayGeneral = $this->input->post('arrayGeneral');
+            foreach ($arrayGeneral as $key) {
+                $arrayInsert3 = array('id_detalle'  => $key[0],
+                                      'id_contacto' => $this->session->userdata('id_contact'),
+                                      'comentario'  => $key[1]);
+                $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
+            }
+            $this->session->unset_userdata('id_detalle');
+            $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
@@ -138,24 +138,19 @@ class Desarrolladores extends CI_Controller {
     }
 
     function comboVerticales(){
-      $html = '';
-      $datos = $this->M_datos->getVertical();
-      $idioma    = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'es';
-      foreach ($datos as $key) {
-          if ($idioma == 'es') {
-              $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
-          } else if ($idioma == 'pt') {
-              $html .= '<option value="'.$key->Id.'">'.$key->nombre_pt.'</option>';
-          }
-      }
-      return $html;
+        $html = '';
+        $datos = $this->M_datos->getVertical();
+        foreach ($datos as $key) {
+            $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
+        }
+        return $html;
     }
 
     function cargarFact(){
         $respuesta = new stdClass();
         $respuesta->mensaje = "";
         if(count($_FILES) == 0){
-            $respuesta->mensaje = 'Seleccione su factura';
+            $respuesta->mensaje = 'Seleccione su logo';
         }else {
             $tipo = $_FILES['archivo']['type']; 
             $tamanio = $_FILES['archivo']['size']; 
@@ -165,7 +160,7 @@ class Desarrolladores extends CI_Controller {
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'El tamaño de su pdf debe ser menor';
             }else {
-                if($nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
+                if($nuevo[-1] == 'pdf' || $nuevo[-1] == 'jpeg' || $nuevo[-1] == 'jpg' || $nuevo[-1] == 'png'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.basename($_FILES['archivo']['name']);
                     if(move_uploaded_file($archivotmp, $target) ){
                        $arrUpdt = array('imagen' => $namearch);

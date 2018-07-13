@@ -122,7 +122,7 @@
             <div class="js-container">
                 <div class="js-contacto text-center">
                    <h2>Você quer ser um parceiro desenvolvedor&#63;</h2>
-                   <a href="Registros" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Participe do nosso programa</a>
+                   <a href="pt/Registros" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Participe do nosso programa</a>
                 </div>
             </div>
         </section>

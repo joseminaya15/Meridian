@@ -47,8 +47,9 @@ function clearSearch() {
 	$('.mdl-checkbox').removeClass('is-checked');
 	idCaract = [];
 	buscarGeneral();
-}
+} 
 function changeLang(idioma){
+	idioma = idioma;
 	$.ajax({
 		data : {idioma : idioma},
 		url  : 'Home/goTo',

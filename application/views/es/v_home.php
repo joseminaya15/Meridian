@@ -124,7 +124,7 @@
             <div class="js-container">
                 <div class="js-contacto text-center">
                    <h2>¿Deseas ser un Desarrollador Partner&#63;</h2>
-                   <a href="Desarrolladores" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nuestro programa</a>
+                   <a href="es/Registros" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">&Uacute;nete a nuestro programa</a>
                 </div>
             </div>
         </section>
