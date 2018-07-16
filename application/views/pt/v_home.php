@@ -203,6 +203,14 @@
                 $('select').selectpicker();
             }
             var languaje = 0;
+            $(window).load(function() {
+                var URLactual = window.location;
+                if(URLactual['href'] != 'http://arubamarketing.net/partners/desarrolladores/'){
+                    location.href = 'http://arubamarketing.net/partners/desarrolladores/';
+                } else if(URLactual['href'] == 'http://arubamarketing.net/partners/desarrolladores') {
+                    location.href = 'http://arubamarketing.net/partners/desarrolladores/';
+                }
+            }
         </script>
     </body>
 </html>
