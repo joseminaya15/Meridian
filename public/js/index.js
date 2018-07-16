@@ -58,7 +58,12 @@ function changeLang(idioma){
 	  	try{
 		    data = JSON.parse(data);
 		    if(data.error == 0){
-		    	location.href = "Home";
+		    	if(data.idioma == 'es'){
+		    		location.href = "../Home";
+		    	} else if (data.idioma == 'pt') {
+					location.href = data.idioma+"/Home";
+		    	}
+
 		    	$('.menu_header').css('display','none');
 	        	$('.search-filter.home').css('display','none');
 	        	sessionStorage.setItem('OPEN_MODAL2', '2');

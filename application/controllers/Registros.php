@@ -21,7 +21,6 @@ class Registros extends CI_Controller {
       $html_titu = '';
       $optionPaises = '';
       $i         = 1;
-      $idioma    = ( $this->session->userdata('idioma') != '' ) ? $this->session->userdata('idioma') : 'es';
       $datosPaises = $this->M_datos->getPais();
       foreach($datosPaises as $key) {
           $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
@@ -65,7 +64,7 @@ class Registros extends CI_Controller {
       }
       $data['verticales'] = $this->comboVerticales();
       $data['html'] = $html;
-		$this->load->view($idioma.'/v_desarrolladores', $data);
+		$this->load->view('es/v_desarrolladores', $data);
 	}
     function guardarDesarrolladores(){
         $data['error'] = EXIT_ERROR;
