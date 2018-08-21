@@ -111,7 +111,7 @@ class M_datos extends  CI_Model{
                    ".$sentVert."
                    ".$sentCara."
               GROUP BY co.Id
-              ORDER BY co.id_deps ASC";
+              ORDER BY co.orden asc, co.id_deps ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
