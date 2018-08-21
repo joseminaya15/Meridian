@@ -48,11 +48,11 @@ class Registros extends CI_Controller {
                           <label>'.$key->tipo_pt.'</label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
                               <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
-                              <span class="mdl-radio__label">Sí</span>
+                              <span class="mdl-radio__label">Sim</span>
                           </label>
                           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont1.'">
                               <input type="radio" id="optionsRadios'.$cont1.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
-                              <span class="mdl-radio__label">No</span>
+                              <span class="mdl-radio__label">Não</span>
                           </label>
                       </div>
                       <div class="col-xs-12 js-input js-observacion">
