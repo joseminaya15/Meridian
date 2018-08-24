@@ -19,6 +19,8 @@ class Admin extends CI_Controller {
         }else {
             $html    = '';
             $datos   = $this->M_datos->filtroGeneral(null, null, null, 'admin');
+            $datosCarac = $this->M_datos->getCaract();
+            $rpta    = '';
             if(count($datos) == 0){
                 $html = '<tr>
                             <td></td>
@@ -50,8 +52,20 @@ class Admin extends CI_Controller {
                             <td>'.$key->industrias.'</td>
                             <td>'.$key->Descripcion.'</td>
                         </tr>';
+                $optionCarac= '';
+                foreach ($datosCarac as $key2) {
+                    $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
+                    $optionCarac .= '<td colspan="2">'.$key2->name_caract.'</td>
+                                     <td></td>';
+                    foreach ($detalleCarac as $value) {
+                        $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
+                        $optionCarac .= '<td>'.$value->tipo.'</td>
+                                         <td>'.$rpta.'</td>';
+                    }
+                }
             }
-            $data['html'] = $html;
+            $data['html']  = $html;
+            $data['html2'] = $optionCarac;
             $this->load->view('v_admin', $data);
         }
 	}

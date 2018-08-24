@@ -88,7 +88,10 @@ class M_datos extends  CI_Model{
                        GROUP_CONCAT(DISTINCT v.nombre SEPARATOR ', ') AS industrias,
                        GROUP_CONCAT(DISTINCT v.nombre_pt SEPARATOR ', ') AS industrias_pt,
                        GROUP_CONCAT(DISTINCT ca.name_caract SEPARATOR ', ') AS caract,
-                       GROUP_CONCAT(DISTINCT ca.name_caract_pt SEPARATOR ', ') AS caract_pt
+                       GROUP_CONCAT(DISTINCT ca.name_caract_pt SEPARATOR ', ') AS caract_pt,
+                       GROUP_CONCAT(DISTINCT (SELECT dc.tipo 
+                                                FROM detalle_caract dc1 
+                                               WHERE dc1.Id = id.id_detalle ) SEPARATOR ', ') AS detalle_caract
                   FROM contacto        co,
                        caracteristicas ca,
                        desarrolladores  d,

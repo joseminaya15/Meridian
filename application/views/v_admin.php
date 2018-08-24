@@ -59,6 +59,18 @@
                           <?php echo $html ?>
                       </tbody>
                     </table>
+
+                    <table id="example2" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%" style="display:none">
+                        <thead>
+                            <tr class="tr-header-reporte">
+                                <th class="text-left">Detalle Caracteristica</th>
+                                <th class="text-left">Respuesta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php echo $html2 ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
