@@ -60,54 +60,71 @@ class Admin extends CI_Controller {
                 $optionCarac .= '<tr>
                                      <td><strong>Empresa: </strong></td>
                                      <td>'.$key->Empresa.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>Gerente: </strong></td>
                                      <td>'.$key->name_cont_comer.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>Contacto Comercial: </strong></td>
                                      <td>'.$key->cont_comercial.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>Contacto Técnico: </strong></td>
                                      <td>'.$key->cont_tecnico.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>Pagina web: </strong></td>
                                      <td>'.$key->pagina.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>País: </strong></td>
                                      <td>'.$key->pais.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>Verticales: </strong></td>
                                      <td>'.$key->industrias.'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
                                      <td><strong>Descripción: </strong></td>
                                      <td>'.(($key->Descripcion == "") ? "-": $key->Descripcion).'</td>
+                                     <td></td>
                                  </tr>
                                  <tr>
+                                     <td></td>
                                      <td></td>
                                      <td></td>
                                  </tr>';
                 foreach ($datosCarac as $key2) {
                     $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
                     $optionCarac .= '<tr>
-                                         <td colspan="2"><strong>'.$key2->name_caract.'</strong></td>
-                                         
+                                         <td><strong>'.$key2->name_caract.'</strong></td>
+                                         <td><strong></strong></td>
+                                     <td></td>
                                      </tr>';
                     foreach ($detalleCarac as $value) {
                         $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
                         $optionCarac .= '<tr>
                                              <td>'.$value->tipo.'</td>
                                              <td>'.$rpta.'</td>
+                                     <td></td>
                                          </tr>';
                     }
                 }
                 $optionCarac .= '<tr>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                 </tr>
+                                 <tr>
+                                     <td></td>
                                      <td></td>
                                      <td></td>
                                  </tr>';

@@ -68,6 +68,7 @@
                             <tr class="tr-header-reporte">
                                 <th class="text-left">  </th>
                                 <th class="text-left">  </th>
+                                <th class="text-left">  </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -109,6 +110,7 @@
                 searching : false,
                 responsive: true,
                 dom: 'Bfrtip',
+                "order": [ 2, 'asc' ],
                 language:{
                     "emptyTable":     "Aucune donnée disponible",
                     "info" : "Mostrando _END_ de _TOTAL_ resultados"
