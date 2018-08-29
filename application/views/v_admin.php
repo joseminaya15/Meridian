@@ -52,19 +52,22 @@
                                 <th class="text-left">Página web</th>
                                 <th class="text-left">País</th>
                                 <th class="text-left">Verticales</th>
+                                <!-- <th style="display:none">Detalle Caracteristicas</th> -->
                                 <th class="text-left">Descripción</th>
                             </tr>
                         </thead>
-                      <tbody>
-                          <?php echo $html ?>
-                      </tbody>
+                        <tbody>
+                            <?php echo $html ?>
+                        </tbody>
                     </table>
-
-                    <table id="example2" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%" style="display:none">
+                </div>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar en excel</button>
+                <div class="table-responsive" style="display:block">
+                    <table id="example_2" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
-                                <th class="text-left">Detalle Caracteristica</th>
-                                <th class="text-left">Respuesta</th>
+                                <th class="text-left">  </th>
+                                <th class="text-left">  </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,33 +94,37 @@
     <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>jsutils.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
-          $('#example').DataTable( {
+        $(document).ready(function() {
+            $('#example').DataTable( {
                 searching : false,
                 dom: 'Bfrtip',
                 language:{
                     "emptyTable":     "Aucune donnée disponible",
                     "info" : "Mostrando _END_ de _TOTAL_ resultados"
                 },
-                lengthMenu: [
-                    [ 10, 25, 50, -1 ],
-                    [ '10 resultados', '25 resultados', '50 resultados']
-                ],
-                buttons: [{
-                        text: 'Mostrar 10 resultados',
-                        extend: 'pageLength'
-                    },
+                aLengthMenu : [10],
+                buttons: []
+            });
+            $('#example_2').DataTable( {
+                searching : false,
+                responsive: true,
+                dom: 'Bfrtip',
+                language:{
+                    "emptyTable":     "Aucune donnée disponible",
+                    "info" : "Mostrando _END_ de _TOTAL_ resultados"
+                },
+                buttons: [
                     {
                         extend:'excel',
                         text: 'Exportar a Excel'
                     }
                 ]
             });
-          $('.buttons-excel').empty();
-          $('.buttons-print').empty();
-          $('.buttons-excel').append('<i class="fa fa-file-excel-o" style="font-size: 18px; vertical-align: middle;"></i>');
-          $('.buttons-print').append('<i class="fa fa-print"></i>');
-      });
+            $('.buttons-excel').empty();
+            $('.buttons-print').empty();
+            $('.buttons-excel').append('<i class="fa fa-file-excel-o" style="font-size: 18px; vertical-align: middle;"></i>');
+            $('.buttons-print').append('<i class="fa fa-print"></i>');
+        });
     </script>
 </body>
 </html>

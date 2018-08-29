@@ -101,3 +101,6 @@ function verificarDatos(e){
 		ingresar();
     }
 }
+function triggerBoton(){
+    $(".buttons-excel").trigger( "click" );
+}
