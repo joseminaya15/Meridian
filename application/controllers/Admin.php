@@ -104,26 +104,22 @@ class Admin extends CI_Controller {
                                  </tr>';
                 foreach ($datosCarac as $key2) {
                     $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
+                    // <td colspan="3" style="background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$key2->name_caract.'</td>
                     $optionCarac .= '<tr>
-                                         <td><strong>'.$key2->name_caract.'</strong></td>
-                                         <td><strong></strong></td>
-                                     <td></td>
+                                         <td>'.$key2->name_caract.'</td>
+                                         <td></td>
+                                         <td></td>
                                      </tr>';
                     foreach ($detalleCarac as $value) {
                         $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
                         $optionCarac .= '<tr>
                                              <td>'.$value->tipo.'</td>
                                              <td>'.$rpta.'</td>
-                                     <td></td>
+                                             <td></td>
                                          </tr>';
                     }
                 }
                 $optionCarac .= '<tr>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                 </tr>
-                                 <tr>
                                      <td></td>
                                      <td></td>
                                      <td></td>
