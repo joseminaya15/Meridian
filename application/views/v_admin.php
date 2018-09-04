@@ -41,7 +41,7 @@
     <section class="js-section js-section--admin">
         <div class="js-container">
             <div class="mdl-card">
-                <div class="table-responsive">
+                <div class="table-responsive" style="display: none">
                     <table id="example" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
@@ -62,7 +62,7 @@
                     </table>
                 </div>
                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar en excel</button>
-                <div class="table-responsive" style="display:none">
+                <div class="table-responsive" style="display:block">
                     <table id="example_2" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
@@ -106,22 +106,22 @@
                 aLengthMenu : [10],
                 buttons: []
             });
-            $('#example_2').DataTable( {
-                searching : false,
-                responsive: true,
-                dom: 'Bfrtip',
-                "order": [ 2, 'asc' ],
-                language:{
-                    "emptyTable":     "Aucune donnée disponible",
-                    "info" : "Mostrando _END_ de _TOTAL_ resultados"
-                },
-                buttons: [
-                    {
-                        extend:'excel',
-                        text: 'Exportar a Excel'
-                    }
-                ]
-            });
+            // $('#example_2').DataTable( {
+            //     searching : false,
+            //     responsive: true,
+            //     dom: 'Bfrtip',
+            //     "order": [ 2, 'asc' ],
+            //     language:{
+            //         "emptyTable":     "Aucune donnée disponible",
+            //         "info" : "Mostrando _END_ de _TOTAL_ resultados"
+            //     },
+            //     buttons: [
+            //         {
+            //             extend:'excel',
+            //             text: 'Exportar a Excel'
+            //         }
+            //     ]
+            // });
             $('.buttons-excel').empty();
             $('.buttons-print').empty();
             $('.buttons-excel').append('<i class="fa fa-file-excel-o" style="font-size: 18px; vertical-align: middle;"></i>');
