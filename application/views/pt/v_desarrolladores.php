@@ -198,8 +198,8 @@
                         <div class="tab-pane pane-pos" id="tab4Pos">
                             <h3>Documentos de suporte</h3>
                             <ol>
-                                <li>Carta de autorização do desenvolvedor para publicar suas informações no site da Aruba</li>
-                                <li>Documento do programa</li>
+                                <li><a class="js-link" href="<?php echo RUTA_PDF?>Carta_autorizacion.pdf" target="_blank">Carta de autorização</a> do desenvolvedor para publicar suas informações no site da Aruba</li>
+                                <li><a class="js-link" href="<?php echo RUTA_PDF?>Documento_programa.pdf" target="_blank">Documento do programa</a></li>
                                 <ol class="js-letras">
                                     <li>Regras do programa</li>
                                     <li>Benef&iacute;cios</li>
