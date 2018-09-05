@@ -41,7 +41,7 @@
     <section class="js-section js-section--admin">
         <div class="js-container">
             <div class="mdl-card">
-                <div class="table-responsive" style="display:none">
+                <div class="table-responsive" style="display:block">
                     <table id="example" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
@@ -52,7 +52,6 @@
                                 <th class="text-left">Página web</th>
                                 <th class="text-left">País</th>
                                 <th class="text-left">Verticales</th>
-                                <!-- <th style="display:none">Detalle Caracteristicas</th> -->
                                 <th class="text-left">Descripción</th>
                             </tr>
                         </thead>
@@ -66,7 +65,6 @@
                     <table id="example_2" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
-                                <!-- <th class="text-left">  </th> -->
                                 <?php echo $html1 ?>
                             </tr>
                         </thead>
@@ -109,7 +107,7 @@
                 searching : false,
                 responsive: true,
                 dom: 'Bfrtip',
-                // "order": [ 2, 'asc' ],
+                "order": [ 2, 'asc' ],
                 language:{
                     "emptyTable":     "Aucune donnée disponible",
                     "info" : "Mostrando _END_ de _TOTAL_ resultados"

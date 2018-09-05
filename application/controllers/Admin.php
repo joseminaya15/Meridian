@@ -18,13 +18,23 @@ class Admin extends CI_Controller {
             header("location: Login");
         }else {
             $html    = '';
-            $cambio  = 0;
             $datos   = $this->M_datos->filtroGeneral(null, null, null, 'admin');
             $datosCarac = $this->M_datos->getCaract();
             $rpta    = '';
             $optionCarac= '';
             $cabecera = '';
             $i = 0;
+            //NO BORRAR
+            $empresa        = '';
+            $gerente        = ''; 
+            $ContactoComer  = '';
+            $ContactoTecni  = ''; 
+            $pagina         = '';
+            $pais           = ''; 
+            $verticales     = '';
+            $descripcion    = '';
+            $respuestas     = '';
+
             if(count($datos) == 0){
                 $html = '<tr>
                             <td></td>
@@ -39,73 +49,105 @@ class Admin extends CI_Controller {
                             <td></td>
                         </tr>';
             }else {
-                $optionCarac .= '<tr>';
-                for($i; $i < sizeof($datos); $i++) {
+                // $optionCarac .= '<tr>';
+                foreach ($datos as $key) {
                     $img     = '';
-                    if($datos[$i]->imagen == null || $datos[$i]->imagen == ''){
+                    if($key->imagen == null || $key->imagen == ''){
                         $img = 'nouser.png';
                     }else {
-                        $img = $datos[$i]->imagen;
+                        $img = $key->imagen;
                     }
-                    $cabecera .= '<th class="text-left"></th>';
                     $html .= '<tr>
                                   <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
-                                  <td>'.$datos[$i]->name_cont_comer.'</td>
-                                  <td>'.$datos[$i]->cont_comercial.'</td>
-                                  <td>'.$datos[$i]->cont_tecnico.'</td>
-                                  <td>'.$datos[$i]->pagina.'</td>
-                                  <td>'.$datos[$i]->pais.'</td>
-                                  <td>'.$datos[$i]->industrias.'</td>
-                                  <td>'.$datos[$i]->Descripcion.'</td>
+                                  <td>'.$key->name_cont_comer.'</td>
+                                  <td>'.$key->cont_comercial.'</td>
+                                  <td>'.$key->cont_tecnico.'</td>
+                                  <td>'.$key->pagina.'</td>
+                                  <td>'.$key->pais.'</td>
+                                  <td>'.$key->industrias.'</td>
+                                  <td>'.$key->Descripcion.'</td>
                               </tr>';
-                    $optionCarac .= '<td>
-                                         <table>
-                                             <tr>
-                                                 <td><strong>Empresa: </strong></td>
-                                                 <td>'.$datos[$i]->Empresa.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>Gerente: </strong></td>
-                                                 <td>'.$datos[$i]->name_cont_comer.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>Contacto Comercial: </strong></td>
-                                                 <td>'.$datos[$i]->cont_comercial.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>Contacto Técnico: </strong></td>
-                                                 <td>'.$datos[$i]->cont_tecnico.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>Pagina web: </strong></td>
-                                                 <td>'.$datos[$i]->pagina.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>País: </strong></td>
-                                                 <td>'.$datos[$i]->pais.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>Verticales: </strong></td>
-                                                 <td>'.$datos[$i]->industrias.'</td>
-                                                 <td></td>
-                                             </tr>
-                                             <tr>
-                                                 <td><strong>Descripción: </strong></td>
-                                                 <td>'.(($datos[$i]->Descripcion == "") ? "-": $datos[$i]->Descripcion).'</td>
-                                                 <td></td>
-                                             </tr>';
+
+                    $cabecera .= '<th class="text-left"></th>
+                                  <th class="text-left"></th>
+                                  <th class="text-left"></th>';
+
+                    $empresa       .= '<td><strong>Empresa: </strong></td>
+                                       <td>'.$key->Empresa.'</td>
+                                       <td></td>';
+                    $gerente       .= '<td><strong>Gerente: </strong></td>
+                                       <td>'.$key->name_cont_comer.'</td>
+                                       <td></td>';
+                    $ContactoComer .= '<td><strong>Contacto Comercial: </strong></td>
+                                       <td>'.$key->cont_comercial.'</td>
+                                       <td></td>';
+                    $ContactoTecni .= '<td><strong>Contacto Técnico: </strong></td>
+                                       <td>'.$key->cont_tecnico.'</td>
+                                       <td></td>';
+                    $pagina        .= '<td><strong>Pagina web: </strong></td>
+                                       <td>'.$key->pagina.'</td>
+                                       <td></td>';
+                    $pais          .= '<td><strong>País: </strong></td>
+                                       <td>'.$key->pais.'</td>
+                                       <td></td>';
+                    $verticales    .= '<td><strong>Verticales: </strong></td>
+                                       <td>'.$key->industrias.'</td>
+                                       <td></td>';
+                    $descripcion   .= '<td><strong>Descripción: </strong></td>
+                                       <td>'.(($key->Descripcion == "") ? "-": $key->Descripcion).'</td>
+                                       <td></td>';
                     foreach ($datosCarac as $key2) {
                         $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                        // <td colspan="3" style="background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$key2->name_caract.'</td>
-                        $optionCarac .= '<tr>
+                        $respuestas .= '<tr>
                                              <td>'.$key2->name_caract.'</td>
                                              <td></td>
+                                         </tr>';
+                        foreach ($detalleCarac as $value) {
+                            $rpta = ( strpos($datos[$i]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
+                            $respuestas .= '<tr>
+                                                 <td>'.$value->tipo.'</td>
+                                                 <td>'.$rpta.'</td>
+                                             </tr>';
+                        }
+                    }
+                    // if($cambio == 0){
+                    //     $optionCarac .= '<tr>
+                    //                          <td>
+                    //                              <table>';
+                    //     foreach ($datosCarac as $key2) {
+                    //         $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
+                    //         // <td colspan="3" style="background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$key2->name_caract.'</td>
+                    //         $optionCarac .= '<tr>
+                    //                              <td>'.$key2->name_caract.'</td>
+                    //                              <td></td>
+                    //                              <td></td>
+                    //                          </tr>';
+                    //         foreach ($detalleCarac as $value) {
+                    //             $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
+                    //             $optionCarac .= '<tr>
+                    //                                  <td>'.$value->tipo.'</td>
+                    //                                  <td>'.$rpta.'</td>
+                    //                                  <td></td>
+                    //                              </tr>';
+                    //             if($value->tipo == 'Reportes Históricos'){
+                    //                 $cambio = 1;
+                    //             }
+                    //         }
+                    //     }
+                    //     $optionCarac .= '        </table>
+                    //                          </td>
+                    //                      </tr>';
+                    // }
+                }
+                /*
+                for($i; $i < sizeof($datos); $i++) {
+                    $optionCarac .= '<td>
+                                         <table>
+                                             <tbody>';
+                    foreach ($datosCarac as $key2) {
+                        $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
+                        $optionCarac .= '<tr>
+                                             <td>'.$key2->name_caract.'</td>
                                              <td></td>
                                          </tr>';
                         foreach ($detalleCarac as $value) {
@@ -113,174 +155,24 @@ class Admin extends CI_Controller {
                             $optionCarac .= '<tr>
                                                  <td>'.$value->tipo.'</td>
                                                  <td>'.$rpta.'</td>
-                                                 <td></td>
                                              </tr>';
-                            if($value->tipo == 'Reportes Históricos'){
-                                $cambio = 1;
-                            }
                         }
                     }
-                    $optionCarac .= '        </table>
+                    $optionCarac .= '            </tbody>
+                                             </table>
                                          </td>';
                 }
                 $optionCarac .= '</tr>';
-                // foreach ($datos as $key) {
-                    // $img     = '';
-                    // if($key->imagen == null || $key->imagen == ''){
-                    //     $img = 'nouser.png';
-                    // }else {
-                    //     $img = $key->imagen;
-                    // }
-                    // $html .= '<tr>
-                    //               <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
-                    //               <td>'.$key->name_cont_comer.'</td>
-                    //               <td>'.$key->cont_comercial.'</td>
-                    //               <td>'.$key->cont_tecnico.'</td>
-                    //               <td>'.$key->pagina.'</td>
-                    //               <td>'.$key->pais.'</td>
-                    //               <td>'.$key->industrias.'</td>
-                    //               <td>'.$key->Descripcion.'</td>
-                    //           </tr>';
-                    // $cabecera .= '<th class="text-left">Logo</th>
-                    //               <th class="text-left">Logo</th>
-                    //               <th class="text-left">    </th>';
-                    // if($cambio == 0){
-                    //     $optionCarac .= '<tr>
-                    //                          <td>
-                    //                              <table>
-                    //                                  <tr>
-                    //                                      <td><strong>Empresa: </strong></td>
-                    //                                      <td>'.$key->Empresa.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Gerente: </strong></td>
-                    //                                      <td>'.$key->name_cont_comer.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Contacto Comercial: </strong></td>
-                    //                                      <td>'.$key->cont_comercial.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Contacto Técnico: </strong></td>
-                    //                                      <td>'.$key->cont_tecnico.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Pagina web: </strong></td>
-                    //                                      <td>'.$key->pagina.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>País: </strong></td>
-                    //                                      <td>'.$key->pais.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Verticales: </strong></td>
-                    //                                      <td>'.$key->industrias.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Descripción: </strong></td>
-                    //                                      <td>'.(($key->Descripcion == "") ? "-": $key->Descripcion).'</td>
-                    //                                      <td></td>
-                    //                                  </tr>';
-                    //     foreach ($datosCarac as $key2) {
-                    //         $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                    //         // <td colspan="3" style="background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$key2->name_caract.'</td>
-                    //         $optionCarac .= '<tr>
-                    //                              <td>'.$key2->name_caract.'</td>
-                    //                              <td></td>
-                    //                              <td></td>
-                    //                          </tr>';
-                    //         foreach ($detalleCarac as $value) {
-                    //             $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
-                    //             $optionCarac .= '<tr>
-                    //                                  <td>'.$value->tipo.'</td>
-                    //                                  <td>'.$rpta.'</td>
-                    //                                  <td></td>
-                    //                              </tr>';
-                    //             if($value->tipo == 'Reportes Históricos'){
-                    //                 $cambio = 1;
-                    //             }
-                    //         }
-                    //     }
-                    //     $optionCarac .= '        </table>
-                    //                          </td>
-                    //                      </tr>';
-                    // }else if($cambio == 1){
-                    //     $optionCarac .= '<tr>
-                    //                          <td>
-                    //                              <table>
-                    //                                  <tr>
-                    //                                      <td><strong>Empresa: </strong></td>
-                    //                                      <td>'.$key->Empresa.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Gerente: </strong></td>
-                    //                                      <td>'.$key->name_cont_comer.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Contacto Comercial: </strong></td>
-                    //                                      <td>'.$key->cont_comercial.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Contacto Técnico: </strong></td>
-                    //                                      <td>'.$key->cont_tecnico.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Pagina web: </strong></td>
-                    //                                      <td>'.$key->pagina.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>País: </strong></td>
-                    //                                      <td>'.$key->pais.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Verticales: </strong></td>
-                    //                                      <td>'.$key->industrias.'</td>
-                    //                                      <td></td>
-                    //                                  </tr>
-                    //                                  <tr>
-                    //                                      <td><strong>Descripción: </strong></td>
-                    //                                      <td>'.(($key->Descripcion == "") ? "-": $key->Descripcion).'</td>
-                    //                                      <td></td>
-                    //                                  </tr>';
-                    //     foreach ($datosCarac as $key2) {
-                    //         $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                    //         // <td colspan="3" style="background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$key2->name_caract.'</td>
-                    //         $optionCarac .= '<tr>
-                    //                              <td>'.$key2->name_caract.'</td>
-                    //                              <td></td>
-                    //                              <td></td>
-                    //                          </tr>';
-                    //         foreach ($detalleCarac as $value) {
-                    //             $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
-                    //             $optionCarac .= '<tr>
-                    //                                  <td>'.$value->tipo.'</td>
-                    //                                  <td>'.$rpta.'</td>
-                    //                                  <td></td>
-                    //                              </tr>';
-                    //             if($value->tipo == 'Reportes Históricos'){
-                    //                 $cambio = 1;
-                    //             }
-                    //         }
-                    //     }
-                    //     $optionCarac .= '        </table>
-                    //                          </td>
-                    //                      </tr>';
-                    // }
-                // }
+                */
             }
+            $optionCarac .='<tr>'.$empresa.'</tr>
+                            <tr>'.$gerente.'</tr>
+                            <tr>'.$ContactoComer.'</tr>
+                            <tr>'.$ContactoTecni.'</tr>
+                            <tr>'.$pagina.'</tr>
+                            <tr>'.$pais.'</tr>
+                            <tr>'.$verticales.'</tr>
+                            <tr>'.$descripcion.'</tr>';
             $data['html']  = $html;
             $data['html1'] = $cabecera;
             $data['html2'] = $optionCarac;
