@@ -41,7 +41,7 @@
     <section class="js-section js-section--admin">
         <div class="js-container">
             <div class="mdl-card">
-                <div class="table-responsive" style="display:block">
+                <div class="table-responsive" >
                     <table id="example" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">
@@ -62,7 +62,7 @@
                     </table>
                 </div>
                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect js-default" onclick="triggerBoton()">descargar en excel</button>
-                <div class="table-responsive" style="display:block">
+                <div class="table-responsive" style="display:none">
                     <table id="example_2" class="display nowrap table table-bordered table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr class="tr-header-reporte">

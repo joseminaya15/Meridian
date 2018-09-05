@@ -83,7 +83,6 @@ class Admin extends CI_Controller {
                     $cabecera .= '<th class="text-left"></th>
                                   <th class="text-left"></th>
                                   <th class="text-left"></th>';
-                    $td .= '<td></td><td></td><td></td>';
                     $empresa       .= '<td><strong>Empresa: </strong></td>
                                        <td>'.$datos[$i]->Empresa.'</td>
                                        <td></td>';
@@ -108,30 +107,27 @@ class Admin extends CI_Controller {
                     $descripcion   .= '<td><strong>Descripción: </strong></td>
                                        <td>'.(($datos[$i]->Descripcion == "") ? "-": $datos[$i]->Descripcion).'</td>
                                        <td></td>';
-                    foreach ($datosCarac as $key2) {
-                        $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                        if($i == 0) {
-                            $respuestasGen .= '<tr>';
-                            for($j = 0; $j<sizeof($datos); $j++){
-                                $respuestasGen .= '<td colspan="2">'.$key2->name_caract.'</td>
-                                                   <td style="display:none"></td>
-                                                   <td></td>';
-                            }
-                            $respuestasGen .= '</tr>';
-                        }
-                        // $respuestasGen .= '<tr>';
-                        // foreach ($detalleCarac as $value) {
-                        //     for($m = 0; $m<sizeof($datos); $m++) {
-                        //         if($i == $m) {
-                        //             $rpta = ( strpos($datos[$i]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
-                        //             $respuestasGen .= '<td>'.$value->tipo.'</td>
-                        //                                <td>'.$rpta.'</td>
-                        //                                <td></td>';
-                        //         }
-                        //     }
-                        // }
-                        // $respuestasGen .= '</tr>';
+                    
+                }
+            }
+            foreach ($datosCarac as $key2) {
+                $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
+                $respuestasGen .= '<tr>';
+                for($j = 0; $j<sizeof($datos); $j++){
+                    $respuestasGen .= '<td colspan="2">'.$key2->name_caract.'</td>
+                                       <td style="display:none"></td>
+                                       <td></td>';
+                }
+                $respuestasGen .= '</tr>';
+                $respuestasGen .= '<tr>';
+                foreach ($detalleCarac as $value) {
+                    for($m = 0; $m<sizeof($datos); $m++) {
+                        $rpta = ( strpos($datos[$m]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
+                        $respuestasGen .= '<td>'.$value->tipo.'</td>
+                                           <td>'.$rpta.'</td>
+                                           <td></td>';
                     }
+                $respuestasGen .= '</tr>';
                 }
             }
             $optionCarac .='<tr>'.$empresa.'</tr>
