@@ -33,6 +33,7 @@ class Admin extends CI_Controller {
             $pais           = ''; 
             $verticales     = '';
             $descripcion    = '';
+            $respuestasGen  = '';
             $respuestas     = '';
             $disabled       = '';
 
@@ -50,31 +51,30 @@ class Admin extends CI_Controller {
                             <td></td>
                         </tr>';
             }else {
-                // $optionCarac .= '<tr>';
-                foreach ($datos as $key) {
+                for($i = 0; $i<sizeof($datos); $i++){
                     $img     = '';
                     $disabled       = '';
-                    if($key->imagen == null || $key->imagen == ''){
+                    if($datos[$i]->imagen == null || $datos[$i]->imagen == ''){
                         $img = 'nouser.png';
                     }else {
-                        $img = $key->imagen;
+                        $img = $datos[$i]->imagen;
                     }
-                    if($key->flg_activo == 1){
+                    if($datos[$i]->flg_activo == 1){
                         $disabled = 'disabled';
                     }
                     $html .= '<tr>
                                   <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
-                                  <td>'.$key->name_cont_comer.'</td>
-                                  <td>'.$key->cont_comercial.'</td>
-                                  <td>'.$key->cont_tecnico.'</td>
-                                  <td>'.$key->pagina.'</td>
-                                  <td>'.$key->pais.'</td>
-                                  <td>'.$key->industrias.'</td>
-                                  <td>'.$key->Descripcion.'</td>
-                                  <td><button type="button" class="btn btn-default" onclick="aceptar('.$key->id_cont.', &quot;'.$key->cont_comercial.'&quot;)" '.$disabled.'>
+                                  <td>'.$datos[$i]->name_cont_comer.'</td>
+                                  <td>'.$datos[$i]->cont_comercial.'</td>
+                                  <td>'.$datos[$i]->cont_tecnico.'</td>
+                                  <td>'.$datos[$i]->pagina.'</td>
+                                  <td>'.$datos[$i]->pais.'</td>
+                                  <td>'.$datos[$i]->industrias.'</td>
+                                  <td>'.$datos[$i]->Descripcion.'</td>
+                                  <td><button type="button" class="btn btn-default" onclick="aceptar('.$datos[$i]->id_cont.', &quot;'.$datos[$i]->cont_comercial.'&quot;)" '.$disabled.'>
                                         <span class="glyphicon glyphicon-search"></span> Aceptar
                                       </button>
-                                      <button type="button" class="btn btn-default" onclick="modalRechazar('.$key->id_cont.', &quot;'.$key->cont_comercial.'&quot;)" '.$disabled.'>
+                                      <button type="button" class="btn btn-default" onclick="modalRechazar('.$datos[$i]->id_cont.', &quot;'.$datos[$i]->cont_comercial.'&quot;)" '.$disabled.'>
                                         <i class="fa fa-close"></i> Rechazar
                                       </button>
                                   </td>
@@ -83,99 +83,56 @@ class Admin extends CI_Controller {
                     $cabecera .= '<th class="text-left"></th>
                                   <th class="text-left"></th>
                                   <th class="text-left"></th>';
-
+                    $td .= '<td></td><td></td><td></td>';
                     $empresa       .= '<td><strong>Empresa: </strong></td>
-                                       <td>'.$key->Empresa.'</td>
+                                       <td>'.$datos[$i]->Empresa.'</td>
                                        <td></td>';
                     $gerente       .= '<td><strong>Gerente: </strong></td>
-                                       <td>'.$key->name_cont_comer.'</td>
+                                       <td>'.$datos[$i]->name_cont_comer.'</td>
                                        <td></td>';
                     $ContactoComer .= '<td><strong>Contacto Comercial: </strong></td>
-                                       <td>'.$key->cont_comercial.'</td>
+                                       <td>'.$datos[$i]->cont_comercial.'</td>
                                        <td></td>';
                     $ContactoTecni .= '<td><strong>Contacto Técnico: </strong></td>
-                                       <td>'.$key->cont_tecnico.'</td>
+                                       <td>'.$datos[$i]->cont_tecnico.'</td>
                                        <td></td>';
                     $pagina        .= '<td><strong>Pagina web: </strong></td>
-                                       <td>'.$key->pagina.'</td>
+                                       <td>'.$datos[$i]->pagina.'</td>
                                        <td></td>';
                     $pais          .= '<td><strong>País: </strong></td>
-                                       <td>'.$key->pais.'</td>
+                                       <td>'.$datos[$i]->pais.'</td>
                                        <td></td>';
                     $verticales    .= '<td><strong>Verticales: </strong></td>
-                                       <td>'.$key->industrias.'</td>
+                                       <td>'.$datos[$i]->industrias.'</td>
                                        <td></td>';
                     $descripcion   .= '<td><strong>Descripción: </strong></td>
-                                       <td>'.(($key->Descripcion == "") ? "-": $key->Descripcion).'</td>
+                                       <td>'.(($datos[$i]->Descripcion == "") ? "-": $datos[$i]->Descripcion).'</td>
                                        <td></td>';
                     foreach ($datosCarac as $key2) {
                         $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                        $respuestas .= '<tr>
-                                             <td>'.$key2->name_caract.'</td>
-                                             <td></td>
-                                         </tr>';
-                        foreach ($detalleCarac as $value) {
-                            $rpta = ( strpos($datos[$i]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
-                            $respuestas .= '<tr>
-                                                 <td>'.$value->tipo.'</td>
-                                                 <td>'.$rpta.'</td>
-                                             </tr>';
+                        if($i == 0) {
+                            $respuestasGen .= '<tr>';
+                            for($j = 0; $j<sizeof($datos); $j++){
+                                $respuestasGen .= '<td colspan="2">'.$key2->name_caract.'</td>
+                                                   <td style="display:none"></td>
+                                                   <td></td>';
+                            }
+                            $respuestasGen .= '</tr>';
                         }
+                        // $respuestasGen .= '<tr>';
+                        // foreach ($detalleCarac as $value) {
+                        //     for($m = 0; $m<sizeof($datos); $m++) {
+                        //         if($i == $m) {
+                        //             $rpta = ( strpos($datos[$i]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
+                        //             $respuestasGen .= '<td>'.$value->tipo.'</td>
+                        //                                <td>'.$rpta.'</td>
+                        //                                <td></td>';
+                        //         }
+                        //     }
+                        // }
+                        // $respuestasGen .= '</tr>';
                     }
-                    // if($cambio == 0){
-                    //     $optionCarac .= '<tr>
-                    //                          <td>
-                    //                              <table>';
-                    //     foreach ($datosCarac as $key2) {
-                    //         $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                    //         // <td colspan="3" style="background-color: #FFFFFF; color: #000000; font-size: 16px;padding: 10px 5px;font-family: MetricBold">'.$key2->name_caract.'</td>
-                    //         $optionCarac .= '<tr>
-                    //                              <td>'.$key2->name_caract.'</td>
-                    //                              <td></td>
-                    //                              <td></td>
-                    //                          </tr>';
-                    //         foreach ($detalleCarac as $value) {
-                    //             $rpta = ( strpos($key->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
-                    //             $optionCarac .= '<tr>
-                    //                                  <td>'.$value->tipo.'</td>
-                    //                                  <td>'.$rpta.'</td>
-                    //                                  <td></td>
-                    //                              </tr>';
-                    //             if($value->tipo == 'Reportes Históricos'){
-                    //                 $cambio = 1;
-                    //             }
-                    //         }
-                    //     }
-                    //     $optionCarac .= '        </table>
-                    //                          </td>
-                    //                      </tr>';
-                    // }
                 }
-                /*
-                for($i; $i < sizeof($datos); $i++) {
-                    $optionCarac .= '<td>
-                                         <table>
-                                             <tbody>';
-                    foreach ($datosCarac as $key2) {
-                        $detalleCarac = $this->M_datos->getDetalleCaract($key2->Id);
-                        $optionCarac .= '<tr>
-                                             <td>'.$key2->name_caract.'</td>
-                                             <td></td>
-                                         </tr>';
-                        foreach ($detalleCarac as $value) {
-                            $rpta = ( strpos($datos[$i]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
-                            $optionCarac .= '<tr>
-                                                 <td>'.$value->tipo.'</td>
-                                                 <td>'.$rpta.'</td>
-                                             </tr>';
-                        }
-                    }
-                    $optionCarac .= '            </tbody>
-                                             </table>
-                                         </td>';
-                }
-                $optionCarac .= '</tr>';
-                */
             }
             $optionCarac .='<tr>'.$empresa.'</tr>
                             <tr>'.$gerente.'</tr>
@@ -184,7 +141,8 @@ class Admin extends CI_Controller {
                             <tr>'.$pagina.'</tr>
                             <tr>'.$pais.'</tr>
                             <tr>'.$verticales.'</tr>
-                            <tr>'.$descripcion.'</tr>';
+                            <tr>'.$descripcion.'</tr>
+                            '.$respuestasGen;
             $data['html']  = $html;
             $data['html1'] = $cabecera;
             $data['html2'] = $optionCarac;

@@ -134,6 +134,7 @@
                     "emptyTable":     "Aucune donnée disponible",
                     "info" : "Mostrando _END_ de _TOTAL_ resultados"
                 },
+                aLengthMenu : [100],
                 buttons: [
                     {
                         extend:'excel',
