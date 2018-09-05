@@ -128,4 +128,13 @@ class M_datos extends  CI_Model{
         $result = $this->db->query($sql, array($ids));
         return $result->result();
     }
+
+    function getLastOrden() {
+        $sql = "SELECT orden 
+                  FROM contacto 
+              ORDER BY orden DESC
+                 LIMIT 1";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

@@ -104,47 +104,37 @@ function verificarDatos(e){
 function triggerBoton(){
     $(".buttons-excel").trigger( "click" );
 }
-function aceptar(dato, email){
+function aceptar(dato){
   $.ajax({
-    data : {id_cliente : dato,
-            email      : email},
+    data : {id_cliente : dato},
     url  : 'admin/aceptarCliente',
     type : 'POST'
   }).done(function(data){
     try{
         data = JSON.parse(data);
         if(data.error == 0){
+            $('#example').DataTable().destroy();
+            $('#exampleBody').html('');
+            $('#exampleBody').html(data.html);
+            $('#example').DataTable( {
+                searching : false,
+                dom: 'Bfrtip',
+                language:{
+                    "emptyTable":     "Aucune donnée disponible",
+                    "info" : "Mostrando _END_ de _TOTAL_ resultados"
+                },
+                aLengthMenu : [10],
+                buttons: []
+            });
+            toastr.remove();
+            msj('success', 'Publicado con exito');
         }else {
-          return;
+          toastr.remove();
+            msj('error', 'No se pudo publicar');
+            return;
         }
       }catch(err){
-        msj('error',err.message);
-      }
-  });
-}
-var id_global    = '';
-var email_global = '';
-function modalRechazar(dato, email){
-  id_global = dato;
-  email_global = email;
-  modal('ModalRechazo');
-}
-function acceptRechazo(){
-  var motivo = $('#motivo').val();
-  $.ajax({
-    data : {id_cliente : id_global,
-            email      : email_global,
-            motivo     : motivo},
-    url  : 'admin/acceptRechazo',
-    type : 'POST'
-  }).done(function(data){
-    try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        }else {
-          return;
-        }
-      }catch(err){
+        toastr.remove();
         msj('error',err.message);
       }
   });

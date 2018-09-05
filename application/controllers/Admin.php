@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	function __construct() {
+    function __construct() {
         parent::__construct();
         $this->load->model('M_datos');
         $this->load->helper("url");
@@ -13,7 +13,7 @@ class Admin extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 
-	public function index(){
+    public function index(){
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }else {
@@ -71,11 +71,8 @@ class Admin extends CI_Controller {
                                   <td>'.$datos[$i]->pais.'</td>
                                   <td>'.$datos[$i]->industrias.'</td>
                                   <td>'.$datos[$i]->Descripcion.'</td>
-                                  <td><button type="button" class="btn btn-default" onclick="aceptar('.$datos[$i]->id_cont.', &quot;'.$datos[$i]->cont_comercial.'&quot;)" '.$disabled.'>
-                                        <span class="glyphicon glyphicon-search"></span> Aceptar
-                                      </button>
-                                      <button type="button" class="btn btn-default" onclick="modalRechazar('.$datos[$i]->id_cont.', &quot;'.$datos[$i]->cont_comercial.'&quot;)" '.$disabled.'>
-                                        <i class="fa fa-close"></i> Rechazar
+                                  <td><button type="button" class="btn btn-default" onclick="aceptar('.$datos[$i]->id_cont.')" '.$disabled.'>
+                                        <span class="glyphicon glyphicon-search"></span> Publicar
                                       </button>
                                   </td>
                               </tr>';
@@ -144,8 +141,8 @@ class Admin extends CI_Controller {
             $data['html2'] = $optionCarac;
             $this->load->view('v_admin', $data);
         }
-	}
-	function cerrarCesion(){
+    }
+    function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
@@ -162,80 +159,60 @@ class Admin extends CI_Controller {
         $data['msj']   = null;
         try {
             $id_cliente  = $this->input->post('id_cliente');
-            $email       = $this->input->post('email');
-            $arrayUpdate = array("flg_activo"  => 1);
-            $this->M_solicitud->updateDatos($arrayUpdate, $id_cliente, 'contacto');
-            $this->sendGmailAceptar($email);
+            $orden       = $this->M_datos->getLastOrden();
+            $orden2      = $orden[0]->orden+1;
+            $arrayUpdate = array("flg_activo"  => 1,
+                                 "orden"       => $orden2);
+            $this->M_datos->updateDatos($arrayUpdate, $id_cliente, 'contacto');
+            $html    = '';
+            $datos   = $this->M_datos->filtroGeneral(null, null, null, 'admin');
+            $datosCarac = $this->M_datos->getCaract();
+            if(count($datos) == 0){
+                $html = '<tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>';
+            }else {
+                for($i = 0; $i<sizeof($datos); $i++){
+                    $img     = '';
+                    $disabled       = '';
+                    if($datos[$i]->imagen == null || $datos[$i]->imagen == ''){
+                        $img = 'nouser.png';
+                    }else {
+                        $img = $datos[$i]->imagen;
+                    }
+                    if($datos[$i]->flg_activo == 1){
+                        $disabled = 'disabled';
+                    }
+                    $html .= '<tr>
+                                  <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
+                                  <td>'.$datos[$i]->name_cont_comer.'</td>
+                                  <td>'.$datos[$i]->cont_comercial.'</td>
+                                  <td>'.$datos[$i]->cont_tecnico.'</td>
+                                  <td>'.$datos[$i]->pagina.'</td>
+                                  <td>'.$datos[$i]->pais.'</td>
+                                  <td>'.$datos[$i]->industrias.'</td>
+                                  <td>'.$datos[$i]->Descripcion.'</td>
+                                  <td><button type="button" class="btn btn-default" onclick="aceptar('.$datos[$i]->id_cont.')" '.$disabled.'>
+                                        <span class="glyphicon glyphicon-search"></span> Publicar
+                                      </button>
+                                  </td>
+                              </tr>';
+                }
+            }
+            $data['html']  = $html; 
             $data['error'] = EXIT_SUCCESS;
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
-    }
-    function sendGmailAceptar($email){
-      $data['error'] = EXIT_ERROR;
-      $data['msj']   = null;
-      try {
-       $this->load->library("email");
-       $configGmail = array('protocol'  => 'smtp',
-                            'smtp_host' => 'smtpout.secureserver.net',
-                            'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18#',
-                            'mailtype'  => 'html',
-                            'charset'   => 'utf-8',
-                            'newline'   => "\r\n");
-        $this->email->initialize($configGmail);
-        $this->email->from('info@sap-latam.com');
-        $this->email->to('jhonatanibericom@gmail.com');
-        $this->email->subject('Bienvenido al portal de Meridian');
-        $texto = '';
-        $this->email->message($texto);
-        $this->email->send();
-        $data['error'] = EXIT_SUCCESS;
-      }catch (Exception $e){
-        $data['msj'] = $e->getMessage();
-      }
-      return json_encode(array_map('utf8_encode', $data));
-    }
-    function acceptRechazo(){
-        $data['error'] = EXIT_ERROR;
-        $data['msj']   = null;
-        try {
-            $id_cliente  = $this->input->post('id_cliente');
-            $email       = $this->input->post('email');
-            $motivo      = $this->input->post('motivo');
-            $this->sendGmailCancelar($email, $motivo);
-            $data['error'] = EXIT_SUCCESS;
-        }catch (Exception $e){
-            $data['msj'] = $e->getMessage();
-        }
-        echo json_encode($data);
-    }
-    function sendGmailCancelar($email, $motivo){
-      $data['error'] = EXIT_ERROR;
-      $data['msj']   = null;
-      try {
-       $this->load->library("email");
-       $configGmail = array('protocol'  => 'smtp',
-                            'smtp_host' => 'smtpout.secureserver.net',
-                            'smtp_port' => 3535,
-                            'smtp_user' => 'info@sap-latam.com',
-                            'smtp_pass' => 'sapinfo18#',
-                            'mailtype'  => 'html',
-                            'charset'   => 'utf-8',
-                            'newline'   => "\r\n");
-        $this->email->initialize($configGmail);
-        $this->email->from('info@sap-latam.com');
-        $this->email->to('jhonatanibericom@gmail.com');
-        $this->email->subject('Su solicitud fue rechazada');
-        $texto = '';
-        $this->email->message($texto);
-        $this->email->send();
-        $data['error'] = EXIT_SUCCESS;
-      }catch (Exception $e){
-        $data['msj'] = $e->getMessage();
-      }
-      return json_encode(array_map('utf8_encode', $data));
     }
 }
