@@ -34,6 +34,7 @@ class Admin extends CI_Controller {
             $verticales     = '';
             $descripcion    = '';
             $respuestas     = '';
+            $disabled       = '';
 
             if(count($datos) == 0){
                 $html = '<tr>
@@ -52,10 +53,14 @@ class Admin extends CI_Controller {
                 // $optionCarac .= '<tr>';
                 foreach ($datos as $key) {
                     $img     = '';
+                    $disabled       = '';
                     if($key->imagen == null || $key->imagen == ''){
                         $img = 'nouser.png';
                     }else {
                         $img = $key->imagen;
+                    }
+                    if($key->flg_activo == 1){
+                        $disabled = 'disabled';
                     }
                     $html .= '<tr>
                                   <td><img src="'.RUTA_ARCHIVOS.''.$img.'" style="width:  100%;max-width: 100px;min-width: 100px;padding: 5px;"></td>
@@ -66,6 +71,13 @@ class Admin extends CI_Controller {
                                   <td>'.$key->pais.'</td>
                                   <td>'.$key->industrias.'</td>
                                   <td>'.$key->Descripcion.'</td>
+                                  <td><button type="button" class="btn btn-default" onclick="aceptar('.$key->id_cont.', &quot;'.$key->cont_comercial.'&quot;)" '.$disabled.'>
+                                        <span class="glyphicon glyphicon-search"></span> Aceptar
+                                      </button>
+                                      <button type="button" class="btn btn-default" onclick="modalRechazar('.$key->id_cont.', &quot;'.$key->cont_comercial.'&quot;)" '.$disabled.'>
+                                        <i class="fa fa-close"></i> Rechazar
+                                      </button>
+                                  </td>
                               </tr>';
 
                     $cabecera .= '<th class="text-left"></th>
@@ -190,5 +202,86 @@ class Admin extends CI_Controller {
             $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
+    }
+    function aceptarCliente(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_cliente  = $this->input->post('id_cliente');
+            $email       = $this->input->post('email');
+            $arrayUpdate = array("flg_activo"  => 1);
+            $this->M_solicitud->updateDatos($arrayUpdate, $id_cliente, 'contacto');
+            $this->sendGmailAceptar($email);
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function sendGmailAceptar($email){
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {
+       $this->load->library("email");
+       $configGmail = array('protocol'  => 'smtp',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'info@sap-latam.com',
+                            'smtp_pass' => 'sapinfo18#',
+                            'mailtype'  => 'html',
+                            'charset'   => 'utf-8',
+                            'newline'   => "\r\n");
+        $this->email->initialize($configGmail);
+        $this->email->from('info@sap-latam.com');
+        $this->email->to('jhonatanibericom@gmail.com');
+        $this->email->subject('Bienvenido al portal de Meridian');
+        $texto = '';
+        $this->email->message($texto);
+        $this->email->send();
+        $data['error'] = EXIT_SUCCESS;
+      }catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+      }
+      return json_encode(array_map('utf8_encode', $data));
+    }
+    function acceptRechazo(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $id_cliente  = $this->input->post('id_cliente');
+            $email       = $this->input->post('email');
+            $motivo      = $this->input->post('motivo');
+            $this->sendGmailCancelar($email, $motivo);
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
+    function sendGmailCancelar($email, $motivo){
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {
+       $this->load->library("email");
+       $configGmail = array('protocol'  => 'smtp',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'info@sap-latam.com',
+                            'smtp_pass' => 'sapinfo18#',
+                            'mailtype'  => 'html',
+                            'charset'   => 'utf-8',
+                            'newline'   => "\r\n");
+        $this->email->initialize($configGmail);
+        $this->email->from('info@sap-latam.com');
+        $this->email->to('jhonatanibericom@gmail.com');
+        $this->email->subject('Su solicitud fue rechazada');
+        $texto = '';
+        $this->email->message($texto);
+        $this->email->send();
+        $data['error'] = EXIT_SUCCESS;
+      }catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+      }
+      return json_encode(array_map('utf8_encode', $data));
     }
 }

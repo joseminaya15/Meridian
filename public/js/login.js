@@ -104,3 +104,48 @@ function verificarDatos(e){
 function triggerBoton(){
     $(".buttons-excel").trigger( "click" );
 }
+function aceptar(dato, email){
+  $.ajax({
+    data : {id_cliente : dato,
+            email      : email},
+    url  : 'admin/aceptarCliente',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
+}
+var id_global    = '';
+var email_global = '';
+function modalRechazar(dato, email){
+  id_global = dato;
+  email_global = email;
+  modal('ModalRechazo');
+}
+function acceptRechazo(){
+  var motivo = $('#motivo').val();
+  $.ajax({
+    data : {id_cliente : id_global,
+            email      : email_global,
+            motivo     : motivo},
+    url  : 'admin/acceptRechazo',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
+}

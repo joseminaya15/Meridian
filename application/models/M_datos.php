@@ -80,6 +80,7 @@ class M_datos extends  CI_Model{
           $flg = 'AND co.flg_activo = 1';
         }
         $sql = "SELECT co.*,
+                       co.Id AS id_cont,
                        d.Empresa,
                        d.Descripcion,
                        d.Descripcion_pt,

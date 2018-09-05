@@ -53,6 +53,7 @@
                                 <th class="text-left">País</th>
                                 <th class="text-left">Verticales</th>
                                 <th class="text-left">Descripción</th>
+                                <th class="text-left">Acción</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,6 +77,27 @@
             </div>
         </div>
     </section>
+    <div class="modal fade" id="ModalRechazo" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="mdl-card" >
+                    <div class="mdl-card__title">
+                        <h2>Rechazar Empresa</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text p-t-0">
+                        <div class="form-group">
+                          <label for="usr">Motivo:</label>
+                          <input type="text" class="form-control" id="motivo">
+                        </div>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="acceptRechazo()">Aceptar</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
     <script type="text/javascript" src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
     <script type="text/javascript" src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
