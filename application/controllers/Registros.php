@@ -156,13 +156,15 @@ class Registros extends CI_Controller {
             $archivotmp = $_FILES['archivo']['tmp_name'];
             $namearch = $_FILES['archivo']['name'];
             $nuevo = explode(".",$namearch);
+            $_FILES['archivo']['name'] = str_replace(' ', '_', $_FILES['archivo']['name']);
+            $contador = count($nuevo);
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'El tamaño de su pdf debe ser menor';
             }else {
-                if($nuevo[-1] == 'pdf' || $nuevo[-1] == 'jpeg' || $nuevo[-1] == 'jpg' || $nuevo[-1] == 'png'){
+                if($nuevo[$contador-1] == 'pdf' || $nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png' || $nuevo[$contador-1] == 'PDF' || $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.basename($_FILES['archivo']['name']);
                     if(move_uploaded_file($archivotmp, $target) ){
-                       $arrUpdt = array('imagen' => $namearch);
+                       $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
                        $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
                        $respuesta->mensaje = 'Su logo se subió correctamente';
                     } else {
