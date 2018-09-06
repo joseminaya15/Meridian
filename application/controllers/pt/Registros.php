@@ -70,6 +70,8 @@ class Registros extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+            $this->session->unset_userdata('id_contact');
+            $this->session->unset_userdata('id_deps');
             $empresa  = $this->input->post('empresa');
             $gerente  = $this->input->post('gerente');
             $cont_com = $this->input->post('cont_com');
