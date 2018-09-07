@@ -53,7 +53,7 @@ class Home extends CI_Controller {
                                   </div>
                                   <div class="js-hide">
                                       <div class="js-card--partner__contenido">
-                                          <p>'.$key->Descripcion.'</p>
+                                          <p>'.(($key->Descripcion == '' ) ? $key->Descripcion_pt : $key->Descripcion).'</p>
                                           <p><strong>Alcance de la soluci&oacute;n: </strong>'.$key->caract.'</p>
                                       </div>
                                       <div class="js-card--partner__footer">
