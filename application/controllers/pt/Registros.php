@@ -128,7 +128,7 @@ class Registros extends CI_Controller {
             	$arrayInsert3 = array('id_detalle'  => $key[0],
                                       'id_contacto' => $this->session->userdata('id_contact'),
                                       'comentario'  => $key[1]);
-            	$insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
+                $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
           	}
           	$this->session->unset_userdata('id_detalle');
           	$data['error'] = EXIT_SUCCESS;
@@ -142,7 +142,7 @@ class Registros extends CI_Controller {
       	$html   = '';
       	$datos  = $this->M_datos->getVertical();
       	foreach ($datos as $key) {
-        	$html .= '<option value="'.$key->Id.'">'.$key->nombre_pt.'</option>';
+            $html .= '<option value="'.$key->Id.'">'.$key->nombre_pt.'</option>';
       	}
       	return $html;
     }
@@ -150,6 +150,7 @@ class Registros extends CI_Controller {
     function cargarFact(){
         $respuesta = new stdClass();
         $respuesta->mensaje = "";
+        $respuesta->mensaje = 1;
         if(count($_FILES) == 0){
             $respuesta->mensaje = 'Seleccione su factura';
         }else {
@@ -163,12 +164,13 @@ class Registros extends CI_Controller {
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'O tamanho do seu logotipo deve ser menor';
             }else {
-                if($nuevo[$contador-1] == 'pdf' || $nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png' || $nuevo[$contador-1] == 'PDF' || $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
+                if($nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png' || $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.basename($_FILES['archivo']['name']);
                     if(move_uploaded_file($archivotmp, $target) ){
-                       $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
-                       $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
-                       $respuesta->mensaje = 'Seu logotipo foi enviado corretamente';
+                        $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
+                        $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
+                        $respuesta->mensaje = 'Seu logotipo foi enviado corretamente';
+                        $respuesta->mensaje = 0;
                     } else {
                        $respuesta->mensaje = 'Houve um problema ao enviar seu logotipo';
                     }

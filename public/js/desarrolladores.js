@@ -15,22 +15,27 @@ function guardarDesarrolladores(){
 	var nom_tecnico = $('#nom_tecnico').val();
 	factura = $('#archivo')[0].files[0];
 	if(empresa == '' || empresa == null){
+		toastr.remove();
 		msj('error', 'Ingrese el nombre de su empresa');
 		return;
 	}
 	if(vertical == '' || vertical == null){
+		toastr.remove();
 		msj('error', 'Ingrese su vertical');
 		return;
 	}
 	if(pais == '' || pais == null){
+		toastr.remove();
 		msj('error', 'Ingrese el país de su empresa');
 		return;
 	}
 	if(gerente == '' || gerente == null){
+		toastr.remove();
 		msj('error', 'Ingrese el nombre de su gerente');
 		return;
 	}
 	if(cont_com == '' || cont_tec == null){
+		toastr.remove();
 		msj('error', 'Ingrese el Email de su contacto comercial');
 		return;
 	}
@@ -41,6 +46,7 @@ function guardarDesarrolladores(){
 		$('#cont_comercial').css('border-color','');
 	}
 	if(cont_tec == '' || cont_tec == null){
+		toastr.remove();
 		msj('error', 'Ingrese el Email de su contacto técnico');
 		return;
 	}
@@ -51,21 +57,28 @@ function guardarDesarrolladores(){
 		$('#cont_tecnico').css('border-color','');
 	}
 	if(url == '' || url == null){
+		toastr.remove();
 		msj('error', 'Ingrese la url de su página web');
 		return;
 	}
 	if(telefono == '' || telefono == null){
+		toastr.remove();
 		msj('error', 'Ingrese su teléfono de contacto');
 		return;
 	}
 	if(descripcion == '' || descripcion == null){
+		toastr.remove();
 		msj('error', 'Ingrese la descripción de su empresa');
 		return;
 	}
 	if(factura == undefined){
+		toastr.remove();
+		msj('error', 'Ingrese el logo de su empresa');
 		return;
 	}
 	if(factura['size'] > 2048000){
+		toastr.remove();
+		msj('error', 'El logo debe ser menor a 2MB');
 		return;
 	}
 	$('.btn-guardar').prop("disabled", true);
@@ -87,17 +100,18 @@ function guardarDesarrolladores(){
 		try{
         	data = JSON.parse(data);
         	if(data.error == 0){
-				limpiarCampos();
-				$('#step2Pos').css('pointer-events', '');
-				$('#li1Pos').addClass('complete');
-				$('#li1Pos').removeClass('active');
-				$('#li2Pos').addClass('active');
-				$('#tab1Pos').removeClass('active');
-				$('#tab2Pos').addClass('active');
+				// limpiarCampos();
+				// $('#step2Pos').css('pointer-events', '');
+				// $('#li1Pos').addClass('complete');
+				// $('#li1Pos').removeClass('active');
+				// $('#li2Pos').addClass('active');
+				// $('#tab1Pos').removeClass('active');
+				// $('#tab2Pos').addClass('active');
         	}else{
         		return;
         	}
       } catch (err){
+        toastr.remove();
         msj('error',err.message);
       }
 	});
@@ -186,6 +200,7 @@ function guardarDatosDeps(){
         		return;
         	}
       } catch (err){
+        toastr.remove();
         msj('error',err.message);
       }
 	});
@@ -197,37 +212,34 @@ function agregarDatos(){
 	var datos = new FormData();
 	factura = $('#archivo')[0].files[0];
 	if(factura == undefined){
-		//msj('error', 'Seleccione una factura');
+		toastr.remove();
+		msj('error', 'Ingrese el logo de su empresa');
 		return;
 	}
 	if(factura['size'] > 2048000){
-		msj('error', 'La factura debe ser menor a 2MB');
-		return;
-	}
-	if(factura == undefined){
-		msj('error', 'Seleccione una imagen');
+		toastr.remove();
+		msj('error', 'El logo debe ser menor a 2MB');
 		return;
 	}
     datos.append('archivo',$('#archivo')[0].files[0]);
-     $.ajax({
+	$.ajax({
         type     	:"post",
         dataType 	:"json",
         url		    :"Registros/cargarFact",
         contentType :false,
         data 		:datos,
         processData :false,
-      }).done(function(respuesta){
+	}).done(function(respuesta){
       	if(respuesta.error == 0) {
-      		/*modal('ModalQuestion');
-      		setTimeout(function() {
-				modal('modalDetalles');
-				$('#bodyPuntaje').html(respuesta.html);
-        		$('#puntajeGeneral').html(respuesta.puntosGeneral);
-        		$('#bodyUltimaCotizacion').html(respuesta.bodyCotizaciones);
-        		$('#bodyCanales').html(respuesta.bodyCanales);
-        		//limpiarCampos();
-			}, 250);*/
+			limpiarCampos();
+			$('#step2Pos').css('pointer-events', '');
+			$('#li1Pos').addClass('complete');
+			$('#li1Pos').removeClass('active');
+			$('#li2Pos').addClass('active');
+			$('#tab1Pos').removeClass('active');
+			$('#tab2Pos').addClass('active');
       	} else {
+        	toastr.remove();
         	msj('error', respuesta.mensaje);
       	}
     });

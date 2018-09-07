@@ -133,7 +133,7 @@
                                         <input type="text" id="telefono">
                                     </div>
 									<div class="col-xs-12 js-input">
-									  	<label for="gerente">Nome do contato comercial</label>
+									  	<label for="gerente">Nome completo do contato comercial</label>
 										<input type="text" id="gerente" maxlength="100">
 									</div>
 									<div class="col-xs-12 js-input">
@@ -147,7 +147,7 @@
                                         <input type="text" id="mov_comercial">
                                     </div>
                                     <div class="col-xs-12 js-input">
-                                        <label for="nom_tecnico" class="col-2 col-form-label">Nome do contato t&eacute;cnico</label>
+                                        <label for="nom_tecnico" class="col-2 col-form-label">Nome completo do contato t&eacute;cnico</label>
                                         <input type="text" id="nom_tecnico">
                                     </div>
 									<div class="col-xs-12 js-input">
@@ -166,6 +166,7 @@
                                             </button>
                                         </div>
                                     </div>
+                                    <p><em>Todos os dados são obrigatórios</em></p>
 									<div class="col-xs-12 text-right">
 										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="guardarDesarrolladores();agregarDatos();">Salvar e continuar</button>
 					            	</div>

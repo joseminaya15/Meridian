@@ -139,8 +139,8 @@ class Registros extends CI_Controller {
     }
 
     function comboVerticales(){
-        $html = '';
-        $datos = $this->M_datos->getVertical();
+        $html   = '';
+        $datos  = $this->M_datos->getVertical();
         foreach ($datos as $key) {
             $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
         }
@@ -150,6 +150,7 @@ class Registros extends CI_Controller {
     function cargarFact(){
         $respuesta = new stdClass();
         $respuesta->mensaje = "";
+        $respuesta->error = 1;
         if(count($_FILES) == 0){
             $respuesta->mensaje = 'Seleccione su logo';
         }else {
@@ -163,12 +164,13 @@ class Registros extends CI_Controller {
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'El tamaño de su pdf debe ser menor';
             }else {
-                if($nuevo[$contador-1] == 'pdf' || $nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png' || $nuevo[$contador-1] == 'PDF' || $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
+                if($nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png'|| $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.basename($_FILES['archivo']['name']);
                     if(move_uploaded_file($archivotmp, $target) ){
-                       $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
-                       $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
-                       $respuesta->mensaje = 'Su logo se subió correctamente';
+                        $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
+                        $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
+                        $respuesta->mensaje = 'Su logo se subió correctamente';
+                        $respuesta->error = 0;
                     } else {
                        $respuesta->mensaje = 'Hubo un problema en la subida de su logo';
                     }
