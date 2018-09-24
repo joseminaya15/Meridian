@@ -77,6 +77,10 @@ class Registros extends CI_Controller {
             $cont_com = $this->input->post('cont_com');
             $cont_tec = $this->input->post('cont_tec');
             $url      = $this->input->post('url');
+            $pattern = "|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i";
+            if (!preg_match($pattern, $url)){
+                $url = 'http://'.$url;
+            }
             $telefono = $this->input->post('telefono');
             $id_pais  = $this->input->post('id_pais');
             $id_verti = $this->input->post('id_verti');
