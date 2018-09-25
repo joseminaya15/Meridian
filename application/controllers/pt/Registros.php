@@ -14,56 +14,50 @@ class Registros extends CI_Controller {
     }
 
 	public function index(){
-      $html      = '';
-      $cont      = 1;
-      $cont1     = '';
-      $titulo    = '';
-      $html_titu = '';
-      $optionPaises = '';
-      $i         = 1;
-      $datosPaises = $this->M_datos->getPais();
-      foreach($datosPaises as $key) {
-          $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
-      }
-      $data['paises'] = $optionPaises;
-      $datos = $this->M_datos->getCaracteristicas();
-      $nombre = $datos[0]->name_caract;
-      foreach ($datos as $key) {
-          $cont1 = $cont+1;
-          $h3    = '';
-          if($nombre == $key->name_caract){
-            if($i == 1){
-              $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract_pt.'</h3></div>';
+        $html      = '';
+        $cont      = 1;
+        $cont1     = '';
+        $titulo    = '';
+        $html_titu = '';
+        $optionPaises = '';
+        $i         = 1;
+        $datosPaises = $this->M_datos->getPais();
+        foreach($datosPaises as $key) {
+            $optionPaises .= '<option value="'.$key->Id.'" >'.$key->Nombre.'</option>';
+        }
+        $data['paises'] = $optionPaises;
+        $datos = $this->M_datos->getCaracteristicas();
+        $nombre = $datos[0]->name_caract;
+        $h3    = '<div class="col-xs-12"><h3>'.$datos[0]->name_caract.'</h3></div>';
+        foreach ($datos as $key) {
+            $cont1 = $cont+1;
+            if($nombre != $key->name_caract) {
+                $nombre = $key->name_caract;
+                $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract_pt.'</h3></div>';
             }
-            $i = 2;
-          }
-          if($nombre != $key->name_caract) {
-            $nombre = $key->name_caract;
-            $h3 = '';
-            $i = 1;
-          }
-          $html .= ''.$h3.'
-                    <div class="col-sm-6 col-xs-12">
-                      <div class="col-xs-12 js-input js-radio">
-                          <label>'.$key->tipo_pt.'</label>
-                          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
-                              <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
-                              <span class="mdl-radio__label">Sim</span>
-                          </label>
-                          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont1.'">
-                              <input type="radio" id="optionsRadios'.$cont1.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
-                              <span class="mdl-radio__label">Não</span>
-                          </label>
-                      </div>
-                      <div class="col-xs-12 js-input js-observacion">
-                          <label for="observacion'.$cont.'">Observação</label>
-                          <input type="text" id="observacion'.$cont.'" maxlength="50">
-                      </div>
-                    </div>';
-          $cont = $cont1+1;
-      }
-      $data['verticales'] = $this->comboVerticales();
-      $data['html'] = $html;
+            $html .= ''.$h3.'
+                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-xs-12 js-input js-radio">
+                            <label>'.$key->tipo_pt.'</label>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
+                                <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
+                                <span class="mdl-radio__label">Sim</span>
+                            </label>
+                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont1.'">
+                                <input type="radio" id="optionsRadios'.$cont1.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
+                                <span class="mdl-radio__label">Não</span>
+                            </label>
+                        </div>
+                        <div class="col-xs-12 js-input js-observacion">
+                            <label for="observacion'.$cont.'">Observação</label>
+                            <input type="text" id="observacion'.$cont.'" maxlength="50">
+                        </div>
+                        </div>';
+            $cont = $cont1+1;
+            $h3    = '';
+        }
+        $data['verticales'] = $this->comboVerticales();
+        $data['html'] = $html;
 		$this->load->view('pt/v_desarrolladores', $data);
 	}
     function guardarDesarrolladores(){

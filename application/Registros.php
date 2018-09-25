@@ -33,23 +33,23 @@ class Registros extends CI_Controller {
             $cont1 = $cont+1;
             if($nombre != $key->name_caract) {
                 $nombre = $key->name_caract;
-                $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract.'</h3></div>';
+                $h3 = '<div class="col-xs-12"><h3>'.$key->name_caract_pt.'</h3></div>';
             }
             $html .= ''.$h3.'
                         <div class="col-sm-6 col-xs-12">
                         <div class="col-xs-12 js-input js-radio">
-                            <label>'.$key->tipo.'</label>
+                            <label>'.$key->tipo_pt.'</label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont.'">
                                 <input type="radio" id="optionsRadios'.$cont.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
-                                <span class="mdl-radio__label">Sí</span>
+                                <span class="mdl-radio__label">Sim</span>
                             </label>
                             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="optionsRadios'.$cont1.'">
                                 <input type="radio" id="optionsRadios'.$cont1.'" class="mdl-radio__button" name="optionsRadios'.$cont.'" value="'.$key->Id.'">
-                                <span class="mdl-radio__label">No</span>
+                                <span class="mdl-radio__label">Não</span>
                             </label>
                         </div>
                         <div class="col-xs-12 js-input js-observacion">
-                            <label for="observacion'.$cont.'">Observacion</label>
+                            <label for="observacion'.$cont.'">Observação</label>
                             <input type="text" id="observacion'.$cont.'" maxlength="50">
                         </div>
                         </div>';
@@ -58,7 +58,7 @@ class Registros extends CI_Controller {
         }
         $data['verticales'] = $this->comboVerticales();
         $data['html'] = $html;
-		$this->load->view('es/v_desarrolladores', $data);
+        $this->load->view('pt/v_desarrolladores', $data);
 	}
     function guardarDesarrolladores(){
         $data['error'] = EXIT_ERROR;
@@ -81,9 +81,9 @@ class Registros extends CI_Controller {
             $mov_comercial = $this->input->post('mov_comercial');
             $nom_tecnico = $this->input->post('nom_tecnico');
             $descripcion = $this->input->post('descripcion');
-            $arrInserDep = array('Empresa'     => $empresa,
-                                 'Descripcion' => $descripcion,
-                                 'imagen'      => '');
+            $arrInserDep = array('Empresa'        => $empresa,
+                                 'Descripcion_pt' => $descripcion,
+                                 'imagen'         => '');
             $insetDep = $this->M_datos->insertarDatos($arrInserDep, 'desarrolladores');
             $arrayInsert = array('name_cont_comer'=> $gerente,
                                  'cont_comercial' => $cont_com,
@@ -118,18 +118,18 @@ class Registros extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
-            $id_detalle = $this->input->post('id_detalle');
-            $arr_deta   = $this->input->post('arr_deta');
-            $obsChecked = $this->input->post('obsChecked');
-            $arrayGeneral = $this->input->post('arrayGeneral');
-            foreach ($arrayGeneral as $key) {
-                $arrayInsert3 = array('id_detalle'  => $key[0],
+          	$id_detalle = $this->input->post('id_detalle');
+          	$arr_deta   = $this->input->post('arr_deta');
+          	$obsChecked = $this->input->post('obsChecked');
+          	$arrayGeneral = $this->input->post('arrayGeneral');
+          	foreach ($arrayGeneral as $key) {
+            	$arrayInsert3 = array('id_detalle'  => $key[0],
                                       'id_contacto' => $this->session->userdata('id_contact'),
                                       'comentario'  => $key[1]);
                 $insetDatos   = $this->M_datos->insertarDatos($arrayInsert3, 'insrt_detalle');
-            }
-            $this->session->unset_userdata('id_detalle');
-            $data['error'] = EXIT_SUCCESS;
+          	}
+          	$this->session->unset_userdata('id_detalle');
+          	$data['error'] = EXIT_SUCCESS;
         }catch(Exception $e){
             $data['msj'] = $e->getMessage();
         }
@@ -137,20 +137,20 @@ class Registros extends CI_Controller {
     }
 
     function comboVerticales(){
-        $html   = '';
-        $datos  = $this->M_datos->getVertical();
-        foreach ($datos as $key) {
-            $html .= '<option value="'.$key->Id.'">'.$key->nombre.'</option>';
-        }
-        return $html;
+      	$html   = '';
+      	$datos  = $this->M_datos->getVertical();
+      	foreach ($datos as $key) {
+            $html .= '<option value="'.$key->Id.'">'.$key->nombre_pt.'</option>';
+      	}
+      	return $html;
     }
 
     function cargarFact(){
         $respuesta = new stdClass();
         $respuesta->mensaje = "";
-        $respuesta->error = 1;
+        $respuesta->mensaje = 1;
         if(count($_FILES) == 0){
-            $respuesta->mensaje = 'Seleccione su logo';
+            $respuesta->mensaje = 'Seleccione su factura';
         }else {
             $tipo = $_FILES['archivo']['type']; 
             $tamanio = $_FILES['archivo']['size']; 
@@ -160,20 +160,20 @@ class Registros extends CI_Controller {
             $_FILES['archivo']['name'] = str_replace(' ', '_', $_FILES['archivo']['name']);
             $contador = count($nuevo);
             if($tamanio > '2000000'){
-                $respuesta->mensaje = 'El tamaño de su pdf debe ser menor';
+                $respuesta->mensaje = 'O tamanho do seu logotipo deve ser menor';
             }else {
-                if($nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png'|| $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
+                if($nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png' || $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.basename($_FILES['archivo']['name']);
                     if(move_uploaded_file($archivotmp, $target) ){
                         $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
                         $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
-                        $respuesta->mensaje = 'Su logo se subió correctamente';
-                        $respuesta->error = 0;
+                        $respuesta->mensaje = 'Seu logotipo foi enviado corretamente';
+                        $respuesta->mensaje = 0;
                     } else {
-                       $respuesta->mensaje = 'Hubo un problema en la subida de su logo';
+                       $respuesta->mensaje = 'Houve um problema ao enviar seu logotipo';
                     }
                 }else {
-                    $respuesta->mensaje = 'El formato del logo es incorrecto';
+                    $respuesta->mensaje = 'O formato do logotipo está incorreto';
                 }
             }
             echo json_encode($respuesta);

@@ -41,7 +41,8 @@ class M_datos extends  CI_Model{
                   FROM detalle_caract dc,
                        caracteristicas c
                  WHERE dc.id_caract = c.Id
-              ORDER BY name_caract ASC";
+                   AND dc.Id < 52
+              ORDER BY name_caract ASC, Id ASC";
         $result = $this->db->query($sql);
         return $result->result();
     }
