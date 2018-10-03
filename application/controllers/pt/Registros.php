@@ -148,7 +148,7 @@ class Registros extends CI_Controller {
     function cargarFact(){
         $respuesta = new stdClass();
         $respuesta->mensaje = "";
-        $respuesta->mensaje = 1;
+        $respuesta->error = 1;
         if(count($_FILES) == 0){
             $respuesta->mensaje = 'Seleccione su factura';
         }else {
@@ -168,7 +168,7 @@ class Registros extends CI_Controller {
                         $arrUpdt = array('imagen' => $_FILES['archivo']['name']);
                         $this->M_datos->updateDatos($arrUpdt, $this->session->userdata('id_deps'), 'desarrolladores');
                         $respuesta->mensaje = 'Seu logotipo foi enviado corretamente';
-                        $respuesta->mensaje = 0;
+                        $respuesta->error = 0;
                     } else {
                        $respuesta->mensaje = 'Houve um problema ao enviar seu logotipo';
                     }

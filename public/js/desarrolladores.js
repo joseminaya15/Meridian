@@ -160,11 +160,12 @@ var arraycomets = [];
 var arrayGeneral = [];
 var obsChecked = '';
 function guardarDatosDeps(){
+
 	$(".js-radio .is-checked").each(function (){
 		var isChecked    = $(this);
 		var labelChecked = isChecked.find('.mdl-radio__label');
 		var textChecked = isChecked.find('.mdl-radio__label').text();
-		if(textChecked == 'Sí'){
+		if(textChecked == 'Sí' || textChecked == 'Sim'){
 			var attrChecked = labelChecked.siblings('.mdl-radio__button').attr('id');
 			var idChecked   = $('#'+attrChecked);
 			var valChecked  = idChecked.val();
@@ -241,6 +242,7 @@ function agregarDatos(){
       	} else {
         	toastr.remove();
         	msj('error', respuesta.mensaje);
+        	return;
       	}
     });
 }
