@@ -22,7 +22,7 @@ class Admin extends CI_Controller {
             $datosCarac = $this->M_datos->getCaract();
             $rpta    = '';
             $optionCarac= '';
-            $cabecera = '';
+            $cabecera = '<tr>';
             $i = 0;
             //NO BORRAR
             $empresa        = '';
@@ -119,7 +119,7 @@ class Admin extends CI_Controller {
                 $respuestasGen .= '<tr>';
                 foreach ($detalleCarac as $value) {
                     for($m = 0; $m<sizeof($datos); $m++) {
-                        $rpta = ( strpos($datos[$m]->detalle_caract, $value->tipo) !== false ) ? 'Si' : 'No' ;
+                        $rpta = ( strpos($datos[$m]->detalle_caract, $value->tipo) !== false)  ? 'Sí' : 'No' ;
                         $respuestasGen .= '<td>'.$value->tipo.'</td>
                                            <td>'.$rpta.'</td>
                                            <td></td>';

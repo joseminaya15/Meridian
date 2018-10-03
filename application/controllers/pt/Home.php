@@ -52,7 +52,7 @@ class Home extends CI_Controller {
                                       <img src="'.RUTA_ARCHIVOS.$key->imagen.'" alt="">
                                   </div>
                                   <div class="js-hide">
-                                      <div class="js-card--partner__contenido">
+                                      <div class="js-card--partner__contenido" style="overflow: auto">
                                           <p>'.(($key->Descripcion_pt == '') ? $key->Descripcion : $key->Descripcion_pt).'</p>
                                           <p><strong>Escopo da solução: </strong>'.$key->caract_pt.'</p>
                                       </div>
@@ -104,7 +104,7 @@ class Home extends CI_Controller {
                                       <img src="'.RUTA_ARCHIVOS.$key->imagen.'" alt="">
                                   </div>
                                   <div class="js-hide">
-                                      <div class="js-card--partner__contenido">
+                                      <div class="js-card--partner__contenido" style="overflow: auto">
                                           <p>'.$key->Descripcion_pt.'</p>
                                           <p><strong>Escopo da solução: </strong>'.$key->caract_pt.'</p>
                                       </div>
